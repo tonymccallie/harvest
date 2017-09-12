@@ -1,33 +1,30 @@
 <ion-header no-border>
 	<ion-navbar color="primary">
-		<ion-title center>Home</ion-title>
+		<ion-title center><img src="../assets/logo.png" class="logo"></ion-title>
 		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
 	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-	<ion-card>
-		<ion-card-header>
-			Title
-		</ion-card-header>
-		<ion-card-content>
-			<img src="http://via.placeholder.com/500x300">
-		</ion-card-content>
-	</ion-card>
-	<ion-card>
-		<ion-card-header>
-			Title
-		</ion-card-header>
-		<ion-card-content>
-			<img src="http://via.placeholder.com/500x300">
-		</ion-card-content>
-	</ion-card>
-	<ion-card>
-		<ion-card-header>
-			Title
-		</ion-card-header>
-		<ion-card-content>
-			<img src="http://via.placeholder.com/500x300">
-		</ion-card-content>
-	</ion-card>
+<ion-content class="card-background-page">
+	<ion-slides autoplay="5000" loop="true">
+		<ion-slide *ngFor="let number of [10,11,12,13]">
+			<img src="https://unsplash.it/1000/600?random&{{number}}">
+		</ion-slide>
+	</ion-slides>
+	<ion-toolbar color="primary">
+		Community Feed
+	</ion-toolbar>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+	<div class="ion-card" *ngFor="let article of news; let i = index" (click)="viewArticle(article)">
+		<!-- <img src="https://unsplash.it/500/300?random&{{i}}"> -->
+		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
+		<div class="card-title">
+			{{article.NewsArticle.title}}
+		</div>
+	</div>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+		<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
 </ion-content>

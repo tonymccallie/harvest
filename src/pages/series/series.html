@@ -1,0 +1,22 @@
+<ion-header no-border>
+	<ion-navbar color="primary">
+		<ion-title center>Series</ion-title>
+		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div *ngFor="let recent of latest">
+		<img src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	</div>
+	<ion-toolbar color="primary">
+		Latest Series
+	</ion-toolbar>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">
+				<img src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:500/height:300/crop:true/zoom:auto">
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

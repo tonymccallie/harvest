@@ -6,31 +6,30 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { LoginPage } from '../pages/login/login';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { GreybackProvider } from '../providers/greyback/greyback';
+import { AudioProvider } from '../providers/audio/audio';
 
 @NgModule({
 	declarations: [
-		MyApp,
-		LoginPage
+		MyApp
 	],
 	imports: [
 		BrowserModule,
 		HttpModule,
-		IonicModule.forRoot(MyApp)
+		IonicModule.forRoot(MyApp, { mode: 'ios' })
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
-		MyApp,
-		LoginPage
+		MyApp
 	],
 	providers: [
 		StatusBar,
 		SplashScreen,
 		{ provide: ErrorHandler, useClass: IonicErrorHandler },
 		AuthServiceProvider,
-		GreybackProvider
+		GreybackProvider,
+		AudioProvider
 	]
 })
 export class AppModule { }
