@@ -10,10 +10,11 @@
 
 	<ion-content>
 		<ion-list>
-			<div *ngIf="player.title">
+			<!-- <div *ngIf="player.title"> -->
 				<ion-item (click)="pause()">
-					<ion-icon item-start *ngIf="player.playing" name="threeleaf-pause"></ion-icon>
-					<ion-icon item-start *ngIf="!player.playing" name="threeleaf-play"></ion-icon>
+					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>
+					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>
+					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>
 					{{player.title}}<br />{{player.speaker}}
 				</ion-item>
 				<ion-item>
@@ -24,7 +25,7 @@
 				</ion-item>
 
 				<ion-list-header color="primary">Menu</ion-list-header>
-			</div>
+			<!-- </div> -->
 			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
 				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
 				{{ p.title }}

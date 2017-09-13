@@ -16,7 +16,6 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 $font-family-base: LatoRegular;
 $tabs-ios-tab-icon-size: 60px;
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -24,8 +23,7 @@ $tabs-ios-tab-icon-size: 60px;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-$colors: ( primary : #344C96, secondary : #32db64, danger : #f53d3d, light : #f4f4f4, dark : #222);
-
+$colors: ( primary: #344C96, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222);
 $text-color: color($colors, primary);
 $tabs-ios-tab-text-color: $text-color;
 // App iOS Variables
@@ -108,51 +106,71 @@ $tabs-ios-tab-text-color: $text-color;
 	src: url('../assets/fonts/Lato-LightItalic.ttf') format('truetype');
 }
 
-.ion-ios-threeleaf-home, .ion-ios-threeleaf-home-outline {
+.ion-ios-threeleaf-home,
+.ion-ios-threeleaf-home-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oh";
 	}
 }
 
-.ion-ios-threeleaf-sermons, .ion-ios-threeleaf-sermons-outline {
+.ion-ios-threeleaf-sermons,
+.ion-ios-threeleaf-sermons-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oZ";
 	}
 }
 
-.ion-ios-threeleaf-stories, .ion-ios-threeleaf-stories-outline {
+.ion-ios-threeleaf-stories,
+.ion-ios-threeleaf-stories-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oH";
 	}
 }
 
-.ion-ios-threeleaf-events, .ion-ios-threeleaf-events-outline {
+.ion-ios-threeleaf-events,
+.ion-ios-threeleaf-events-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oe";
 	}
 }
 
-.ion-ios-threeleaf-resources, .ion-ios-threeleaf-resources-outline {
+.ion-ios-threeleaf-resources,
+.ion-ios-threeleaf-resources-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oR";
 	}
 }
 
-.ion-ios-threeleaf-pause, .ion-ios-threeleaf-pause-outline {
+.ion-ios-threeleaf-pause,
+.ion-ios-threeleaf-pause-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "op";
 	}
 }
 
-.ion-ios-threeleaf-play, .ion-ios-threeleaf-play-outline {
+.ion-ios-threeleaf-play,
+.ion-ios-threeleaf-play-outline {
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oP";
+	}
+}
+
+.ion-ios-refresh {
+	animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
 	}
 }

@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { LoadingController } from 'ionic-angular';
 
 @Injectable()
 export class AudioProvider {
 	player: any;
 	playing: boolean = false;
+	loading: boolean = true;
 	current: number = 0;
 	duration: number = 0;
 	percentage: number = 0;
 	title: string = '';
 	speaker: string = '';
+	loader: any;
 
-	constructor(public http: Http) {
+	constructor(public http: Http, public loadingCtrl: LoadingController) {
 		var self = this;
+		this.loader = this.loadingCtrl.create({
+			content: "Loading media..."
+		});
 		this.player = new Audio();
 		this.player.ontimeupdate = function (player) {
 			self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
@@ -28,6 +34,7 @@ export class AudioProvider {
 			//self.player.play();
 		}
 		this.player.oncanplaythrough = function (data) {
+			self.loading = true;
 			console.log(['oncanplaythrough',data]);
 		}
 		this.player.onstalled = function (data) {
@@ -54,7 +61,9 @@ export class AudioProvider {
 	}
 
 	play(config: any) {
+		this.loader.present();
 		this.playing = true;
+		this.loading = true;
 		this.title = config.title;
 		this.speaker = config.speaker;
 		this.player.src = config.url+'/file.mp3';

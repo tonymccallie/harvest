@@ -3871,39 +3871,73 @@ ion-icon::before {
   src: url("../assets/fonts/Lato-LightItalic.ttf") format("truetype");
 }
 
-.ion-ios-threeleaf-home:before, .ion-ios-threeleaf-home-outline:before {
+.ion-ios-threeleaf-home:before,
+.ion-ios-threeleaf-home-outline:before {
   font-family: 'Threeleaf';
   content: "oh";
 }
 
-.ion-ios-threeleaf-sermons:before, .ion-ios-threeleaf-sermons-outline:before {
+.ion-ios-threeleaf-sermons:before,
+.ion-ios-threeleaf-sermons-outline:before {
   font-family: 'Threeleaf';
   content: "oZ";
 }
 
-.ion-ios-threeleaf-stories:before, .ion-ios-threeleaf-stories-outline:before {
+.ion-ios-threeleaf-stories:before,
+.ion-ios-threeleaf-stories-outline:before {
   font-family: 'Threeleaf';
   content: "oH";
 }
 
-.ion-ios-threeleaf-events:before, .ion-ios-threeleaf-events-outline:before {
+.ion-ios-threeleaf-events:before,
+.ion-ios-threeleaf-events-outline:before {
   font-family: 'Threeleaf';
   content: "oe";
 }
 
-.ion-ios-threeleaf-resources:before, .ion-ios-threeleaf-resources-outline:before {
+.ion-ios-threeleaf-resources:before,
+.ion-ios-threeleaf-resources-outline:before {
   font-family: 'Threeleaf';
   content: "oR";
 }
 
-.ion-ios-threeleaf-pause:before, .ion-ios-threeleaf-pause-outline:before {
+.ion-ios-threeleaf-pause:before,
+.ion-ios-threeleaf-pause-outline:before {
   font-family: 'Threeleaf';
   content: "op";
 }
 
-.ion-ios-threeleaf-play:before, .ion-ios-threeleaf-play-outline:before {
+.ion-ios-threeleaf-play:before,
+.ion-ios-threeleaf-play-outline:before {
   font-family: 'Threeleaf';
   content: "oP";
+}
+
+.ion-ios-refresh {
+  -webkit-animation: spin 1.5s infinite linear;
+  animation: spin 1.5s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
 
 ion-action-sheet {
