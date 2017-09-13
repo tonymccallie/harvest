@@ -28341,7 +28341,7 @@ ion-toolbar {
   text-transform: uppercase;
 }
 
-ion-header {
+ion-header, ion-header ion-toolbar {
   height: 60px;
 }
 
@@ -28392,7 +28392,7 @@ page-home .logo {
 }
 
 page-menu ion-menu ion-header {
-  height: 40px;
+  height: 60px;
 }
 
 page-menu ion-menu ion-navbar {
