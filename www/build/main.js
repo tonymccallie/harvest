@@ -175,6 +175,7 @@ var AudioProvider = (function () {
         this.title = config.title;
         this.speaker = config.speaker;
         this.player.src = config.url;
+        this.player.autoplay = true;
         this.player.play();
     };
     AudioProvider.prototype.pause = function () {
@@ -194,9 +195,10 @@ var AudioProvider = (function () {
 }());
 AudioProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
 ], AudioProvider);
 
+var _a;
 //# sourceMappingURL=audio.js.map
 
 /***/ }),

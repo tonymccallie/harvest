@@ -27,6 +27,7 @@ export class AudioProvider {
 		this.title = config.title;
 		this.speaker = config.speaker;
 		this.player.src = config.url;
+		this.player.autoplay = true;
 		this.player.play();
 	}
 
