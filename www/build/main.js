@@ -171,12 +171,25 @@ var AudioProvider = (function () {
         };
     }
     AudioProvider.prototype.play = function (config) {
+        var self = this;
         this.playing = true;
         this.title = config.title;
         this.speaker = config.speaker;
         this.player.src = config.url;
-        this.player.autoplay = true;
-        this.player.play();
+        this.player.onprogress = function (data) {
+            console.log(['onprogress', data]);
+        };
+        this.player.oncanplay = function (data) {
+            console.log(['oncanplay', data]);
+            self.player.play();
+        };
+        this.player.onstalled = function (data) {
+            console.log(['onstalled', data]);
+        };
+        this.player.onstalled = function (data) {
+            console.log(['onstalled', data]);
+        };
+        //this.player.play();
     };
     AudioProvider.prototype.pause = function () {
         if (this.playing) {
