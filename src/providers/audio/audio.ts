@@ -20,13 +20,6 @@ export class AudioProvider {
 			self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
 			self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
 		}
-	}
-
-	play(config: any) {
-		this.playing = true;
-		this.title = config.title;
-		this.speaker = config.speaker;
-		this.player.src = config.url+'/file.mp3';
 		this.player.onprogress = function (data) {
 			console.log(['onprogress',data]);
 		}
@@ -34,12 +27,37 @@ export class AudioProvider {
 			console.log(['oncanplay',data]);
 			//self.player.play();
 		}
-		this.player.onstalled = function (data) {
-			console.log(['onstalled',data]);
+		this.player.oncanplaythrough = function (data) {
+			console.log(['oncanplaythrough',data]);
 		}
 		this.player.onstalled = function (data) {
 			console.log(['onstalled',data]);
 		}
+		this.player.onabort = function (data) {
+			console.log(['onabort',data]);
+		}
+		this.player.onerror = function (data) {
+			console.log(['onerror',data]);
+		}
+		this.player.onloadstart = function (data) {
+			console.log(['onloadstart',data]);
+		}
+		this.player.onplaying = function (data) {
+			console.log(['onplaying',data]);
+		}
+		this.player.onplay = function (data) {
+			console.log(['onplay',data]);
+		}
+		this.player.onpause = function (data) {
+			console.log(['onpause',data]);
+		}
+	}
+
+	play(config: any) {
+		this.playing = true;
+		this.title = config.title;
+		this.speaker = config.speaker;
+		this.player.src = config.url+'/file.mp3';
 		this.player.play();
 	}
 
