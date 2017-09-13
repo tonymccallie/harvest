@@ -171,17 +171,16 @@ var AudioProvider = (function () {
         };
     }
     AudioProvider.prototype.play = function (config) {
-        var self = this;
         this.playing = true;
         this.title = config.title;
         this.speaker = config.speaker;
-        this.player.src = config.url;
+        this.player.src = config.url + '/file.mp3';
         this.player.onprogress = function (data) {
             console.log(['onprogress', data]);
         };
         this.player.oncanplay = function (data) {
             console.log(['oncanplay', data]);
-            self.player.play();
+            //self.player.play();
         };
         this.player.onstalled = function (data) {
             console.log(['onstalled', data]);
@@ -189,7 +188,7 @@ var AudioProvider = (function () {
         this.player.onstalled = function (data) {
             console.log(['onstalled', data]);
         };
-        //this.player.play();
+        this.player.play();
     };
     AudioProvider.prototype.pause = function () {
         if (this.playing) {
@@ -208,10 +207,9 @@ var AudioProvider = (function () {
 }());
 AudioProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
 ], AudioProvider);
 
-var _a;
 //# sourceMappingURL=audio.js.map
 
 /***/ }),

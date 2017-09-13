@@ -23,17 +23,16 @@ export class AudioProvider {
 	}
 
 	play(config: any) {
-		var self = this;
 		this.playing = true;
 		this.title = config.title;
 		this.speaker = config.speaker;
-		this.player.src = config.url;
+		this.player.src = config.url+'/file.mp3';
 		this.player.onprogress = function (data) {
 			console.log(['onprogress',data]);
 		}
 		this.player.oncanplay = function (data) {
 			console.log(['oncanplay',data]);
-			self.player.play();
+			//self.player.play();
 		}
 		this.player.onstalled = function (data) {
 			console.log(['onstalled',data]);
@@ -41,7 +40,7 @@ export class AudioProvider {
 		this.player.onstalled = function (data) {
 			console.log(['onstalled',data]);
 		}
-		//this.player.play();
+		this.player.play();
 	}
 
 	pause() {
