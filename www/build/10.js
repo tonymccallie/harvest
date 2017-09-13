@@ -29,7 +29,7 @@ AboutPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__about__["a" /* AboutPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about__["a" /* AboutPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about__["a" /* AboutPage */]),
         ],
     })
 ], AboutPageModule);
@@ -73,7 +73,7 @@ var AboutPage = (function () {
     return AboutPage;
 }());
 AboutPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-about',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/about/about.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>About</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\nAbout us\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/about/about.html"*/,
     }),

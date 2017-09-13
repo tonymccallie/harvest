@@ -29,7 +29,7 @@ SermonsPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__sermons__["a" /* SermonsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermons__["a" /* SermonsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermons__["a" /* SermonsPage */]),
         ],
     })
 ], SermonsPageModule);
@@ -86,7 +86,7 @@ var SermonsPage = (function () {
     return SermonsPage;
 }());
 SermonsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
         segment: 'sermons/:seriesId'
     }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({

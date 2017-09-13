@@ -156,9 +156,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AudioProvider = (function () {
-    function AudioProvider(http, loadingCtrl) {
+    function AudioProvider(http, alertCtrl) {
         this.http = http;
-        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
         this.playing = false;
         this.loading = true;
         this.current = 0;
@@ -167,9 +167,6 @@ var AudioProvider = (function () {
         this.title = '';
         this.speaker = '';
         var self = this;
-        this.loader = this.loadingCtrl.create({
-            content: "Loading media..."
-        });
         this.player = new Audio();
         this.player.ontimeupdate = function (player) {
             self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
@@ -184,7 +181,7 @@ var AudioProvider = (function () {
             //self.player.play();
         };
         this.player.oncanplaythrough = function (data) {
-            self.loading = true;
+            self.loading = false;
             console.log(['oncanplaythrough', data]);
         };
         this.player.onstalled = function (data) {
@@ -194,6 +191,15 @@ var AudioProvider = (function () {
             console.log(['onabort', data]);
         };
         this.player.onerror = function (data) {
+            var alert = self.alertCtrl.create({
+                title: 'Oh no!',
+                subTitle: 'There was an error trying to load the audio file. You might try again later or listen to a different one.',
+                buttons: ['Ok']
+            });
+            alert.present();
+            self.playing = false;
+            self.loading = true;
+            self.title = '';
             console.log(['onerror', data]);
         };
         this.player.onloadstart = function (data) {
@@ -210,12 +216,12 @@ var AudioProvider = (function () {
         };
     }
     AudioProvider.prototype.play = function (config) {
-        this.loader.present();
         this.playing = true;
         this.loading = true;
         this.title = config.title;
         this.speaker = config.speaker;
         this.player.src = config.url + '/file.mp3';
+        this.player.load();
         this.player.play();
     };
     AudioProvider.prototype.pause = function () {
@@ -235,7 +241,7 @@ var AudioProvider = (function () {
 }());
 AudioProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* LoadingController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]])
 ], AudioProvider);
 
 //# sourceMappingURL=audio.js.map
@@ -300,7 +306,7 @@ AppModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], { mode: 'ios' }, {
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], { mode: 'ios' }, {
                 links: [
                     { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/article-detail/article-detail.module#ArticleDetailPageModule', name: 'ArticleDetailPage', segment: 'article/:articleId', priority: 'low', defaultHistory: [] },
@@ -316,14 +322,14 @@ AppModule = __decorate([
                 ]
             })
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* IonicApp */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicErrorHandler */] },
+            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
             __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
             __WEBPACK_IMPORTED_MODULE_8__providers_greyback_greyback__["a" /* GreybackProvider */],
             __WEBPACK_IMPORTED_MODULE_9__providers_audio_audio__["a" /* AudioProvider */]

@@ -29,7 +29,7 @@ ArticleDetailPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */]),
         ],
     })
 ], ArticleDetailPageModule);
@@ -73,7 +73,7 @@ var ArticleDetailPage = (function () {
     return ArticleDetailPage;
 }());
 ArticleDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])({
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
         segment: 'article/:articleId'
     }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({

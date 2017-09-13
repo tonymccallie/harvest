@@ -29,7 +29,7 @@ SermonPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */]),
         ],
     })
 ], SermonPageModule);
@@ -87,7 +87,7 @@ var SermonPage = (function () {
     return SermonPage;
 }());
 SermonPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-sermon',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/sermon/sermon.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Sermon</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{sermon.title}}\n	</ion-toolbar>\n	<ion-list>\n		<button ion-item (click)="playAudio(sermon)">\n			Play MP3\n		</button>\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/sermon/sermon.html"*/,
     }),

@@ -29,7 +29,7 @@ TabsPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
         ],
     })
 ], TabsPageModule);
@@ -73,7 +73,7 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-tabs',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/tabs/tabs.html"*/'<ion-tabs [selectedIndex]="myIndex" no-border color="primary">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="threeleaf-home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Sermons" tabIcon="threeleaf-sermons"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Events" tabIcon="threeleaf-events"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Stories" tabIcon="threeleaf-stories"></ion-tab>\n  <ion-tab [root]="tab5Root" tabTitle="Resources" tabIcon="threeleaf-resources"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/tabs/tabs.html"*/,
     }),

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { LoadingController } from 'ionic-angular';
+
+import { AlertController } from 'ionic-angular';
 
 @Injectable()
 export class AudioProvider {
@@ -13,13 +14,9 @@ export class AudioProvider {
 	percentage: number = 0;
 	title: string = '';
 	speaker: string = '';
-	loader: any;
 
-	constructor(public http: Http, public loadingCtrl: LoadingController) {
+	constructor(public http: Http, public alertCtrl: AlertController) {
 		var self = this;
-		this.loader = this.loadingCtrl.create({
-			content: "Loading media..."
-		});
 		this.player = new Audio();
 		this.player.ontimeupdate = function (player) {
 			self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
@@ -34,7 +31,7 @@ export class AudioProvider {
 			//self.player.play();
 		}
 		this.player.oncanplaythrough = function (data) {
-			self.loading = true;
+			self.loading = false;
 			console.log(['oncanplaythrough',data]);
 		}
 		this.player.onstalled = function (data) {
@@ -44,6 +41,15 @@ export class AudioProvider {
 			console.log(['onabort',data]);
 		}
 		this.player.onerror = function (data) {
+			let alert = self.alertCtrl.create({
+				title: 'Oh no!',
+				subTitle: 'There was an error trying to load the audio file. You might try again later or listen to a different one.',
+				buttons: ['Ok']
+			});
+			alert.present();
+			self.playing = false;
+			self.loading = true;
+			self.title = '';
 			console.log(['onerror',data]);
 		}
 		this.player.onloadstart = function (data) {
@@ -61,12 +67,12 @@ export class AudioProvider {
 	}
 
 	play(config: any) {
-		this.loader.present();
 		this.playing = true;
 		this.loading = true;
 		this.title = config.title;
 		this.speaker = config.speaker;
 		this.player.src = config.url+'/file.mp3';
+		this.player.load();
 		this.player.play();
 	}
 
