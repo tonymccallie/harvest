@@ -5,6 +5,11 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+	<ion-list>
+		<button ion-item *ngFor="let story of stories; let i = index" (click)="viewStory(story)">
+			<div item-start>{{i}}</div>
+			{{story.MessageMessage.title}}
+		</button>
+	</ion-list>
 </ion-content>

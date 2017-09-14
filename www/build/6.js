@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 269:
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostDetailPageModule", function() { return PostDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post_detail__ = __webpack_require__(282);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MenuPageModule = (function () {
-    function MenuPageModule() {
+var PostDetailPageModule = (function () {
+    function PostDetailPageModule() {
     }
-    return MenuPageModule;
+    return PostDetailPageModule;
 }());
-MenuPageModule = __decorate([
+PostDetailPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
+            __WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */]),
         ],
-        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
     })
-], MenuPageModule);
+], PostDetailPageModule);
 
-//# sourceMappingURL=menu.module.js.map
+//# sourceMappingURL=post-detail.module.js.map
 
 /***/ }),
 
-/***/ 280:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,79 +58,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MenuPage = (function () {
-    function MenuPage(navCtrl, navParams, audioProvider) {
+var PostDetailPage = (function () {
+    function PostDetailPage(navCtrl, navParams, greybackProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.audioProvider = audioProvider;
-        // Basic root for our content view
-        this.rootPage = 'TabsPage';
-        this.pages = [
-            { title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'threeleaf-home' },
-            { title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'threeleaf-sermons' },
-            { title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 3, icon: 'threeleaf-events' },
-            { title: 'Stories', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 2, icon: 'threeleaf-stories' },
-            { title: 'Resources', pageName: 'TabsPage', tabComponent: 'ResourcesPage', index: 4, icon: 'threeleaf-resources' },
-            { title: 'About', pageName: 'AboutPage', icon: 'shuffle' },
-        ];
-        this.player = audioProvider;
+        this.greybackProvider = greybackProvider;
+        console.log('constructor PostDetailPage');
+        this.post = this.navParams.get('post');
+        this.rootUrl = greybackProvider.rootUrl;
     }
-    MenuPage.prototype.openPage = function (page) {
-        var params = {};
-        // The index is equal to the order of our tabs inside tabs.ts
-        if (page.index) {
-            params = { tabIndex: page.index };
-        }
-        console.log([this.nav.getActiveChildNavs()[0], this.nav.getActiveChildNavs()]);
-        // The active child nav is our Tabs Navigation
-        if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
-            this.nav.getActiveChildNavs()[0].select(page.index);
-        }
-        else {
-            // Tabs are not active, so reset the root page 
-            // In this case: moving to or from SpecialPage
-            this.nav.setRoot(page.pageName, params);
-        }
+    PostDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PostDetailPage');
     };
-    MenuPage.prototype.isActive = function (page) {
-        // Again the Tabs Navigation
-        var childNav = this.nav.getActiveChildNavs()[0];
-        if (childNav) {
-            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
-                return 'primary';
-            }
-            return;
-        }
-        // Fallback needed when there is no active childnav (tabs not active)
-        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
-            return 'primary';
-        }
-        return;
-    };
-    MenuPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MenuPage');
-    };
-    MenuPage.prototype.pause = function () {
-        this.audioProvider.pause();
-    };
-    MenuPage.prototype.scrub = function (percent) {
-        this.audioProvider.scrub(percent);
-    };
-    return MenuPage;
+    return PostDetailPage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
-], MenuPage.prototype, "nav", void 0);
-MenuPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-menu',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/'<!-- <ion-split-pane> -->\n<ion-menu [content]="content" side="right" type="reveal" persistent="true">\n	<ion-header no-border>\n		<ion-toolbar color="primary">\n			<ion-title *ngIf="!player.title">Menu</ion-title>\n			<ion-title *ngIf="player.title">\n				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>\n		</ion-toolbar>\n	</ion-header>\n\n	<ion-content>\n		<ion-list>\n			<div *ngIf="player.title">\n				<ion-item (click)="pause()">\n					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>\n					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>\n					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>\n					{{player.title}}<br />{{player.speaker}}\n				</ion-item>\n				<ion-item>\n					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">\n						<ion-label range-left>{{player.current | date:\'mm:ss\' }}</ion-label>\n						<ion-label range-right>{{player.duration | date:\'mm:ss\' }}</ion-label>\n					</ion-range>\n				</ion-item>\n\n				<ion-list-header color="primary">Menu</ion-list-header>\n			</div>\n			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n				{{ p.title }}\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n<!-- main navigation -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n<!-- </ion-split-pane> -->'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/,
+PostDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
+        segment: 'post/:postId'
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]])
-], MenuPage);
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-post-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Community Feed</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{post.CommunityPost.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="post.CommunityPost.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
+], PostDetailPage);
 
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=post-detail.js.map
 
 /***/ })
 

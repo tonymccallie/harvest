@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 268:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(281);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = (function () {
-    function HomePageModule() {
+var MenuPageModule = (function () {
+    function MenuPageModule() {
     }
-    return HomePageModule;
+    return MenuPageModule;
 }());
-HomePageModule = __decorate([
+MenuPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
         ],
+        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
     })
-], HomePageModule);
+], MenuPageModule);
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=menu.module.js.map
 
 /***/ }),
 
-/***/ 279:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,70 +59,79 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, navParams, greybackProvider) {
+var MenuPage = (function () {
+    function MenuPage(navCtrl, navParams, audioProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.greybackProvider = greybackProvider;
-        this.rootUrl = greybackProvider.rootUrl;
-        console.log('contructor HomePage');
+        this.audioProvider = audioProvider;
+        // Basic root for our content view
+        this.rootPage = 'TabsPage';
+        this.pages = [
+            { title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'threeleaf-home' },
+            { title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'threeleaf-sermons' },
+            { title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 3, icon: 'threeleaf-events' },
+            { title: 'Stories', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 2, icon: 'threeleaf-stories' },
+            { title: 'Resources', pageName: 'TabsPage', tabComponent: 'ResourcesPage', index: 4, icon: 'threeleaf-resources' },
+            { title: 'About', pageName: 'AboutPage', icon: 'shuffle' },
+        ];
+        this.player = audioProvider;
     }
-    HomePage.prototype.ionViewDidLoad = function () {
-        //fired if not cached
-        console.log('ionViewDidLoad HomePage');
+    MenuPage.prototype.openPage = function (page) {
+        var params = {};
+        // The index is equal to the order of our tabs inside tabs.ts
+        if (page.index) {
+            params = { tabIndex: page.index };
+        }
+        console.log([this.nav.getActiveChildNavs()[0], this.nav.getActiveChildNavs()]);
+        // The active child nav is our Tabs Navigation
+        if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
+            this.nav.getActiveChildNavs()[0].select(page.index);
+        }
+        else {
+            // Tabs are not active, so reset the root page 
+            // In this case: moving to or from SpecialPage
+            this.nav.setRoot(page.pageName, params);
+        }
     };
-    HomePage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        //fired every time
-        console.log('ionViewWillEnter HomePage');
-        this.greybackProvider.getNews().subscribe(function (news) {
-            _this.news = news.data;
-        });
+    MenuPage.prototype.isActive = function (page) {
+        // Again the Tabs Navigation
+        var childNav = this.nav.getActiveChildNavs()[0];
+        if (childNav) {
+            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+                return 'primary';
+            }
+            return;
+        }
+        // Fallback needed when there is no active childnav (tabs not active)
+        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
+            return 'primary';
+        }
+        return;
     };
-    HomePage.prototype.ionViewDidEnter = function () {
-        //fired every time
-        console.log('ionViewDidEnter HomePage');
+    MenuPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MenuPage');
     };
-    HomePage.prototype.viewArticle = function (article) {
-        this.navCtrl.push('ArticleDetailPage', {
-            article: article,
-            articleId: article.NewsArticle.id
-        });
+    MenuPage.prototype.pause = function () {
+        this.audioProvider.pause();
     };
-    HomePage.prototype.doRefresh = function (refresher) {
-        console.log('doRefresh');
-        setTimeout(function () {
-            console.log('Async operation has ended');
-            refresher.complete();
-        }, 2000);
+    MenuPage.prototype.scrub = function (percent) {
+        this.audioProvider.scrub(percent);
     };
-    HomePage.prototype.doInfinite = function (infiniteScroll) {
-        console.log('Begin async operation');
-        // setTimeout(() => {
-        // 	for (let i = 0; i < 30; i++) {
-        // 		this.news.push({title:'test',body:'test'});
-        // 	}
-        // 	console.log('Async operation has ended');
-        // 	infiniteScroll.complete();
-        // }, 500);
-    };
-    return HomePage;
+    return MenuPage;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */])
-], HomePage.prototype, "slides", void 0);
-HomePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
+], MenuPage.prototype, "nav", void 0);
+MenuPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/home/home.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center><img src="assets/logo.png" class="logo"></ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n	<ion-slides autoplay="5000" loop="true" *ngIf="news && news.length">\n		<ion-slide *ngFor="let article of news">\n			<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto/greyscale:true" />\n		</ion-slide>\n	</ion-slides>\n	<ion-toolbar color="primary">\n		Community Feed\n	</ion-toolbar>\n	<ion-refresher (ionRefresh)="doRefresh($event)">\n		<ion-refresher-content></ion-refresher-content>\n	</ion-refresher>\n	<div class="ion-card" *ngFor="let article of news" (click)="viewArticle(article)">\n		<!-- <img src="https://unsplash.it/500/300?random&{{i}}"> -->\n		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />\n		<div class="card-title">\n			{{article.NewsArticle.title}}\n		</div>\n	</div>\n	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n		<ion-infinite-scroll-content></ion-infinite-scroll-content>\n	</ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/home/home.html"*/,
+        selector: 'page-menu',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/'<!-- <ion-split-pane> -->\n<ion-menu [content]="content" side="right" type="reveal" persistent="true">\n	<ion-header no-border>\n		<ion-toolbar color="primary">\n			<ion-title *ngIf="!player.title">Menu</ion-title>\n			<ion-title *ngIf="player.title">\n				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>\n		</ion-toolbar>\n	</ion-header>\n\n	<ion-content>\n		<ion-list>\n			<div *ngIf="player.title">\n				<ion-item (click)="pause()">\n					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>\n					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>\n					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>\n					{{player.title}}<br />{{player.speaker}}\n				</ion-item>\n				<ion-item>\n					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">\n						<ion-label range-left>{{player.current | date:\'mm:ss\' }}</ion-label>\n						<ion-label range-right>{{player.duration | date:\'mm:ss\' }}</ion-label>\n					</ion-range>\n				</ion-item>\n\n				<ion-list-header color="primary">Menu</ion-list-header>\n			</div>\n			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n				{{ p.title }}\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n<!-- main navigation -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n<!-- </ion-split-pane> -->'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
-], HomePage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]])
+], MenuPage);
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=menu.js.map
 
 /***/ })
 

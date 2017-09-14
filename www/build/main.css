@@ -3901,6 +3901,12 @@ ion-icon::before {
   content: "oR";
 }
 
+.ion-ios-threeleaf-times:before,
+.ion-ios-threeleaf-times-outline:before {
+  font-family: 'Threeleaf';
+  content: "oR";
+}
+
 .ion-ios-threeleaf-pause:before,
 .ion-ios-threeleaf-pause-outline:before {
   font-family: 'Threeleaf';
@@ -3911,6 +3917,18 @@ ion-icon::before {
 .ion-ios-threeleaf-play-outline:before {
   font-family: 'Threeleaf';
   content: "oP";
+}
+
+.ion-ios-threeleaf-listen:before,
+.ion-ios-threeleaf-listen-outline:before {
+  font-family: 'Threeleaf';
+  content: "L";
+}
+
+.ion-ios-threeleaf-watch:before,
+.ion-ios-threeleaf-watch-outline:before {
+  font-family: 'Threeleaf';
+  content: "d";
 }
 
 .ion-ios-refresh {
@@ -19646,9 +19664,9 @@ ion-spinner.spinner-paused svg {
 .tabs-ios .tab-button-icon {
   margin-top: 4px;
   margin-bottom: 1px;
-  min-width: 65px;
-  height: 60px;
-  font-size: 60px;
+  min-width: 45px;
+  height: 40px;
+  font-size: 40px;
   color: #8c8c8c;
 }
 
@@ -28383,6 +28401,10 @@ ion-navbar {
   height: 60px;
 }
 
+ion-toolbar {
+  margin-top: -5px;
+}
+
 .tab-button-text {
   text-transform: uppercase;
   height: 20px;
@@ -28391,10 +28413,6 @@ ion-navbar {
 
 page-home ion-slides {
   height: auto;
-}
-
-page-home ion-toolbar {
-  margin-top: -5px;
 }
 
 page-home .card-background-page .ion-card {

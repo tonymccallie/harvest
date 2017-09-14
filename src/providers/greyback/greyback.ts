@@ -14,6 +14,10 @@ export class GreybackProvider {
 		return this.http.get(this.rootUrl+'/ajax/plugin/news/news_articles/json/limit:4/category:3').map(result => result.json());
 	}
 
+	getCommunity() {
+		return this.http.get(this.rootUrl+'/ajax/plugin/community/community_posts/latest/department:1').map(result => result.json());
+	}
+
 	getSeries() {
 		return this.http.get(this.rootUrl+'/ajax/plugin/message/message_series/json/category:1').map(result => result.json());
 	}
@@ -24,6 +28,10 @@ export class GreybackProvider {
 
 	getLatestSermon() {
 		return this.http.get(this.rootUrl+'/ajax/plugin/message/message_messages/json/limit:1/category:1').map(result => result.json());
+	}
+
+	getEvents() {
+		return this.http.get(this.rootUrl+'/ajax/plugin/news/news_articles/json/limit:10/category:1').map(result => result.json());
 	}
 
 }

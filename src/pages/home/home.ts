@@ -17,6 +17,7 @@ export interface Article {
 })
 export class HomePage {
 	news: any[];
+	posts: any[];
 	rootUrl: string;
 
 	@ViewChild(Slides) slides: Slides;
@@ -37,6 +38,9 @@ export class HomePage {
 		this.greybackProvider.getNews().subscribe(news => {
 			this.news = news.data;
 		});
+		this.greybackProvider.getCommunity().subscribe(posts => {
+			this.posts = posts.data;
+		});
 	}
 
 	ionViewDidEnter() {
@@ -48,6 +52,13 @@ export class HomePage {
 		this.navCtrl.push('ArticleDetailPage', {
 			article: article,
 			articleId: article.NewsArticle.id
+		});
+	}
+
+	viewPost(post) {
+		this.navCtrl.push('PostDetailPage', {
+			post: post,
+			postId: post.CommunityPost.id
 		});
 	}
 

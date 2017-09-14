@@ -8,11 +8,10 @@
 <ion-content>
 	<img src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
 	<ion-toolbar color="primary">
-		{{sermon.title}}
+		{{sermon.MessageMessage.title}}
 	</ion-toolbar>
-	<ion-list>
-		<button ion-item (click)="playAudio(sermon)">
-			Play MP3
-		</button>
-	</ion-list>
+	<div padding>
+		<button ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>
+		<button ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button>
+	</div>
 </ion-content>

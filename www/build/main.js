@@ -1,4 +1,4 @@
-webpackJsonp([11],{
+webpackJsonp([12],{
 
 /***/ 108:
 /***/ (function(module, exports) {
@@ -23,47 +23,55 @@ webpackEmptyAsyncContext.id = 108;
 var map = {
 	"../pages/about/about.module": [
 		265,
-		10
+		26
 	],
 	"../pages/article-detail/article-detail.module": [
 		266,
-		9
+		25
+	],
+	"../pages/event-detail/event-detail.module": [
+		289,
+		24
 	],
 	"../pages/events/events.module": [
 		267,
-		8
+		23
 	],
 	"../pages/home/home.module": [
 		268,
-		7
+		22
 	],
 	"../pages/menu/menu.module": [
 		269,
-		6
+		21
+	],
+	"../pages/post-detail/post-detail.module": [
+		270,
+		20
 	],
 	"../pages/resources/resources.module": [
-		270,
-		5
+		271,
+		19
 	],
 	"../pages/series/series.module": [
-		271,
-		4
+		272,
+		18
 	],
 	"../pages/sermon/sermon.module": [
-		272,
-		3
+		273,
+		17
 	],
 	"../pages/sermons/sermons.module": [
-		273,
-		2
+		274,
+		16
 	],
 	"../pages/stories/stories.module": [
-		274,
-		1
+		275,
+		15
 	],
 	"../pages/tabs/tabs.module": [
-		275,
-		0
+		276,
+		14
 	]
 };
 function webpackAsyncContext(req) {
@@ -112,6 +120,9 @@ var GreybackProvider = (function () {
     GreybackProvider.prototype.getNews = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:3').map(function (result) { return result.json(); });
     };
+    GreybackProvider.prototype.getCommunity = function () {
+        return this.http.get(this.rootUrl + '/ajax/plugin/community/community_posts/latest/department:1').map(function (result) { return result.json(); });
+    };
     GreybackProvider.prototype.getSeries = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/message/message_series/json/category:1').map(function (result) { return result.json(); });
     };
@@ -120,6 +131,9 @@ var GreybackProvider = (function () {
     };
     GreybackProvider.prototype.getLatestSermon = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/message/message_messages/json/limit:1/category:1').map(function (result) { return result.json(); });
+    };
+    GreybackProvider.prototype.getEvents = function () {
+        return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:1').map(function (result) { return result.json(); });
     };
     return GreybackProvider;
 }());
@@ -313,12 +327,14 @@ AppModule = __decorate([
                     { loadChildren: '../pages/events/events.module#EventsPageModule', name: 'EventsPage', segment: 'events', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/post-detail/post-detail.module#PostDetailPageModule', name: 'PostDetailPage', segment: 'post/:postId', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/resources/resources.module#ResourcesPageModule', name: 'ResourcesPage', segment: 'resources', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/series/series.module#SeriesPageModule', name: 'SeriesPage', segment: 'series', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sermon/sermon.module#SermonPageModule', name: 'SermonPage', segment: 'sermon', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sermons/sermons.module#SermonsPageModule', name: 'SermonsPage', segment: 'sermons/:seriesId', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/stories/stories.module#StoriesPageModule', name: 'StoriesPage', segment: 'stories', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/event-detail/event-detail.module#EventDetailPageModule', name: 'EventDetailPage', segment: 'event/:eventId', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],

@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the StoriesPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { GreybackProvider } from '../../providers/greyback/greyback';
 
 @IonicPage()
 @Component({
-  selector: 'page-stories',
-  templateUrl: 'stories.html',
+	selector: 'page-stories',
+	templateUrl: 'stories.html',
 })
 export class StoriesPage {
+	stories: any[];
+	rootUrl: string;
+	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
+		this.greybackProvider.getSeriesById(52).subscribe(stories => {
+			this.stories = stories.data;
+		});
+	}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StoriesPage');
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad StoriesPage');
+	}
 
 }

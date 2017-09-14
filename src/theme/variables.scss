@@ -15,7 +15,7 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 $font-family-base: LatoRegular;
-$tabs-ios-tab-icon-size: 60px;
+$tabs-ios-tab-icon-size: 40px;
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -146,6 +146,14 @@ $tabs-ios-tab-text-color: $text-color;
 	}
 }
 
+.ion-ios-threeleaf-times,
+.ion-ios-threeleaf-times-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "oR";
+	}
+}
+
 .ion-ios-threeleaf-pause,
 .ion-ios-threeleaf-pause-outline {
 	&:before {
@@ -159,6 +167,22 @@ $tabs-ios-tab-text-color: $text-color;
 	&:before {
 		font-family: 'Threeleaf';
 		content: "oP";
+	}
+}
+
+.ion-ios-threeleaf-listen,
+.ion-ios-threeleaf-listen-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "L";
+	}
+}
+
+.ion-ios-threeleaf-watch,
+.ion-ios-threeleaf-watch-outline {
+	&:before {
+		font-family: 'Threeleaf';
+		content: "d";
 	}
 }
 
