@@ -6,7 +6,10 @@
 </ion-header>
 
 <ion-content>
-	<img src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<div *ngIf="source">
+		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>
+	</div>
 	<ion-toolbar color="primary">
 		{{sermon.MessageMessage.title}}
 	</ion-toolbar>

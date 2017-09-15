@@ -14,12 +14,16 @@ export class SermonPage {
 	sermon: any;
 	rootUrl: string;
 	player: any;
+	source: string;
+	poster: string;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider, public audioProvider: AudioProvider, public menuCtrl: MenuController) {
 		this.sermon = this.navParams.get('sermon');
 		this.series = this.navParams.get('series');
 		this.rootUrl = greybackProvider.rootUrl;
 		this.player = audioProvider;
+		this.source = this.rootUrl + '/play/vid/' + this.sermon.MediaVideo.id + '/vid.mp4';
+		this.poster = this.rootUrl + '/img/thumb/' + this.sermon.MediaVideo.preview + '/width:854/height:480/crop:true/zoom:auto/image.jpg';
 	}
 
 	ionViewDidLoad() {
