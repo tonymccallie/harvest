@@ -10,7 +10,7 @@
 		<img src="assets/loading_media.png" />
 	</div>
 	<div *ngFor="let recent of latest">
-		<img src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+		<img src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">
 	</div>
 	<ion-toolbar color="primary">
 		Latest Series

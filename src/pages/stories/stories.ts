@@ -9,6 +9,7 @@ import { GreybackProvider } from '../../providers/greyback/greyback';
 })
 export class StoriesPage {
 	stories: any[];
+	player: any = null;
 	rootUrl: string;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		this.greybackProvider.getSeriesById(52).subscribe(stories => {
@@ -20,4 +21,12 @@ export class StoriesPage {
 		console.log('ionViewDidLoad StoriesPage');
 	}
 
+	viewStory(story) {
+		console.log(story);
+		// this.navCtrl.push('SermonPage', {
+		// 	series: this.series,
+		// 	sermon: sermon,
+		// 	sermonId: sermon.id
+		// });
+	}
 }

@@ -30,7 +30,9 @@
         "@ionic-native/status-bar": "3.12.1",
         "@ionic/storage": "2.0.1",
         "audio-context-polyfill": "^1.0.0",
+        "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
+        "cordova-plugin-audioplayer": "https://github.com/AubreyHewes/cordova-background-audio.git#1.1.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
@@ -44,6 +46,7 @@
         "ionic-audio": "^3.2.0",
         "ionic-plugin-keyboard": "^2.2.1",
         "ionicons": "3.0.0",
+        "nl.kingsquare.cordova.background-audio": "git+https://github.com/AubreyHewes/cordova-background-audio.git#1.1.0",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
@@ -63,9 +66,12 @@
             "ionic-plugin-keyboard": {},
             "cordova-plugin-media": {
                 "MICROPHONE_USAGE_DESCRIPTION": " "
-            }
+            },
+            "cordova-plugin-audioplayer": {},
+            "nl.kingsquare.cordova.background-audio": {}
         },
         "platforms": [
+            "android",
             "ios"
         ]
     }

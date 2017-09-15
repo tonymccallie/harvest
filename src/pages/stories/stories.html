@@ -6,6 +6,15 @@
 </ion-header>
 
 <ion-content>
+	<div *ngIf="!player">
+		<img src="assets/loading_media.png" />
+	</div>
+	<video *ngIf="player">
+
+	</video>
+	<ion-toolbar color="primary">
+		Latest Series
+	</ion-toolbar>
 	<ion-list>
 		<button ion-item *ngFor="let story of stories; let i = index" (click)="viewStory(story)">
 			<div item-start>{{i+1}}</div>
