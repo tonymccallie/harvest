@@ -6,12 +6,12 @@
 </ion-header>
 
 <ion-content>
-	<div *ngIf="!player">
+	<div *ngIf="!topStory">
 		<img src="assets/loading_media.png" />
 	</div>
-	<video *ngIf="player">
-
-	</video>
+	<div *ngIf="topStory">
+			<video *ngIf="topStory.MediaVideo.id" src="{{rootUrl}}/play/vid/{{topStory.MediaVideo.id}}"></video>
+	</div>
 	<ion-toolbar color="primary">
 		Latest Series
 	</ion-toolbar>

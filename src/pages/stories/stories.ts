@@ -9,11 +9,13 @@ import { GreybackProvider } from '../../providers/greyback/greyback';
 })
 export class StoriesPage {
 	stories: any[];
+	topStory: any;
 	player: any = null;
 	rootUrl: string;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		this.greybackProvider.getSeriesById(52).subscribe(stories => {
 			this.stories = stories.data;
+			this.topStory = stories.data[0];
 		});
 	}
 
