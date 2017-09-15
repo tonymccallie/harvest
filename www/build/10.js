@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 266:
+/***/ 267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleDetailPageModule", function() { return ArticleDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventDetailPageModule", function() { return EventDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__article_detail__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_detail__ = __webpack_require__(280);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ArticleDetailPageModule = (function () {
-    function ArticleDetailPageModule() {
+var EventDetailPageModule = (function () {
+    function EventDetailPageModule() {
     }
-    return ArticleDetailPageModule;
+    return EventDetailPageModule;
 }());
-ArticleDetailPageModule = __decorate([
+EventDetailPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]),
         ],
     })
-], ArticleDetailPageModule);
+], EventDetailPageModule);
 
-//# sourceMappingURL=article-detail.module.js.map
+//# sourceMappingURL=event-detail.module.js.map
 
 /***/ }),
 
-/***/ 278:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArticleDetailPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
@@ -58,31 +58,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ArticleDetailPage = (function () {
-    function ArticleDetailPage(navCtrl, navParams, greybackProvider) {
+var EventDetailPage = (function () {
+    function EventDetailPage(navCtrl, navParams, greybackProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
-        console.log('constructor ArticleDetailPage');
-        this.article = this.navParams.get('article');
+        console.log('constructor EventDetailPage');
+        this.event = this.navParams.get('event');
         this.rootUrl = greybackProvider.rootUrl;
     }
-    ArticleDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ArticleDetailPage');
+    EventDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EventDetailPage');
     };
-    return ArticleDetailPage;
+    return EventDetailPage;
 }());
-ArticleDetailPage = __decorate([
+EventDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
-        segment: 'article/:articleId'
+        segment: 'event/:eventId'
     }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-article-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/article-detail/article-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Latest News</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{article.NewsArticle.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="article.NewsArticle.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/article-detail/article-detail.html"*/,
+        selector: 'page-event-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/event-detail/event-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{event.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{event.NewsArticle.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="event.NewsArticle.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/event-detail/event-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
-], ArticleDetailPage);
+], EventDetailPage);
 
-//# sourceMappingURL=article-detail.js.map
+//# sourceMappingURL=event-detail.js.map
 
 /***/ })
 

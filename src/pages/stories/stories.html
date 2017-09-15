@@ -8,7 +8,7 @@
 <ion-content>
 	<ion-list>
 		<button ion-item *ngFor="let story of stories; let i = index" (click)="viewStory(story)">
-			<div item-start>{{i}}</div>
+			<div item-start>{{i+1}}</div>
 			{{story.MessageMessage.title}}
 		</button>
 	</ion-list>

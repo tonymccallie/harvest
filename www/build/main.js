@@ -1,4 +1,4 @@
-webpackJsonp([12],{
+webpackJsonp([13],{
 
 /***/ 108:
 /***/ (function(module, exports) {
@@ -23,55 +23,55 @@ webpackEmptyAsyncContext.id = 108;
 var map = {
 	"../pages/about/about.module": [
 		265,
-		26
+		12
 	],
 	"../pages/article-detail/article-detail.module": [
 		266,
-		25
+		11
 	],
 	"../pages/event-detail/event-detail.module": [
-		289,
-		24
+		267,
+		10
 	],
 	"../pages/events/events.module": [
-		267,
-		23
+		268,
+		9
 	],
 	"../pages/home/home.module": [
-		268,
-		22
+		269,
+		8
 	],
 	"../pages/menu/menu.module": [
-		269,
-		21
+		270,
+		7
 	],
 	"../pages/post-detail/post-detail.module": [
-		270,
-		20
+		271,
+		6
 	],
 	"../pages/resources/resources.module": [
-		271,
-		19
+		272,
+		5
 	],
 	"../pages/series/series.module": [
-		272,
-		18
+		273,
+		4
 	],
 	"../pages/sermon/sermon.module": [
-		273,
-		17
+		274,
+		3
 	],
 	"../pages/sermons/sermons.module": [
-		274,
-		16
+		275,
+		2
 	],
 	"../pages/stories/stories.module": [
-		275,
-		15
+		276,
+		1
 	],
 	"../pages/tabs/tabs.module": [
-		276,
-		14
+		277,
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -324,6 +324,7 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/article-detail/article-detail.module#ArticleDetailPageModule', name: 'ArticleDetailPage', segment: 'article/:articleId', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/event-detail/event-detail.module#EventDetailPageModule', name: 'EventDetailPage', segment: 'event/:eventId', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/events/events.module#EventsPageModule', name: 'EventsPage', segment: 'events', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
@@ -333,8 +334,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/sermon/sermon.module#SermonPageModule', name: 'SermonPage', segment: 'sermon', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sermons/sermons.module#SermonsPageModule', name: 'SermonsPage', segment: 'sermons/:seriesId', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/stories/stories.module#StoriesPageModule', name: 'StoriesPage', segment: 'stories', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/event-detail/event-detail.module#EventDetailPageModule', name: 'EventDetailPage', segment: 'event/:eventId', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
