@@ -11,8 +11,8 @@
 		{{series.title}}
 	</ion-toolbar>
 	<ion-list>
-		<button ion-item *ngFor="let sermon of sermons; let i = index" (click)="viewSermon(sermon)">
-			<div item-start>{{i}}</div>
+		<button ion-item *ngFor="let sermon of sermons" (click)="viewSermon(sermon)">
+			<div item-start>{{sermon.MessageMessage.start | date:'M/dd'}}</div>
 			{{sermon.MessageMessage.title}}
 		</button>
 	</ion-list>

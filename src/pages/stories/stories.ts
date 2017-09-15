@@ -10,13 +10,15 @@ import { GreybackProvider } from '../../providers/greyback/greyback';
 export class StoriesPage {
 	stories: any[];
 	topStory: any;
-	player: any = null;
 	rootUrl: string;
+	source: string;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		this.greybackProvider.getSeriesById(52).subscribe(stories => {
 			this.stories = stories.data;
 			this.topStory = stories.data[0];
+			this.source = this.rootUrl + '/play/vid/' + this.topStory.MediaVideo.id + '/vid.mp4';
 		});
+		this.rootUrl = greybackProvider.rootUrl;
 	}
 
 	ionViewDidLoad() {
@@ -24,11 +26,6 @@ export class StoriesPage {
 	}
 
 	viewStory(story) {
-		console.log(story);
-		// this.navCtrl.push('SermonPage', {
-		// 	series: this.series,
-		// 	sermon: sermon,
-		// 	sermonId: sermon.id
-		// });
+		this.source = this.rootUrl + '/play/vid/' + story.MediaVideo.id + '/vid.mp4';
 	}
 }

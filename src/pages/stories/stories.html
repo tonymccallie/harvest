@@ -10,7 +10,7 @@
 		<img src="assets/loading_media.png" />
 	</div>
 	<div *ngIf="topStory">
-			<video *ngIf="topStory.MediaVideo.id" src="{{rootUrl}}/play/vid/{{topStory.MediaVideo.id}}"></video>
+		<video [src]="source" controls style="width: 100%;"></video>
 	</div>
 	<ion-toolbar color="primary">
 		Latest Series
