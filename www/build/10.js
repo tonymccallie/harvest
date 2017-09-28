@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 267:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventDetailPageModule", function() { return EventDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_detail__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(293);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EventDetailPageModule = (function () {
-    function EventDetailPageModule() {
+var MenuPageModule = (function () {
+    function MenuPageModule() {
     }
-    return EventDetailPageModule;
+    return MenuPageModule;
 }());
-EventDetailPageModule = __decorate([
+MenuPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
         ],
+        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
     })
-], EventDetailPageModule);
+], MenuPageModule);
 
-//# sourceMappingURL=event-detail.module.js.map
+//# sourceMappingURL=menu.module.js.map
 
 /***/ }),
 
-/***/ 280:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,31 +59,88 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EventDetailPage = (function () {
-    function EventDetailPage(navCtrl, navParams, greybackProvider) {
+var MenuPage = (function () {
+    function MenuPage(navCtrl, navParams, audioProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.greybackProvider = greybackProvider;
-        console.log('constructor EventDetailPage');
-        this.event = this.navParams.get('event');
-        this.rootUrl = greybackProvider.rootUrl;
+        this.audioProvider = audioProvider;
+        // Basic root for our content view
+        this.rootPage = 'TabsPage';
+        this.pages = [
+            { title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'ios-home-outline' },
+            { title: 'Jesus', pageName: 'JesusPage', icon: 'ios-heart-outline' },
+            { title: 'About', pageName: 'AboutPage', icon: 'ios-information-circle-outline' },
+            { title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'ios-headset-outline' },
+            { title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 2, icon: 'ios-calendar-outline' },
+            { title: 'Giving', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 3, icon: 'ios-cash-outline' },
+            { title: 'Service Times', pageName: 'TabsPage', tabComponent: 'TimesPage', index: 4, icon: 'ios-time-outline' },
+            { title: 'Staff', pageName: 'StaffPage', icon: 'ios-contact-outline' },
+            { title: 'Location', pageName: 'LocationPage', icon: 'ios-pin-outline' },
+            { title: 'Prayer', pageName: 'PrayerPage', icon: 'ios-chatboxes-outline' },
+            { title: 'Credits', pageName: 'CreditsPage', icon: 'ios-ribbon-outline' },
+        ];
+        this.player = audioProvider;
     }
-    EventDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EventDetailPage');
+    MenuPage.prototype.openPage = function (page) {
+        var params = {};
+        // The index is equal to the order of our tabs inside tabs.ts
+        if (page.index) {
+            params = { tabIndex: page.index };
+        }
+        // The active child nav is our Tabs Navigation
+        if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
+            this.nav.getActiveChildNavs()[0].select(page.index);
+        }
+        else {
+            // Tabs are not active, so reset the root page 
+            // In this case: moving to or from SpecialPage
+            //this.nav.setRoot(page.pageName, params);
+            //this.nav.getActiveChildNavs()[0].select(5);
+            //this.nav.getActiveChildNavs()[0].getByIndex(5).push(page.pageName);
+            this.nav.getActiveChildNavs()[0].getSelected().push(page.pageName);
+            //this.nav.push(page.pageName);
+        }
     };
-    return EventDetailPage;
+    MenuPage.prototype.isActive = function (page) {
+        // Again the Tabs Navigation
+        var childNav = this.nav.getActiveChildNavs()[0];
+        if (childNav) {
+            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+                return 'primary';
+            }
+            return;
+        }
+        // Fallback needed when there is no active childnav (tabs not active)
+        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
+            return 'primary';
+        }
+        return;
+    };
+    MenuPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MenuPage');
+    };
+    MenuPage.prototype.pause = function () {
+        this.audioProvider.pause();
+    };
+    MenuPage.prototype.scrub = function (percent) {
+        this.audioProvider.scrub(percent);
+    };
+    return MenuPage;
 }());
-EventDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
-        segment: 'event/:eventId'
-    }),
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]) === "function" && _a || Object)
+], MenuPage.prototype, "nav", void 0);
+MenuPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-event-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/event-detail/event-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{event.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{event.NewsArticle.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="event.NewsArticle.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/event-detail/event-detail.html"*/,
+        selector: 'page-menu',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/'<!-- <ion-split-pane> -->\n<ion-menu [content]="content" side="right" type="reveal" persistent="true">\n	<ion-header no-border>\n		<ion-toolbar color="primary">\n			<ion-title *ngIf="!player.title">Menu</ion-title>\n			<ion-title *ngIf="player.title">\n				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>\n		</ion-toolbar>\n	</ion-header>\n\n	<ion-content>\n		<ion-list>\n			<div *ngIf="player.title">\n				<ion-item (click)="pause()">\n					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>\n					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>\n					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>\n					{{player.title}}<br />{{player.speaker}}\n				</ion-item>\n				<ion-item>\n					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">\n						<ion-label range-left>{{player.current | date:\'mm:ss\' }}</ion-label>\n						<ion-label range-right>{{player.duration | date:\'mm:ss\' }}</ion-label>\n					</ion-range>\n				</ion-item>\n\n				<ion-list-header color="primary">Menu</ion-list-header>\n			</div>\n			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n				{{ p.title }}\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n<!-- main navigation -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n<!-- </ion-split-pane> -->'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
-], EventDetailPage);
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]) === "function" && _d || Object])
+], MenuPage);
 
-//# sourceMappingURL=event-detail.js.map
+var _a, _b, _c, _d;
+//# sourceMappingURL=menu.js.map
 
 /***/ })
 

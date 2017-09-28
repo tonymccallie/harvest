@@ -10,9 +10,10 @@ export class TabsPage {
 
 	tab1Root: any = 'HomePage';
 	tab2Root: any = 'SeriesPage';
-	tab3Root: any = 'StoriesPage';
-	tab4Root: any = 'EventsPage';
-	tab5Root: any = 'ResourcesPage';
+	tab3Root: any = 'EventsPage';
+	tab4Root: any = 'TimesPage';
+	tab5Root: any = 'AboutPage';
+
 	myIndex: number;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -21,6 +22,10 @@ export class TabsPage {
 
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad TabsPage');
+	}
+
+	giving() {
+		console.log('giving');
 	}
 
 }

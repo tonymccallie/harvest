@@ -22,6 +22,15 @@ ion-toolbar {
 	text-transform: uppercase;
 }
 
+ion-title {
+	text-transform: uppercase;
+}
+
+.toolbar-ios-primary .toolbar-background-ios,
+.tabs-ios-primary .tabbar {
+	background-image: url(../assets/img/blue.jpg);
+}
+
 // ion-navbar.toolbar {
 // 	height: 60px;
 // }

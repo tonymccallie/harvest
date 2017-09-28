@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 270:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResourcesPageModule", function() { return ResourcesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resources__ = __webpack_require__(296);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MenuPageModule = (function () {
-    function MenuPageModule() {
+var ResourcesPageModule = (function () {
+    function ResourcesPageModule() {
     }
-    return MenuPageModule;
+    return ResourcesPageModule;
 }());
-MenuPageModule = __decorate([
+ResourcesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
+            __WEBPACK_IMPORTED_MODULE_2__resources__["a" /* ResourcesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__resources__["a" /* ResourcesPage */]),
         ],
-        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
     })
-], MenuPageModule);
+], ResourcesPageModule);
 
-//# sourceMappingURL=menu.module.js.map
+//# sourceMappingURL=resources.module.js.map
 
 /***/ }),
 
-/***/ 283:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResourcesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,80 +56,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var MenuPage = (function () {
-    function MenuPage(navCtrl, navParams, audioProvider) {
+/**
+ * Generated class for the ResourcesPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var ResourcesPage = (function () {
+    function ResourcesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.audioProvider = audioProvider;
-        // Basic root for our content view
-        this.rootPage = 'TabsPage';
-        this.pages = [
-            { title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'threeleaf-home' },
-            { title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'threeleaf-sermons' },
-            { title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 3, icon: 'threeleaf-events' },
-            { title: 'Stories', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 2, icon: 'threeleaf-stories' },
-            { title: 'Resources', pageName: 'TabsPage', tabComponent: 'ResourcesPage', index: 4, icon: 'threeleaf-resources' },
-            { title: 'About', pageName: 'AboutPage', icon: 'shuffle' },
-        ];
-        this.player = audioProvider;
     }
-    MenuPage.prototype.openPage = function (page) {
-        var params = {};
-        // The index is equal to the order of our tabs inside tabs.ts
-        if (page.index) {
-            params = { tabIndex: page.index };
-        }
-        console.log([this.nav.getActiveChildNavs()[0], this.nav.getActiveChildNavs()]);
-        // The active child nav is our Tabs Navigation
-        if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
-            this.nav.getActiveChildNavs()[0].select(page.index);
-        }
-        else {
-            // Tabs are not active, so reset the root page 
-            // In this case: moving to or from SpecialPage
-            this.nav.setRoot(page.pageName, params);
-        }
+    ResourcesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ResourcesPage');
     };
-    MenuPage.prototype.isActive = function (page) {
-        // Again the Tabs Navigation
-        var childNav = this.nav.getActiveChildNavs()[0];
-        if (childNav) {
-            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
-                return 'primary';
-            }
-            return;
-        }
-        // Fallback needed when there is no active childnav (tabs not active)
-        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
-            return 'primary';
-        }
-        return;
-    };
-    MenuPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MenuPage');
-    };
-    MenuPage.prototype.pause = function () {
-        this.audioProvider.pause();
-    };
-    MenuPage.prototype.scrub = function (percent) {
-        this.audioProvider.scrub(percent);
-    };
-    return MenuPage;
+    return ResourcesPage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
-], MenuPage.prototype, "nav", void 0);
-MenuPage = __decorate([
+ResourcesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-menu',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/'<!-- <ion-split-pane> -->\n<ion-menu [content]="content" side="right" type="reveal" persistent="true">\n	<ion-header no-border>\n		<ion-toolbar color="primary">\n			<ion-title *ngIf="!player.title">Menu</ion-title>\n			<ion-title *ngIf="player.title">\n				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>\n		</ion-toolbar>\n	</ion-header>\n\n	<ion-content>\n		<ion-list>\n			<div *ngIf="player.title">\n				<ion-item (click)="pause()">\n					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>\n					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>\n					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>\n					{{player.title}}<br />{{player.speaker}}\n				</ion-item>\n				<ion-item>\n					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">\n						<ion-label range-left>{{player.current | date:\'mm:ss\' }}</ion-label>\n						<ion-label range-right>{{player.duration | date:\'mm:ss\' }}</ion-label>\n					</ion-range>\n				</ion-item>\n\n				<ion-list-header color="primary">Menu</ion-list-header>\n			</div>\n			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n				{{ p.title }}\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n<!-- main navigation -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n<!-- </ion-split-pane> -->'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/,
+        selector: 'page-resources',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/resources/resources.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Service Times</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<h2>TRADITIONAL 9:30 IN WORSHIP CENTER</h2>\n	<p>Choir and Orchestra with Dr. Ronny Marriott</p>\n\n	<h2>MODERN 9:30 & 11:00 IN THREE1SEVEN</h2>\n	<p>Band with Dr. Ronny Marriott</p>\n\n	<h2>SPANISH 11:00 IN WORSHIP CENTER</h2>\n	<p>Praise Team with Jonathan Colon</p>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/resources/resources.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]])
-], MenuPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+], ResourcesPage);
 
-//# sourceMappingURL=menu.js.map
+//# sourceMappingURL=resources.js.map
 
 /***/ })
 

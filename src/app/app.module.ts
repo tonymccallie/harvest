@@ -9,15 +9,22 @@ import { MyApp } from './app.component';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { GreybackProvider } from '../providers/greyback/greyback';
 import { AudioProvider } from '../providers/audio/audio';
+import { TabHiddenDirective } from '../directives/tab-hidden/tab-hidden';
 
 @NgModule({
 	declarations: [
-		MyApp
+		MyApp,
+		TabHiddenDirective
 	],
 	imports: [
 		BrowserModule,
 		HttpModule,
-		IonicModule.forRoot(MyApp, { mode: 'ios' })
+		IonicModule.forRoot(MyApp, {
+			mode: 'ios'
+		})
+	],
+	exports: [
+		TabHiddenDirective
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [

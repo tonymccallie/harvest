@@ -24,12 +24,17 @@ export class MenuPage {
 	@ViewChild(Nav) nav: Nav;
 
 	pages: PageInterface[] = [
-		{ title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'threeleaf-home' },
-		{ title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'threeleaf-sermons' },
-		{ title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 3, icon: 'threeleaf-events' },
-		{ title: 'Stories', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 2, icon: 'threeleaf-stories' },
-		{ title: 'Resources', pageName: 'TabsPage', tabComponent: 'ResourcesPage', index: 4, icon: 'threeleaf-resources' },
-		{ title: 'About', pageName: 'AboutPage', icon: 'shuffle' },
+		{ title: 'Home', pageName: 'TabsPage', tabComponent: 'HomePage', index: 0, icon: 'ios-home-outline' },
+		{ title: 'Jesus', pageName: 'JesusPage', icon: 'ios-heart-outline' },
+		{ title: 'About', pageName: 'AboutPage', icon: 'ios-information-circle-outline' },
+		{ title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'ios-headset-outline' },
+		{ title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 2, icon: 'ios-calendar-outline' },
+		{ title: 'Giving', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 3, icon: 'ios-cash-outline' },
+		{ title: 'Service Times', pageName: 'TabsPage', tabComponent: 'TimesPage', index: 4, icon: 'ios-time-outline' },
+		{ title: 'Staff', pageName: 'StaffPage', icon: 'ios-contact-outline' },
+		{ title: 'Location', pageName: 'LocationPage', icon: 'ios-pin-outline' },
+		{ title: 'Prayer', pageName: 'PrayerPage', icon: 'ios-chatboxes-outline' },
+		{ title: 'Credits', pageName: 'CreditsPage', icon: 'ios-ribbon-outline' },
 	];
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public audioProvider: AudioProvider) {
@@ -43,14 +48,18 @@ export class MenuPage {
 		if (page.index) {
 			params = { tabIndex: page.index };
 		}
-		console.log([this.nav.getActiveChildNavs()[0], this.nav.getActiveChildNavs()])
+		
 		// The active child nav is our Tabs Navigation
 		if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
 			this.nav.getActiveChildNavs()[0].select(page.index);
 		} else {
 			// Tabs are not active, so reset the root page 
 			// In this case: moving to or from SpecialPage
-			this.nav.setRoot(page.pageName, params);
+			//this.nav.setRoot(page.pageName, params);
+			//this.nav.getActiveChildNavs()[0].select(5);
+			//this.nav.getActiveChildNavs()[0].getByIndex(5).push(page.pageName);
+			this.nav.getActiveChildNavs()[0].getSelected().push(page.pageName);
+			//this.nav.push(page.pageName);
 		}
 	}
 

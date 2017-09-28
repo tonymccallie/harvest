@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 274:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SermonPageModule", function() { return SermonPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StaffPageModule", function() { return StaffPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sermon__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__staff__ = __webpack_require__(300);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SermonPageModule = (function () {
-    function SermonPageModule() {
+var StaffPageModule = (function () {
+    function StaffPageModule() {
     }
-    return SermonPageModule;
+    return StaffPageModule;
 }());
-SermonPageModule = __decorate([
+StaffPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */],
+            __WEBPACK_IMPORTED_MODULE_2__staff__["a" /* StaffPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__staff__["a" /* StaffPage */]),
         ],
     })
-], SermonPageModule);
+], StaffPageModule);
 
-//# sourceMappingURL=sermon.module.js.map
+//# sourceMappingURL=staff.module.js.map
 
 /***/ }),
 
-/***/ 287:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SermonPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StaffPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_audio_audio__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,46 +56,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-var SermonPage = (function () {
-    function SermonPage(navCtrl, navParams, greybackProvider, audioProvider, menuCtrl) {
+/**
+ * Generated class for the StaffPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var StaffPage = (function () {
+    function StaffPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.greybackProvider = greybackProvider;
-        this.audioProvider = audioProvider;
-        this.menuCtrl = menuCtrl;
-        this.sermon = this.navParams.get('sermon');
-        this.series = this.navParams.get('series');
-        this.rootUrl = greybackProvider.rootUrl;
-        this.player = audioProvider;
-        this.source = this.rootUrl + '/play/vid/' + this.sermon.MediaVideo.id + '/vid.mp4';
-        this.poster = this.rootUrl + '/img/thumb/' + this.sermon.MediaVideo.preview + '/width:854/height:480/crop:true/zoom:auto/image.jpg';
     }
-    SermonPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SermonPage');
+    StaffPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad StaffPage');
     };
-    SermonPage.prototype.playAudio = function (sermon) {
-        this.audioProvider.play({
-            url: this.rootUrl + '/play/mp3/' + sermon.MediaAudio.id,
-            title: sermon.MessageMessage.title,
-            speaker: sermon.MessageAuthor.name
-        });
-        this.menuCtrl.open();
-    };
-    return SermonPage;
+    return StaffPage;
 }());
-SermonPage = __decorate([
+StaffPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-sermon',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/sermon/sermon.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Sermon</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<div *ngIf="source">\n		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>\n	</div>\n	<ion-toolbar color="primary">\n		{{sermon.MessageMessage.title}}\n	</ion-toolbar>\n	<div padding>\n		<button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>\n		<button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/sermon/sermon.html"*/,
+        selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_audio_audio__["a" /* AudioProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_audio_audio__["a" /* AudioProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _e || Object])
-], SermonPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+], StaffPage);
 
-var _a, _b, _c, _d, _e;
-//# sourceMappingURL=sermon.js.map
+//# sourceMappingURL=staff.js.map
 
 /***/ })
 

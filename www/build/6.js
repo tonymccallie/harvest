@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 271:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostDetailPageModule", function() { return PostDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SeriesPageModule", function() { return SeriesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post_detail__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__series__ = __webpack_require__(297);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PostDetailPageModule = (function () {
-    function PostDetailPageModule() {
+var SeriesPageModule = (function () {
+    function SeriesPageModule() {
     }
-    return PostDetailPageModule;
+    return SeriesPageModule;
 }());
-PostDetailPageModule = __decorate([
+SeriesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_2__series__["a" /* SeriesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__series__["a" /* SeriesPage */]),
         ],
     })
-], PostDetailPageModule);
+], SeriesPageModule);
 
-//# sourceMappingURL=post-detail.module.js.map
+//# sourceMappingURL=series.module.js.map
 
 /***/ }),
 
-/***/ 284:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostDetailPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SeriesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
@@ -58,31 +58,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PostDetailPage = (function () {
-    function PostDetailPage(navCtrl, navParams, greybackProvider) {
+var SeriesPage = (function () {
+    function SeriesPage(navCtrl, navParams, greybackProvider) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
-        console.log('constructor PostDetailPage');
-        this.post = this.navParams.get('post');
+        console.log('constructor SeriesPage');
         this.rootUrl = greybackProvider.rootUrl;
+        this.greybackProvider.getSeries().subscribe(function (series) {
+            _this.series = series.data;
+        });
     }
-    PostDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PostDetailPage');
+    SeriesPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        console.log('ionViewDidLoad SeriesPage');
+        this.greybackProvider.getLatestSermon().subscribe(function (latest) {
+            _this.latest = latest.data;
+        });
     };
-    return PostDetailPage;
+    SeriesPage.prototype.ionViewWillEnter = function () {
+        console.log('ionViewWillEnter SeriesPage');
+    };
+    SeriesPage.prototype.viewSeries = function (series) {
+        this.navCtrl.push('SermonsPage', {
+            series: series,
+            seriesId: series.id
+        });
+    };
+    return SeriesPage;
 }());
-PostDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
-        segment: 'post/:postId'
-    }),
+SeriesPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-post-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Community Feed</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{post.CommunityPost.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="post.CommunityPost.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/,
+        selector: 'page-series',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Series</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<div *ngIf="!latest">\n		<img src="assets/loading_media.png" />\n	</div>\n	<div *ngFor="let recent of latest">\n		<img src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">\n	</div>\n	<ion-toolbar color="primary">\n		Latest Series\n	</ion-toolbar>\n	<div *ngIf="!series">\n		<ion-row>\n			<ion-col col-6 *ngFor="let image of [0,1,2,3,4,5,6]">\n				<img src="assets/loading_media.png" />\n			</ion-col>\n		</ion-row>\n	</div>\n	<ion-grid>\n		<ion-row>\n			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">\n				<img src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:500/height:300/crop:true/zoom:auto">\n			</ion-col>\n		</ion-row>\n	</ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
-], PostDetailPage);
+], SeriesPage);
 
-//# sourceMappingURL=post-detail.js.map
+//# sourceMappingURL=series.js.map
 
 /***/ })
 

@@ -1,4 +1,4 @@
-webpackJsonp([13],{
+webpackJsonp([19],{
 
 /***/ 108:
 /***/ (function(module, exports) {
@@ -22,55 +22,79 @@ webpackEmptyAsyncContext.id = 108;
 
 var map = {
 	"../pages/about/about.module": [
-		265,
-		12
+		266,
+		18
 	],
 	"../pages/article-detail/article-detail.module": [
-		266,
-		11
+		267,
+		17
+	],
+	"../pages/credits/credits.module": [
+		268,
+		16
 	],
 	"../pages/event-detail/event-detail.module": [
-		267,
-		10
+		269,
+		15
 	],
 	"../pages/events/events.module": [
-		268,
-		9
+		270,
+		14
 	],
 	"../pages/home/home.module": [
-		269,
-		8
+		271,
+		13
+	],
+	"../pages/jesus/jesus.module": [
+		272,
+		12
+	],
+	"../pages/location/location.module": [
+		273,
+		11
 	],
 	"../pages/menu/menu.module": [
-		270,
-		7
+		274,
+		10
 	],
 	"../pages/post-detail/post-detail.module": [
-		271,
-		6
+		275,
+		9
+	],
+	"../pages/prayer/prayer.module": [
+		276,
+		8
 	],
 	"../pages/resources/resources.module": [
-		272,
-		5
+		277,
+		7
 	],
 	"../pages/series/series.module": [
-		273,
-		4
+		278,
+		6
 	],
 	"../pages/sermon/sermon.module": [
-		274,
-		3
+		279,
+		5
 	],
 	"../pages/sermons/sermons.module": [
-		275,
-		2
+		280,
+		4
+	],
+	"../pages/staff/staff.module": [
+		281,
+		3
 	],
 	"../pages/stories/stories.module": [
-		276,
-		1
+		282,
+		2
 	],
 	"../pages/tabs/tabs.module": [
-		277,
+		283,
+		1
+	],
+	"../pages/times/times.module": [
+		284,
 		0
 	]
 };
@@ -291,12 +315,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_auth_service_auth_service__ = __webpack_require__(264);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_greyback_greyback__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_audio_audio__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_tab_hidden_tab_hidden__ = __webpack_require__(265);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -315,28 +341,40 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_10__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], { mode: 'ios' }, {
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
+                mode: 'ios'
+            }, {
                 links: [
                     { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/article-detail/article-detail.module#ArticleDetailPageModule', name: 'ArticleDetailPage', segment: 'article/:articleId', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/credits/credits.module#CreditsPageModule', name: 'CreditsPage', segment: 'credits', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/event-detail/event-detail.module#EventDetailPageModule', name: 'EventDetailPage', segment: 'event/:eventId', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/events/events.module#EventsPageModule', name: 'EventsPage', segment: 'events', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/jesus/jesus.module#JesusPageModule', name: 'JesusPage', segment: 'jesus', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/location/location.module#LocationPageModule', name: 'LocationPage', segment: 'location', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/post-detail/post-detail.module#PostDetailPageModule', name: 'PostDetailPage', segment: 'post/:postId', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/prayer/prayer.module#PrayerPageModule', name: 'PrayerPage', segment: 'prayer', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/resources/resources.module#ResourcesPageModule', name: 'ResourcesPage', segment: 'resources', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/series/series.module#SeriesPageModule', name: 'SeriesPage', segment: 'series', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sermon/sermon.module#SermonPageModule', name: 'SermonPage', segment: 'sermon', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/sermons/sermons.module#SermonsPageModule', name: 'SermonsPage', segment: 'sermons/:seriesId', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/staff/staff.module#StaffPageModule', name: 'StaffPage', segment: 'staff', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/stories/stories.module#StoriesPageModule', name: 'StoriesPage', segment: 'stories', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/times/times.module#TimesPageModule', name: 'TimesPage', segment: 'times', priority: 'low', defaultHistory: [] }
                 ]
             })
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_10__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
@@ -534,6 +572,64 @@ AuthServiceProvider = __decorate([
 ], AuthServiceProvider);
 
 //# sourceMappingURL=auth-service.js.map
+
+/***/ }),
+
+/***/ 265:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabHiddenDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TabHiddenDirective = (function () {
+    function TabHiddenDirective(_el) {
+        this._el = _el;
+        this._tabElCache = new Map();
+    }
+    TabHiddenDirective.prototype.ngAfterViewChecked = function () {
+        var tabId = this._el.nativeElement.id.split('-');
+        tabId.shift();
+        tabId.unshift('tab');
+        tabId = tabId.join('-');
+        var tabEl;
+        if (!this._tabElCache.has(tabId)) {
+            tabEl = document.querySelector('#' + tabId);
+            this._tabElCache.set(tabId, tabEl);
+        }
+        else {
+            tabEl = this._tabElCache.get(tabId);
+        }
+        if (tabEl) {
+            if (this.tabHidden) {
+                tabEl.style.display = 'none';
+            }
+            else {
+                tabEl.style.display = 'flex';
+            }
+        }
+    };
+    return TabHiddenDirective;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('tab-hidden'),
+    __metadata("design:type", Boolean)
+], TabHiddenDirective.prototype, "tabHidden", void 0);
+TabHiddenDirective = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({ selector: '[tab-hidden]' }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+], TabHiddenDirective);
+
+//# sourceMappingURL=tab-hidden.js.map
 
 /***/ })
 

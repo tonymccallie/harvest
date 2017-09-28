@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 268:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventsPageModule", function() { return EventsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostDetailPageModule", function() { return PostDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__events__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post_detail__ = __webpack_require__(294);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EventsPageModule = (function () {
-    function EventsPageModule() {
+var PostDetailPageModule = (function () {
+    function PostDetailPageModule() {
     }
-    return EventsPageModule;
+    return PostDetailPageModule;
 }());
-EventsPageModule = __decorate([
+PostDetailPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__events__["a" /* EventsPage */],
+            __WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__events__["a" /* EventsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__post_detail__["a" /* PostDetailPage */]),
         ],
     })
-], EventsPageModule);
+], PostDetailPageModule);
 
-//# sourceMappingURL=events.module.js.map
+//# sourceMappingURL=post-detail.module.js.map
 
 /***/ }),
 
-/***/ 281:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
@@ -58,38 +58,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EventsPage = (function () {
-    function EventsPage(navCtrl, navParams, greybackProvider) {
-        var _this = this;
+var PostDetailPage = (function () {
+    function PostDetailPage(navCtrl, navParams, greybackProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
-        console.log('constructor EventsPage');
+        console.log('constructor PostDetailPage');
+        this.post = this.navParams.get('post');
         this.rootUrl = greybackProvider.rootUrl;
-        this.greybackProvider.getEvents().subscribe(function (events) {
-            _this.events = events.data;
-        });
     }
-    EventsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EventsPage');
+    PostDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PostDetailPage');
     };
-    EventsPage.prototype.viewEvent = function (event) {
-        this.navCtrl.push('EventDetailPage', {
-            event: event,
-            eventId: event.NewsArticle.id
-        });
-    };
-    return EventsPage;
+    return PostDetailPage;
 }());
-EventsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+PostDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
+        segment: 'post/:postId'
+    }),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<button ion-item *ngFor="let event of events; let i = index" (click)="viewEvent(event)">\n			{{event.NewsArticle.title}}\n		</button>\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
+        selector: 'page-post-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Community Feed</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{post.CommunityPost.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="post.CommunityPost.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/post-detail/post-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
-], EventsPage);
+], PostDetailPage);
 
-//# sourceMappingURL=events.js.map
+//# sourceMappingURL=post-detail.js.map
 
 /***/ })
 
