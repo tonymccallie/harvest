@@ -5,12 +5,17 @@ page-home {
 		height: auto;
 	}
 
+	ion-card {
+		img {
+			width: auto;
+		}
+	}
 	.card-background-page {
 		.ion-card {
 			position: relative;
 			text-align: center;
 		}
-		.card-title {
+		.Xcard-title {
 			position: absolute;
 			bottom: 0;
 			font-size: 1.2em;

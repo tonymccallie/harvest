@@ -45,6 +45,7 @@ StaffPageModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StaffPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,16 +57,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the StaffPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 var StaffPage = (function () {
-    function StaffPage(navCtrl, navParams) {
+    function StaffPage(navCtrl, navParams, greybackProvider) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.greybackProvider = greybackProvider;
+        this.greybackProvider.getStaff().subscribe(function (departments) {
+            _this.departments = departments.data;
+        });
+        this.rootUrl = greybackProvider.rootUrl;
     }
     StaffPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad StaffPage');
@@ -75,9 +77,9 @@ var StaffPage = (function () {
 StaffPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
+        selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div *ngFor="let department of departments">\n		<h3>{{department.StaffDepartment.title}}</h3>\n		<ion-card *ngFor="let staff of department.StaffLink; let i = index">\n			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />\n			<ion-card-content>\n				<ion-card-title>{{staff.StaffMember.first_name + \' \' + staff.StaffMember.last_name}}</ion-card-title>\n				{{staff.StaffMember.title}}\n			</ion-card-content>\n		</ion-card>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
 ], StaffPage);
 
 //# sourceMappingURL=staff.js.map

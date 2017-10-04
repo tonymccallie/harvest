@@ -10,7 +10,8 @@
 		<img src="assets/loading_media.png" />
 	</div>
 	<div *ngFor="let recent of latest">
-		<img src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">
+		<img *ngIf="recent.MessageSeries.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">
+		<img *ngIf="!recent.MessageSeries.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />
 	</div>
 	<ion-toolbar color="primary">
 		Latest Series
@@ -25,7 +26,8 @@
 	<ion-grid>
 		<ion-row>
 			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">
-				<img src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:500/height:300/crop:true/zoom:auto">
+				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">
+				<img *ngIf="!single.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />
 			</ion-col>
 		</ion-row>
 	</ion-grid>

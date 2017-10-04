@@ -28424,12 +28424,16 @@ page-home ion-slides {
   height: auto;
 }
 
+page-home ion-card img {
+  width: auto;
+}
+
 page-home .card-background-page .ion-card {
   position: relative;
   text-align: center;
 }
 
-page-home .card-background-page .card-title {
+page-home .card-background-page .Xcard-title {
   position: absolute;
   bottom: 0;
   font-size: 1.2em;

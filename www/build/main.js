@@ -138,14 +138,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GreybackProvider = (function () {
     function GreybackProvider(http) {
         this.http = http;
-        this.rootUrl = 'http://gracepointcoppell.org';
+        this.rootUrl = 'http://firstburleson.server3.greyback.net/';
         console.log('Hello GreybackProvider Provider');
     }
     GreybackProvider.prototype.getNews = function () {
-        return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:3').map(function (result) { return result.json(); });
+        return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:1').map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getCommunity = function () {
-        return this.http.get(this.rootUrl + '/ajax/plugin/community/community_posts/latest/department:1').map(function (result) { return result.json(); });
+        return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:2').map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getSeries = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/message/message_series/json/category:1').map(function (result) { return result.json(); });
@@ -159,13 +159,17 @@ var GreybackProvider = (function () {
     GreybackProvider.prototype.getEvents = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:1').map(function (result) { return result.json(); });
     };
+    GreybackProvider.prototype.getStaff = function () {
+        return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:2').map(function (result) { return result.json(); });
+    };
     return GreybackProvider;
 }());
 GreybackProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
 ], GreybackProvider);
 
+var _a;
 //# sourceMappingURL=greyback.js.map
 
 /***/ }),
