@@ -14,7 +14,11 @@
 		{{sermon.MessageMessage.title}}
 	</ion-toolbar>
 	<div padding>
+		Speaker: {{sermon.MessageAuthor.name}}<br />
+		Date: {{sermon.MessageMessage.start | date:'M/dd/yyyy'}}<br />
+		<div *ngIf="sermon.MessageMessage.descr">Description: {{sermon.MessageMessage.descr}}</div>
+		<p><br /></p>
 		<button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>
-		<button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button>
+		<!-- <button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button> -->
 	</div>
 </ion-content>

@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 278:
+/***/ 279:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SeriesPageModule", function() { return SeriesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__series__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__series__ = __webpack_require__(298);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ SeriesPageModule = __decorate([
 
 /***/ }),
 
-/***/ 297:
+/***/ 298:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +91,7 @@ var SeriesPage = (function () {
 SeriesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-series',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Series</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<div *ngIf="!latest">\n		<img src="assets/loading_media.png" />\n	</div>\n	<div *ngFor="let recent of latest">\n		<img *ngIf="recent.MessageSeries.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">\n		<img *ngIf="!recent.MessageSeries.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />\n	</div>\n	<ion-toolbar color="primary">\n		Latest Series\n	</ion-toolbar>\n	<div *ngIf="!series">\n		<ion-row>\n			<ion-col col-6 *ngFor="let image of [0,1,2,3,4,5,6]">\n				<img src="assets/loading_media.png" />\n			</ion-col>\n		</ion-row>\n	</div>\n	<ion-grid>\n		<ion-row>\n			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">\n				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">\n				<img *ngIf="!single.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />\n			</ion-col>\n		</ion-row>\n	</ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/,
+        selector: 'page-series',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Series</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<div *ngIf="!latest">\n		<img src="assets/loading_media.png" />\n	</div>\n	<div *ngFor="let recent of latest">\n		<img *ngIf="recent.MessageSeries.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">\n		<img *ngIf="!recent.MessageSeries.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />\n	</div>\n	<ion-toolbar color="primary">\n		Latest Series\n	</ion-toolbar>\n	<div *ngIf="!series">\n		<ion-row>\n			<ion-col col-6 *ngFor="let image of [0,1,2,3,4,5,6]">\n				<img src="assets/loading_media.png" />\n			</ion-col>\n		</ion-row>\n	</div>\n	<ion-grid>\n		<ion-row>\n			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">\n				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n				<img *ngIf="!single.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />\n			</ion-col>\n		</ion-row>\n	</ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
 ], SeriesPage);

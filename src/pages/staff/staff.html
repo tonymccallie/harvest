@@ -8,7 +8,7 @@
 <ion-content padding>
 	<div *ngFor="let department of departments">
 		<h3>{{department.StaffDepartment.title}}</h3>
-		<ion-card *ngFor="let staff of department.StaffLink; let i = index">
+		<ion-card *ngFor="let staff of department.StaffLink; let i = index" (click)="mailto(staff)">
 			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />
 			<ion-card-content>
 				<ion-card-title>{{staff.StaffMember.first_name + ' ' + staff.StaffMember.last_name}}</ion-card-title>

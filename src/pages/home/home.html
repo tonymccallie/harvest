@@ -18,10 +18,10 @@
 		<ion-refresher-content></ion-refresher-content>
 	</ion-refresher>
 	<ion-card *ngFor="let post of posts; let i = index">
-		<!-- <img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" /> -->
+		<img src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
 		<ion-card-content>
-			<ion-card-title>{{post.NewsArticle.title}}</ion-card-title>
-			<div [innerHTML]="post.NewsArticle.body"></div>
+			<ion-card-title>{{post.CommunityPost.title}}</ion-card-title>
+			<div [innerHTML]="post.CommunityPost.body"></div>
 		</ion-card-content>
 	</ion-card>
 	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">

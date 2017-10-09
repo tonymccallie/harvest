@@ -11,11 +11,12 @@ export class GreybackProvider {
 	}
 
 	getNews() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:1').map(result => result.json());
+		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:3').map(result => result.json());
 	}
 
 	getCommunity() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:2').map(result => result.json());
+		//return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:2').map(result => result.json());
+		return this.http.get(this.rootUrl + '/ajax/plugin/community/community_posts/latest/department:2').map(result => result.json());
 	}
 
 	getSeries() {
@@ -31,7 +32,7 @@ export class GreybackProvider {
 	}
 
 	getEvents() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:1').map(result => result.json());
+		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:3').map(result => result.json());
 	}
 
 	getStaff() {

@@ -21,4 +21,7 @@ export class StaffPage {
 		console.log('ionViewDidLoad StaffPage');
 	}
 
+	mailto(staff) {
+		console.log('mailto');
+	}
 }

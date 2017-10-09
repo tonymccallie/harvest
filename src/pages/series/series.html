@@ -26,7 +26,7 @@
 	<ion-grid>
 		<ion-row>
 			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">
-				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">
+				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
 				<img *ngIf="!single.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />
 			</ion-col>
 		</ion-row>

@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 281:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StaffPageModule", function() { return StaffPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__staff__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__staff__ = __webpack_require__(301);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ StaffPageModule = __decorate([
 
 /***/ }),
 
-/***/ 300:
+/***/ 301:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,16 +72,20 @@ var StaffPage = (function () {
     StaffPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad StaffPage');
     };
+    StaffPage.prototype.mailto = function (staff) {
+        console.log('mailto');
+    };
     return StaffPage;
 }());
 StaffPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div *ngFor="let department of departments">\n		<h3>{{department.StaffDepartment.title}}</h3>\n		<ion-card *ngFor="let staff of department.StaffLink; let i = index">\n			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />\n			<ion-card-content>\n				<ion-card-title>{{staff.StaffMember.first_name + \' \' + staff.StaffMember.last_name}}</ion-card-title>\n				{{staff.StaffMember.title}}\n			</ion-card-content>\n		</ion-card>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
+        selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div *ngFor="let department of departments">\n		<h3>{{department.StaffDepartment.title}}</h3>\n		<ion-card *ngFor="let staff of department.StaffLink; let i = index" (click)="mailto(staff)">\n			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />\n			<ion-card-content>\n				<ion-card-title>{{staff.StaffMember.first_name + \' \' + staff.StaffMember.last_name}}</ion-card-title>\n				{{staff.StaffMember.title}}\n			</ion-card-content>\n		</ion-card>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object])
 ], StaffPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=staff.js.map
 
 /***/ })

@@ -19664,9 +19664,9 @@ ion-spinner.spinner-paused svg {
 .tabs-ios .tab-button-icon {
   margin-top: 4px;
   margin-bottom: 1px;
-  min-width: 45px;
-  height: 40px;
-  font-size: 40px;
+  min-width: 30px;
+  height: 25px;
+  font-size: 25px;
   color: #8c8c8c;
 }
 

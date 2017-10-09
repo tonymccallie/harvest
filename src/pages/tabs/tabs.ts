@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @IonicPage()
 @Component({
@@ -16,7 +17,7 @@ export class TabsPage {
 
 	myIndex: number;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) {
 		this.myIndex = navParams.data.tabIndex || 0;
 	}
 
@@ -25,7 +26,7 @@ export class TabsPage {
 	}
 
 	giving() {
-		console.log('giving');
+		const browser = this.iab.create('https://easytithe.com/fbcburleson','_system');
 	}
 
 }
