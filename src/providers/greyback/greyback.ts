@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -37,6 +37,19 @@ export class GreybackProvider {
 
 	getStaff() {
 		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:2').map(result => result.json())
+	}
+
+	getCalendars() {
+		let headers = new Headers();
+		headers.append('Accept', 'application/json');
+		headers.append('Content-Type', 'application/json');
+		headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
+		let opts = new RequestOptions({ headers: headers });
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', opts).map(result => result.json());
+	}
+
+	getCalendar() {
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&stopdate=10/31/2017&pageIndex=0&pageSize=50').map(result => result.json());
 	}
 
 }

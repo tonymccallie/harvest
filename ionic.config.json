@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies":[
+	  {
+		  "path":"/calendars",
+		  "proxyUrl":"/api_accessacs_mobile/v2/10413/calendars"
+	  }
+  ]
 }
