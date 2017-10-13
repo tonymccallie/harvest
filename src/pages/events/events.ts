@@ -25,7 +25,7 @@ export class EventsPage {
 	}
 
 	convertDate(date) {
-		let newDate = Date.parse(date.substr(0,date.length - 4));
+		let newDate = Date.parse(date.substr(0,date.length - 4).replace(' ','T'));
 		console.log(newDate);
 		return newDate;
 	}
