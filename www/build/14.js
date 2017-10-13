@@ -67,7 +67,7 @@ var EventsPage = (function () {
         console.log('constructor EventsPage');
         this.rootUrl = greybackProvider.rootUrl;
         this.greybackProvider.getCalendar().subscribe(function (events) {
-            _this.events = events.data;
+            _this.events = events.Page;
         });
     }
     EventsPage.prototype.ionViewDidLoad = function () {
