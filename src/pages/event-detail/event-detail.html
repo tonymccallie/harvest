@@ -1,17 +1,15 @@
 <ion-header no-border>
 	<ion-navbar color="primary">
 		<ion-title center>Events</ion-title>
-		<button ion-button icon-only menuToggle right>
-			<ion-icon name="menu"></ion-icon>
-		</button>
+		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
 	</ion-navbar>
 </ion-header>
 
 
 <ion-content>
 	<div padding>
-		<pre>
-			{{event | json}}
-		</pre>
+		<h4>{{event.EventName}}</h4>
+		Date:{{convertDate(event.StartDate) | date:'M/dd h:mma'}}<br />
+		{{event.Description}}>
 	</div>
 </ion-content>

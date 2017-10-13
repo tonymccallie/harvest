@@ -14,10 +14,11 @@ export class EventDetailPage {
 	rootUrl: string;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventDetailPage');
-		let objEvent = this.navParams.get('event');
-		this.greybackProvider.getEvent(objEvent.EventId).subscribe(event => {
-			this.event = event;
-		});
+		// let objEvent = this.navParams.get('event');
+		// this.greybackProvider.getEvent(objEvent.EventId).subscribe(event => {
+		// 	this.event = event;
+		// });
+		this.event = this.navParams.get('event');
 		this.rootUrl = greybackProvider.rootUrl;
 	}
 
