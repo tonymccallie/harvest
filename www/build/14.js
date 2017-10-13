@@ -74,7 +74,9 @@ var EventsPage = (function () {
         console.log('ionViewDidLoad EventsPage');
     };
     EventsPage.prototype.convertDate = function (date) {
+        console.log(date);
         var newDate = Date.parse(date);
+        console.log(newDate);
         return newDate;
     };
     EventsPage.prototype.viewEvent = function (event) {

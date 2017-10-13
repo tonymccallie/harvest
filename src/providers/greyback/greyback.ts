@@ -47,7 +47,6 @@ export class GreybackProvider {
 	}
 
 	getCalendars() {
-
 		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(result => result.json());
 	}
 
