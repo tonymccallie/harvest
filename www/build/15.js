@@ -65,11 +65,16 @@ var EventDetailPage = (function () {
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
         console.log('constructor EventDetailPage');
-        this.greybackProvider.getEvent(this.navParams.get('event')).subscribe(function (event) {
+        var objEvent = this.navParams.get('event');
+        this.greybackProvider.getEvent(objEvent.eventId).subscribe(function (event) {
             _this.event = event;
         });
         this.rootUrl = greybackProvider.rootUrl;
     }
+    EventDetailPage.prototype.convertDate = function (date) {
+        var newDate = Date.parse(date.substr(0, date.length - 4).replace(' ', 'T'));
+        return newDate;
+    };
     EventDetailPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad EventDetailPage');
     };

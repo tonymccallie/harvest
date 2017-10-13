@@ -56,6 +56,7 @@ export class GreybackProvider {
 	}
 
 	getEvent(eventId: string) {
+		console.log(eventId);
 		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events/' + eventId, this.opts).map(result => result.json());
 	}
 

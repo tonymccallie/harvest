@@ -14,10 +14,16 @@ export class EventDetailPage {
 	rootUrl: string;
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventDetailPage');
-		this.greybackProvider.getEvent(this.navParams.get('event')).subscribe(event => {
+		let objEvent = this.navParams.get('event');
+		this.greybackProvider.getEvent(objEvent.eventId).subscribe(event => {
 			this.event = event;
 		});
 		this.rootUrl = greybackProvider.rootUrl;
+	}
+
+	convertDate(date) {
+		let newDate = Date.parse(date.substr(0,date.length - 4).replace(' ','T'));
+		return newDate;
 	}
 
 	ionViewDidLoad() {

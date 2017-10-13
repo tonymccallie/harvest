@@ -176,6 +176,7 @@ var GreybackProvider = (function () {
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&pageIndex=0&pageSize=30&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getEvent = function (eventId) {
+        console.log(eventId);
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events/' + eventId, this.opts).map(function (result) { return result.json(); });
     };
     return GreybackProvider;

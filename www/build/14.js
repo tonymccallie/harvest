@@ -75,7 +75,6 @@ var EventsPage = (function () {
     };
     EventsPage.prototype.convertDate = function (date) {
         var newDate = Date.parse(date.substr(0, date.length - 4).replace(' ', 'T'));
-        console.log(newDate);
         return newDate;
     };
     EventsPage.prototype.viewEvent = function (event) {
