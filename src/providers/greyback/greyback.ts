@@ -5,9 +5,16 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GreybackProvider {
 	rootUrl: string = 'http://firstburleson.server3.greyback.net/';
+	headers: any = new Headers;
+	opts: any;
+
 
 	constructor(public http: Http) {
 		console.log('Hello GreybackProvider Provider');
+		this.headers.append('Accept', 'application/json');
+		this.headers.append('Content-Type', 'application/json');
+		this.headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
+		this.opts = new RequestOptions({ headers: this.headers });
 	}
 
 	getNews() {
@@ -40,16 +47,17 @@ export class GreybackProvider {
 	}
 
 	getCalendars() {
-		let headers = new Headers();
-		headers.append('Accept', 'application/json');
-		headers.append('Content-Type', 'application/json');
-		headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
-		let opts = new RequestOptions({ headers: headers });
-		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', opts).map(result => result.json());
+
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(result => result.json());
 	}
 
 	getCalendar() {
-		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&stopdate=10/31/2017&pageIndex=0&pageSize=50').map(result => result.json());
+		//58c08c0d-776d-4762-8180-0df5fcf1ae74
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&pageIndex=0&pageSize=30&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(result => result.json());
+	}
+
+	getEvent(eventId: string) {
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events/' + eventId, this.opts).map(result => result.json());
 	}
 
 }

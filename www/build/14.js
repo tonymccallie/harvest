@@ -66,7 +66,7 @@ var EventsPage = (function () {
         this.greybackProvider = greybackProvider;
         console.log('constructor EventsPage');
         this.rootUrl = greybackProvider.rootUrl;
-        this.greybackProvider.getEvents().subscribe(function (events) {
+        this.greybackProvider.getCalendar().subscribe(function (events) {
             _this.events = events.data;
         });
     }
@@ -84,11 +84,12 @@ var EventsPage = (function () {
 EventsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-card *ngFor="let article of events; let i = index">\n		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />\n		<ion-card-content>\n			<ion-card-title>{{article.NewsArticle.title}}</ion-card-title>\n			<div padding [innerHTML]="article.NewsArticle.body"></div>\n		</ion-card-content>\n	</ion-card>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
+        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	{{events | json}}\n	<!-- <ion-card *ngFor="let article of events; let i = index">\n		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />\n		<ion-card-content>\n			<ion-card-title>{{article.NewsArticle.title}}</ion-card-title>\n			<div padding [innerHTML]="article.NewsArticle.body"></div>\n		</ion-card-content>\n	</ion-card> -->\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object])
 ], EventsPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=events.js.map
 
 /***/ })

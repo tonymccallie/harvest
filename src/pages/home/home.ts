@@ -41,9 +41,9 @@ export class HomePage {
 		this.greybackProvider.getCommunity().subscribe(posts => {
 			this.posts = posts.data;
 		});
-		this.greybackProvider.getCalendars().subscribe(results => {
-			console.log(results);
-		}, msg => console.error(`ErrorFOO: ${msg.status} ${msg.statusText}`));
+		// this.greybackProvider.getCalendars().subscribe(results => {
+		// 	console.log(results);
+		// }, msg => console.error(`ErrorFOO: ${msg.status} ${msg.statusText}`));
 	}
 
 	ionViewDidEnter() {

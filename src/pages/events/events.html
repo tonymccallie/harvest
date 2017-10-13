@@ -6,11 +6,12 @@
 </ion-header>
 
 <ion-content>
-	<ion-card *ngFor="let article of events; let i = index">
+	{{events | json}}
+	<!-- <ion-card *ngFor="let article of events; let i = index">
 		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
 		<ion-card-content>
 			<ion-card-title>{{article.NewsArticle.title}}</ion-card-title>
 			<div padding [innerHTML]="article.NewsArticle.body"></div>
 		</ion-card-content>
-	</ion-card>
+	</ion-card> -->
 </ion-content>

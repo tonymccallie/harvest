@@ -139,7 +139,12 @@ var GreybackProvider = (function () {
     function GreybackProvider(http) {
         this.http = http;
         this.rootUrl = 'http://firstburleson.server3.greyback.net/';
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */];
         console.log('Hello GreybackProvider Provider');
+        this.headers.append('Accept', 'application/json');
+        this.headers.append('Content-Type', 'application/json');
+        this.headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
+        this.opts = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
     GreybackProvider.prototype.getNews = function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:3').map(function (result) { return result.json(); });
@@ -164,23 +169,23 @@ var GreybackProvider = (function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:2').map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getCalendars = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
-        headers.append('Accept', 'application/json');
-        headers.append('Content-Type', 'application/json');
-        headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
-        var opts = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', opts).map(function (result) { return result.json(); });
+        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getCalendar = function () {
-        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&stopdate=10/31/2017&pageIndex=0&pageSize=50').map(function (result) { return result.json(); });
+        //58c08c0d-776d-4762-8180-0df5fcf1ae74
+        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&pageIndex=0&pageSize=30&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(function (result) { return result.json(); });
+    };
+    GreybackProvider.prototype.getEvent = function (eventId) {
+        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events/' + eventId, this.opts).map(function (result) { return result.json(); });
     };
     return GreybackProvider;
 }());
 GreybackProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], GreybackProvider);
 
+var _a;
 //# sourceMappingURL=greyback.js.map
 
 /***/ }),
