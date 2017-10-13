@@ -24,6 +24,11 @@ export class EventsPage {
 		console.log('ionViewDidLoad EventsPage');
 	}
 
+	convertDate(date) {
+		let newDate = Date.parse(date);
+		return newDate;
+	}
+
 	viewEvent(event) {
 		this.navCtrl.push('EventDetailPage', {
 			event: event,
