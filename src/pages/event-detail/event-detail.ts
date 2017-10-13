@@ -15,6 +15,7 @@ export class EventDetailPage {
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventDetailPage');
 		this.event = this.navParams.get('event');
+		console.log(this.event);
 		this.rootUrl = greybackProvider.rootUrl;
 	}
 

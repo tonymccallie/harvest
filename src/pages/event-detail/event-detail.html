@@ -8,7 +8,10 @@
 
 <ion-content>
 	<ion-toolbar color="primary">
-		{{event | json}}
+			{{event.EventName}}
 	</ion-toolbar>
-	<!-- <div padding [innerHTML]="event.NewsArticle.body"></div> -->
+	<div padding>
+		Date:{{event.StartDate}}<br />
+		{{event.Description}}
+	</div>
 </ion-content>
