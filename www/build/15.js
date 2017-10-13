@@ -66,6 +66,7 @@ var EventDetailPage = (function () {
         this.greybackProvider = greybackProvider;
         console.log('constructor EventDetailPage');
         var objEvent = this.navParams.get('event');
+        console.log(objEvent);
         this.greybackProvider.getEvent(objEvent.eventId).subscribe(function (event) {
             _this.event = event;
         });
