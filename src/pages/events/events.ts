@@ -10,7 +10,7 @@ import { GreybackProvider } from '../../providers/greyback/greyback';
 export class EventsPage {
 	events: any[];
 	rootUrl: string;
-	
+
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventsPage');
@@ -27,7 +27,7 @@ export class EventsPage {
 	viewEvent(event) {
 		this.navCtrl.push('EventDetailPage', {
 			event: event,
-			eventId: event.NewsArticle.id
+			eventId: event.EventId
 		});
 	}
 

@@ -1,17 +1,17 @@
 <ion-header no-border>
 	<ion-navbar color="primary">
 		<ion-title center>Events</ion-title>
-		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
+		<button ion-button icon-only menuToggle right>
+			<ion-icon name="menu"></ion-icon>
+		</button>
 	</ion-navbar>
 </ion-header>
 
 <ion-content>
-	{{events | json}}
-	<!-- <ion-card *ngFor="let article of events; let i = index">
-		<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
-		<ion-card-content>
-			<ion-card-title>{{article.NewsArticle.title}}</ion-card-title>
-			<div padding [innerHTML]="article.NewsArticle.body"></div>
-		</ion-card-content>
-	</ion-card> -->
+	<ion-list>
+		<button ion-item *ngFor="let let event of events" (click)="viewEvent(event)">
+			<div item-start>{{event.StartDate | date:'M/dd j:mma'}}</div>
+			{{event.EventName}}
+		</button>
+	</ion-list>
 </ion-content>
