@@ -79,7 +79,7 @@ var EventsPage = (function () {
             _this.events = [];
             events.Page.forEach(function (event, index) {
                 var tmpMonth = __WEBPACK_IMPORTED_MODULE_3_moment__["utc"](event.StartDate).format('MMMM');
-                var tmpDay = __WEBPACK_IMPORTED_MODULE_3_moment__["utc"](event.StartDate).format('dddd, MM Do');
+                var tmpDay = __WEBPACK_IMPORTED_MODULE_3_moment__["utc"](event.StartDate).format('dddd, MMM Do');
                 if (_this.curMonth != tmpMonth) {
                     _this.monthIndex = _this.events.length;
                     _this.events.push({
@@ -98,7 +98,6 @@ var EventsPage = (function () {
                 }
                 _this.events[_this.monthIndex].days[_this.dayIndex].events.push(event);
             });
-            console.log(_this.events);
         });
     }
     EventsPage.prototype.ionViewDidLoad = function () {
@@ -119,7 +118,7 @@ var EventsPage = (function () {
 EventsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<div *ngFor="let month of events">\n			<ion-item-divider>{{month.name}}</ion-item-divider>\n			<div *ngFor="let day of month.days">\n				<ion-item>\n					<h3>{{day.name}}</h3>\n				</ion-item>\n				<div *ngFor="let event of day.events">\n					<ion-item>\n						<div item-start>{{event.StartDate | amLocal | amDateFormat:\'h:mma\'}}</div>\n						{{event.EventName}}\n					</ion-item>\n				</div>\n			</div>\n		</div>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
+        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<div *ngFor="let month of events">\n			<ion-item-divider>{{month.name}}</ion-item-divider>\n			<div *ngFor="let day of month.days">\n				<ion-item>\n					<h2>{{day.name}}</h2>\n				</ion-item>\n				<div *ngFor="let event of day.events">\n					<ion-item>\n						<div item-start>{{event.StartDate | amLocal | amDateFormat:\'h:mma\'}}</div>\n						{{event.EventName}}\n					</ion-item>\n				</div>\n			</div>\n		</div>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object])
 ], EventsPage);
