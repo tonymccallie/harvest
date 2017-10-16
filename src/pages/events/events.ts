@@ -17,6 +17,7 @@ export class EventsPage {
 		this.rootUrl = greybackProvider.rootUrl;
 		this.greybackProvider.getCalendar().subscribe(events => {
 			this.events = events.Page;
+			console.log(this.events);
 		});
 	}
 
