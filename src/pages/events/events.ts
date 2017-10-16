@@ -40,7 +40,7 @@ export class EventsPage {
 					});
 					this.curDay = tmpDay;
 				}
-				this.events[this.monthIndex].days[this.dayIndex].push(event);
+				this.events[this.monthIndex].days[this.dayIndex].events.push(event);
 			});
 			console.log(this.events);
 		});
