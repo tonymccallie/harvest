@@ -70,17 +70,32 @@ var EventsPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
+        this.monthIndex = 0;
+        this.dayIndex = 0;
         console.log('constructor EventsPage');
         this.rootUrl = greybackProvider.rootUrl;
         this.greybackProvider.getCalendar().subscribe(function (events) {
-            _this.events = events.Page;
-            _this.events.forEach(function (event, index) {
-                console.log(event);
+            //this.events = events.Page;
+            events.Page.forEach(function (event, index) {
                 var tmpMonth = __WEBPACK_IMPORTED_MODULE_3_moment__["utc"](event.StartDate).format('MMMM');
+                var tmpDay = __WEBPACK_IMPORTED_MODULE_3_moment__["utc"](event.StartDate).format('dddd [the] Do');
                 if (_this.curMonth != tmpMonth) {
-                    _this.events[index].header = tmpMonth;
+                    _this.monthIndex = _this.events.length;
+                    _this.events.push({
+                        name: tmpMonth,
+                        days: []
+                    });
                     _this.curMonth = tmpMonth;
                 }
+                if (_this.curDay != tmpDay) {
+                    _this.dayIndex = _this.events[_this.monthIndex].days.length;
+                    _this.events[_this.monthIndex].days.push({
+                        name: tmpDay,
+                        events: []
+                    });
+                    _this.curDay = tmpDay;
+                }
+                _this.events[_this.monthIndex].days[_this.dayIndex].push(event);
             });
             console.log(_this.events);
         });
@@ -103,7 +118,7 @@ var EventsPage = (function () {
 EventsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button>\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
+        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		{{events | json}}\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object])
 ], EventsPage);

@@ -11,20 +11,36 @@ import * as moment from 'moment';
 export class EventsPage {
 	events: any[];
 	rootUrl: string;
-	curMonth: any;
+	curMonth: string;
+	curDay: string;
+	monthIndex: number = 0;
+	dayIndex: number = 0;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventsPage');
 		this.rootUrl = greybackProvider.rootUrl;
 		this.greybackProvider.getCalendar().subscribe(events => {
-			this.events = events.Page;
-			this.events.forEach((event,index) => {
-				console.log(event);
+			//this.events = events.Page;
+			events.Page.forEach((event,index) => {
 				let tmpMonth = moment.utc(event.StartDate).format('MMMM');
+				let tmpDay = moment.utc(event.StartDate).format('dddd [the] Do');
 				if(this.curMonth != tmpMonth) {
-					this.events[index].header = tmpMonth;
+					this.monthIndex = this.events.length;
+					this.events.push({
+						name:tmpMonth,
+						days:[]
+					});
 					this.curMonth = tmpMonth;
 				}
+				if(this.curDay != tmpDay) {
+					this.dayIndex = this.events[this.monthIndex].days.length;
+					this.events[this.monthIndex].days.push({
+						name: tmpDay,
+						events: []
+					});
+					this.curDay = tmpDay;
+				}
+				this.events[this.monthIndex].days[this.dayIndex].push(event);
 			});
 			console.log(this.events);
 		});

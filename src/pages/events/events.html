@@ -9,9 +9,10 @@
 
 <ion-content>
 	<ion-list>
-		<button ion-item *ngFor="let event of events">
+		{{events | json}}
+		<!-- <button ion-item *ngFor="let event of events">
 			<div item-start>{{event.StartDate | amLocal | amDateFormat:'dd Mo h:mma'}}</div>
 			{{event.EventName}}
-		</button>
+		</button> -->
 	</ion-list>
 </ion-content>
