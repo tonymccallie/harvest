@@ -17,7 +17,7 @@
 				</ion-item>
 				<div *ngFor="let event of day.events">
 					<ion-item>
-						<div item-start>{{event.StartDate | amLocal | amDateFormat:'dd Mo h:mma'}}</div>
+						<div item-start>{{event.StartDate | amLocal | amDateFormat:'h:mma'}}</div>
 						{{event.EventName}}
 					</ion-item>
 				</div>
