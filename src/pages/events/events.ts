@@ -21,6 +21,7 @@ export class EventsPage {
 		this.rootUrl = greybackProvider.rootUrl;
 		this.greybackProvider.getCalendar().subscribe(events => {
 			//this.events = events.Page;
+			this.events = [];
 			events.Page.forEach((event,index) => {
 				let tmpMonth = moment.utc(event.StartDate).format('MMMM');
 				let tmpDay = moment.utc(event.StartDate).format('dddd [the] Do');
