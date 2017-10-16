@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GreybackProvider } from '../../providers/greyback/greyback';
-
+import { SharedModule } from '../../app/shared.module';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 
@@ -22,7 +22,7 @@ export class HomePage {
 
 	@ViewChild(Slides) slides: Slides;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private greybackProvider: GreybackProvider) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, private greybackProvider: GreybackProvider, public shared: SharedModule) {
 		this.rootUrl = greybackProvider.rootUrl;
 		console.log('contructor HomePage');
 	}

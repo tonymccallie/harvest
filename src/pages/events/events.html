@@ -9,7 +9,7 @@
 
 <ion-content>
 	<ion-list>
-		<button ion-item *ngFor="let event of events" (click)="viewEvent(event)">
+		<button ion-item *ngFor="let event of events">
 			<div item-start>{{event.StartDate | amDateFormat:'M/DD'}}</div>
 			{{event.EventName}}
 		</button>
