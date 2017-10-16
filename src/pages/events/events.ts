@@ -24,7 +24,7 @@ export class EventsPage {
 			this.events = [];
 			events.Page.forEach((event,index) => {
 				let tmpMonth = moment.utc(event.StartDate).format('MMMM');
-				let tmpDay = moment.utc(event.StartDate).format('dddd [the] Do');
+				let tmpDay = moment.utc(event.StartDate).format('dddd, MM Do');
 				if(this.curMonth != tmpMonth) {
 					this.monthIndex = this.events.length;
 					this.events.push({
