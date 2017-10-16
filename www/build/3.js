@@ -24,7 +24,7 @@ var StaffPageModule = (function () {
     return StaffPageModule;
 }());
 StaffPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__staff__["a" /* StaffPage */],
         ],
@@ -79,7 +79,7 @@ var StaffPage = (function () {
 }());
 StaffPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-staff',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Staff</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div *ngFor="let department of departments">\n		<h3>{{department.StaffDepartment.title}}</h3>\n		<ion-card *ngFor="let staff of department.StaffLink; let i = index">\n			<img src="{{rootUrl}}/img/thumb/{{staff.StaffMember.MediaImage.filename}}/width:600/height:600/crop:true/zoom:auto" />\n			<ion-card-content>\n				<ion-card-title>{{staff.StaffMember.first_name + \' \' + staff.StaffMember.last_name}}</ion-card-title>\n				{{staff.StaffMember.title}}\n				<ion-list no-lines>\n					<ion-item>\n						<a icon-left ion-button small outline item-end *ngIf="staff.StaffMember.email" href="mailto:{{staff.StaffMember.email}}">\n							<ion-icon name="mail-outline"></ion-icon> Email\n						</a>\n					</ion-item>\n				</ion-list>\n			</ion-card-content>\n		</ion-card>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/staff/staff.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])

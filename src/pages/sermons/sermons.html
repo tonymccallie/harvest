@@ -12,7 +12,7 @@
 	</ion-toolbar>
 	<ion-list>
 		<button ion-item *ngFor="let sermon of sermons" (click)="viewSermon(sermon)">
-			<div item-start>{{sermon.MessageMessage.start | date:'M/dd'}}</div>
+			<div item-start>{{sermon.MessageMessage.start | amDateFormat:'M/DD'}}</div>
 			{{sermon.MessageMessage.title}}
 		</button>
 	</ion-list>

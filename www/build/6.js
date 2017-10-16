@@ -24,7 +24,7 @@ var SeriesPageModule = (function () {
     return SeriesPageModule;
 }());
 SeriesPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__series__["a" /* SeriesPage */],
         ],
@@ -90,7 +90,7 @@ var SeriesPage = (function () {
 }());
 SeriesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-series',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Series</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<div *ngIf="!latest">\n		<img src="assets/img/fbcb_sermon_load.jpg" />\n	</div>\n	<div *ngFor="let recent of latest">\n		<img *ngIf="recent.MessageSeries.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{recent.MessageSeries.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" (click)="viewSeries(recent.MessageSeries)">\n		<img *ngIf="!recent.MessageSeries.MediaImage.filename" src="http://via.placeholder.com/1000x600?text=No+series+image" />\n	</div>\n	<ion-toolbar color="primary">\n		Latest Series\n	</ion-toolbar>\n	<div *ngIf="!series">\n		<ion-row>\n			<ion-col col-6 *ngFor="let image of [0,1,2,3,4,5,6]">\n				<img src="assets/img/fbcb_sermon_load.jpg" />\n			</ion-col>\n		</ion-row>\n	</div>\n	<ion-grid>\n		<ion-row>\n			<ion-col col-6 *ngFor="let single of series; let i = index" (click)="viewSeries(single)">\n				<img *ngIf="single.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{single.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n				<img *ngIf="!single.MediaImage.filename" src="assets/img/fbcb_sermon_load.jpg" />\n			</ion-col>\n		</ion-row>\n	</ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/series/series.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])

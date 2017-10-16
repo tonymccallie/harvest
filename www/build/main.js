@@ -182,7 +182,7 @@ var GreybackProvider = (function () {
     return GreybackProvider;
 }());
 GreybackProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
 ], GreybackProvider);
 
@@ -298,7 +298,7 @@ var AudioProvider = (function () {
     return AudioProvider;
 }());
 AudioProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["a" /* AlertController */]])
 ], AudioProvider);
 
@@ -332,11 +332,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_in_app_browser__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_auth_service_auth_service__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_greyback_greyback__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_audio_audio__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_tab_hidden_tab_hidden__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_moment__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_auth_service_auth_service__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_module__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_greyback_greyback__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_audio_audio__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__directives_tab_hidden_tab_hidden__ = __webpack_require__(266);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -355,21 +358,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_11__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_13__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {
                 mode: 'ios'
             }, {
                 links: [
@@ -393,23 +398,26 @@ AppModule = __decorate([
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/times/times.module#TimesPageModule', name: 'TimesPage', segment: 'times', priority: 'low', defaultHistory: [] }
                 ]
-            })
+            }),
+            __WEBPACK_IMPORTED_MODULE_7_angular2_moment__["MomentModule"],
+            __WEBPACK_IMPORTED_MODULE_10__shared_module__["a" /* SharedModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_11__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
+            __WEBPACK_IMPORTED_MODULE_13__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_8__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_greyback_greyback__["a" /* GreybackProvider */],
-            __WEBPACK_IMPORTED_MODULE_10__providers_audio_audio__["a" /* AudioProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_native_in_app_browser__["a" /* InAppBrowser */]
+            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_9__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_11__providers_greyback_greyback__["a" /* GreybackProvider */],
+            __WEBPACK_IMPORTED_MODULE_12__providers_audio_audio__["a" /* AudioProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_in_app_browser__["a" /* InAppBrowser */],
+            __WEBPACK_IMPORTED_MODULE_10__shared_module__["a" /* SharedModule */]
         ]
     })
 ], AppModule);
@@ -454,7 +462,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -591,7 +599,7 @@ var AuthServiceProvider = (function () {
     return AuthServiceProvider;
 }());
 AuthServiceProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
 ], AuthServiceProvider);
 
 //# sourceMappingURL=auth-service.js.map
@@ -644,15 +652,313 @@ var TabHiddenDirective = (function () {
     return TabHiddenDirective;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('tab-hidden'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tab-hidden'),
     __metadata("design:type", Boolean)
 ], TabHiddenDirective.prototype, "tabHidden", void 0);
 TabHiddenDirective = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({ selector: '[tab-hidden]' }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({ selector: '[tab-hidden]' }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]])
 ], TabHiddenDirective);
 
 //# sourceMappingURL=tab-hidden.js.map
+
+/***/ }),
+
+/***/ 438:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 307,
+	"./af.js": 307,
+	"./ar": 308,
+	"./ar-dz": 309,
+	"./ar-dz.js": 309,
+	"./ar-kw": 310,
+	"./ar-kw.js": 310,
+	"./ar-ly": 311,
+	"./ar-ly.js": 311,
+	"./ar-ma": 312,
+	"./ar-ma.js": 312,
+	"./ar-sa": 313,
+	"./ar-sa.js": 313,
+	"./ar-tn": 314,
+	"./ar-tn.js": 314,
+	"./ar.js": 308,
+	"./az": 315,
+	"./az.js": 315,
+	"./be": 316,
+	"./be.js": 316,
+	"./bg": 317,
+	"./bg.js": 317,
+	"./bm": 318,
+	"./bm.js": 318,
+	"./bn": 319,
+	"./bn.js": 319,
+	"./bo": 320,
+	"./bo.js": 320,
+	"./br": 321,
+	"./br.js": 321,
+	"./bs": 322,
+	"./bs.js": 322,
+	"./ca": 323,
+	"./ca.js": 323,
+	"./cs": 324,
+	"./cs.js": 324,
+	"./cv": 325,
+	"./cv.js": 325,
+	"./cy": 326,
+	"./cy.js": 326,
+	"./da": 327,
+	"./da.js": 327,
+	"./de": 328,
+	"./de-at": 329,
+	"./de-at.js": 329,
+	"./de-ch": 330,
+	"./de-ch.js": 330,
+	"./de.js": 328,
+	"./dv": 331,
+	"./dv.js": 331,
+	"./el": 332,
+	"./el.js": 332,
+	"./en-au": 333,
+	"./en-au.js": 333,
+	"./en-ca": 334,
+	"./en-ca.js": 334,
+	"./en-gb": 335,
+	"./en-gb.js": 335,
+	"./en-ie": 336,
+	"./en-ie.js": 336,
+	"./en-nz": 337,
+	"./en-nz.js": 337,
+	"./eo": 338,
+	"./eo.js": 338,
+	"./es": 339,
+	"./es-do": 340,
+	"./es-do.js": 340,
+	"./es-us": 341,
+	"./es-us.js": 341,
+	"./es.js": 339,
+	"./et": 342,
+	"./et.js": 342,
+	"./eu": 343,
+	"./eu.js": 343,
+	"./fa": 344,
+	"./fa.js": 344,
+	"./fi": 345,
+	"./fi.js": 345,
+	"./fo": 346,
+	"./fo.js": 346,
+	"./fr": 347,
+	"./fr-ca": 348,
+	"./fr-ca.js": 348,
+	"./fr-ch": 349,
+	"./fr-ch.js": 349,
+	"./fr.js": 347,
+	"./fy": 350,
+	"./fy.js": 350,
+	"./gd": 351,
+	"./gd.js": 351,
+	"./gl": 352,
+	"./gl.js": 352,
+	"./gom-latn": 353,
+	"./gom-latn.js": 353,
+	"./gu": 354,
+	"./gu.js": 354,
+	"./he": 355,
+	"./he.js": 355,
+	"./hi": 356,
+	"./hi.js": 356,
+	"./hr": 357,
+	"./hr.js": 357,
+	"./hu": 358,
+	"./hu.js": 358,
+	"./hy-am": 359,
+	"./hy-am.js": 359,
+	"./id": 360,
+	"./id.js": 360,
+	"./is": 361,
+	"./is.js": 361,
+	"./it": 362,
+	"./it.js": 362,
+	"./ja": 363,
+	"./ja.js": 363,
+	"./jv": 364,
+	"./jv.js": 364,
+	"./ka": 365,
+	"./ka.js": 365,
+	"./kk": 366,
+	"./kk.js": 366,
+	"./km": 367,
+	"./km.js": 367,
+	"./kn": 368,
+	"./kn.js": 368,
+	"./ko": 369,
+	"./ko.js": 369,
+	"./ky": 370,
+	"./ky.js": 370,
+	"./lb": 371,
+	"./lb.js": 371,
+	"./lo": 372,
+	"./lo.js": 372,
+	"./lt": 373,
+	"./lt.js": 373,
+	"./lv": 374,
+	"./lv.js": 374,
+	"./me": 375,
+	"./me.js": 375,
+	"./mi": 376,
+	"./mi.js": 376,
+	"./mk": 377,
+	"./mk.js": 377,
+	"./ml": 378,
+	"./ml.js": 378,
+	"./mr": 379,
+	"./mr.js": 379,
+	"./ms": 380,
+	"./ms-my": 381,
+	"./ms-my.js": 381,
+	"./ms.js": 380,
+	"./my": 382,
+	"./my.js": 382,
+	"./nb": 383,
+	"./nb.js": 383,
+	"./ne": 384,
+	"./ne.js": 384,
+	"./nl": 385,
+	"./nl-be": 386,
+	"./nl-be.js": 386,
+	"./nl.js": 385,
+	"./nn": 387,
+	"./nn.js": 387,
+	"./pa-in": 388,
+	"./pa-in.js": 388,
+	"./pl": 389,
+	"./pl.js": 389,
+	"./pt": 390,
+	"./pt-br": 391,
+	"./pt-br.js": 391,
+	"./pt.js": 390,
+	"./ro": 392,
+	"./ro.js": 392,
+	"./ru": 393,
+	"./ru.js": 393,
+	"./sd": 394,
+	"./sd.js": 394,
+	"./se": 395,
+	"./se.js": 395,
+	"./si": 396,
+	"./si.js": 396,
+	"./sk": 397,
+	"./sk.js": 397,
+	"./sl": 398,
+	"./sl.js": 398,
+	"./sq": 399,
+	"./sq.js": 399,
+	"./sr": 400,
+	"./sr-cyrl": 401,
+	"./sr-cyrl.js": 401,
+	"./sr.js": 400,
+	"./ss": 402,
+	"./ss.js": 402,
+	"./sv": 403,
+	"./sv.js": 403,
+	"./sw": 404,
+	"./sw.js": 404,
+	"./ta": 405,
+	"./ta.js": 405,
+	"./te": 406,
+	"./te.js": 406,
+	"./tet": 407,
+	"./tet.js": 407,
+	"./th": 408,
+	"./th.js": 408,
+	"./tl-ph": 409,
+	"./tl-ph.js": 409,
+	"./tlh": 410,
+	"./tlh.js": 410,
+	"./tr": 411,
+	"./tr.js": 411,
+	"./tzl": 412,
+	"./tzl.js": 412,
+	"./tzm": 413,
+	"./tzm-latn": 414,
+	"./tzm-latn.js": 414,
+	"./tzm.js": 413,
+	"./uk": 415,
+	"./uk.js": 415,
+	"./ur": 416,
+	"./ur.js": 416,
+	"./uz": 417,
+	"./uz-latn": 418,
+	"./uz-latn.js": 418,
+	"./uz.js": 417,
+	"./vi": 419,
+	"./vi.js": 419,
+	"./x-pseudo": 420,
+	"./x-pseudo.js": 420,
+	"./yo": 421,
+	"./yo.js": 421,
+	"./zh-cn": 422,
+	"./zh-cn.js": 422,
+	"./zh-hk": 423,
+	"./zh-hk.js": 423,
+	"./zh-tw": 424,
+	"./zh-tw.js": 424
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 438;
+
+/***/ }),
+
+/***/ 445:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_moment__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_moment__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SharedModule = (function () {
+    function SharedModule() {
+    }
+    return SharedModule;
+}());
+SharedModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_2_angular2_moment__["MomentModule"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicModule */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2_angular2_moment__["MomentModule"]
+        ]
+    })
+], SharedModule);
+
+//# sourceMappingURL=shared.module.js.map
 
 /***/ })
 

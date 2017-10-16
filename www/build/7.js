@@ -24,7 +24,7 @@ var ResourcesPageModule = (function () {
     return ResourcesPageModule;
 }());
 ResourcesPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__resources__["a" /* ResourcesPage */],
         ],
@@ -74,7 +74,7 @@ var ResourcesPage = (function () {
 }());
 ResourcesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-resources',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/resources/resources.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Service Times</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<h2>TRADITIONAL 9:30 IN WORSHIP CENTER</h2>\n	<p>Choir and Orchestra with Dr. Ronny Marriott</p>\n\n	<h2>MODERN 9:30 & 11:00 IN THREE1SEVEN</h2>\n	<p>Band with Dr. Ronny Marriott</p>\n\n	<h2>SPANISH 11:00 IN WORSHIP CENTER</h2>\n	<p>Praise Team with Jonathan Colon</p>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/resources/resources.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])

@@ -24,7 +24,7 @@ var CreditsPageModule = (function () {
     return CreditsPageModule;
 }());
 CreditsPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__credits__["a" /* CreditsPage */],
         ],
@@ -74,8 +74,8 @@ var CreditsPage = (function () {
 }());
 CreditsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-credits',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/credits/credits.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Credits</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img src="assets/img/threeleaf.jpg" alt="threeleaf" style="width: 100%;">\n	<div padding>\n		<h2>About ThreeLeaf</h2>\n		<p>It may sound pretty cliché, but we are all about you. Our number one goal is to help see our client\'s dreams become a reality.\n			The rules, values, and methods of advertising are changing everyday, but one thing never changes – your story and our\n			passion to help you tell it.\n			<br>\n		</p>\n		<p>We are a full-service ad agency specializing in re-branding and brand campaigns.\n			<br>\n		</p>\n		<a ion-button target="_blank" href="http://www.threeleaf.net">Visit Our Website</a>\n		<p>\n			<br>\n		</p>\n		<h3>Our Name</h3>\n		<p>Long ago, a young Catholic Priest was commissioned by the Pope to evangelize Ireland. Patrick began looking for ways to\n			communicate to a group of people who knew nothing about the Christian faith. In a moment of inspiration, he used a three\n			leaf clover to help explain the concept of the Holy Trinity.</p>\n		<p>Like St. Patrick, you have a message to communicate. Let us help you take your message to the masses. Let us help you find\n			your three leaf clover.</p>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/credits/credits.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-credits',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/credits/credits.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Credits</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img src="assets/img/threeleaf.jpg" alt="threeleaf" style="width: 100%;">\n	<div padding>\n		<h2>ABOUT THREELEAF</h2>\n		<p>It may sound pretty cliché, but we are all about you. Our number one goal is to help see our client\'s dreams become a reality.\n			The rules, values, and methods of advertising are changing everyday, but one thing never changes – your story and our\n			passion to help you tell it.\n			<br>\n		</p>\n		<p>We are a full-service ad agency specializing in re-branding and brand campaigns.\n			<br>\n		</p>\n		<a ion-button target="_blank" href="http://www.threeleaf.net">Visit Our Website</a>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/credits/credits.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
 ], CreditsPage);
