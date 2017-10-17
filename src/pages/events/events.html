@@ -8,13 +8,12 @@
 </ion-header>
 
 <ion-content>
-	{{events | json}}
 	<ion-list>
 		<div *ngFor="let month of events">
 			<ion-item-divider>{{month.name}}</ion-item-divider>
 			<div *ngFor="let day of month.days">
 				<ion-item>
-					<h2>{{day.name}}</h2>
+					<h1><em>{{day.name}}</em></h1>
 				</ion-item>
 				<div *ngFor="let event of day.events">
 					<ion-item>
@@ -29,4 +28,7 @@
 			{{event.EventName}}
 		</button> -->
 	</ion-list>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+		<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
 </ion-content>

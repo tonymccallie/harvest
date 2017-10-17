@@ -15,37 +15,15 @@ export class EventsPage {
 	curDay: string;
 	monthIndex: number = 0;
 	dayIndex: number = 0;
+	pageIndex: number = 0;
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
 		console.log('constructor EventsPage');
 		this.rootUrl = greybackProvider.rootUrl;
-		this.greybackProvider.getCalendar().subscribe(events => {
+		this.greybackProvider.getCalendar(this.pageIndex).subscribe(events => {
 			//this.events = events.Page;
 			this.events = [];
-			events.Page.forEach((event,index) => {
-				let tmpMonth = moment.utc(event.StartDate).format('MMMM');
-				let tmpDay = moment.utc(event.StartDate).format('dddd, MMM Do');
-				if(this.curMonth != tmpMonth) {
-					this.monthIndex = this.events.length;
-					this.events.push({
-						name:tmpMonth,
-						days:[]
-					});
-					this.curMonth = tmpMonth;
-				}
-				if(this.curDay != tmpDay) {
-					this.dayIndex = this.events[this.monthIndex].days.length;
-					this.events[this.monthIndex].days.push({
-						name: tmpDay,
-						events: []
-					});
-					this.curDay = tmpDay;
-				}
-				this.events[this.monthIndex].days[this.dayIndex].events.push(event);
-				console.log(this.events);
-			},error => {
-				console.log('errors');
-			});
+			this.addEvents(events);
 		});
 	}
 
@@ -54,14 +32,47 @@ export class EventsPage {
 	}
 
 	convertDate(date) {
-		let newDate = Date.parse(date.substr(0,date.length - 4).replace(' ','T'));
+		let newDate = Date.parse(date.substr(0, date.length - 4).replace(' ', 'T'));
 		return newDate;
+	}
+
+	doInfinite(infiniteScroll) {
+		console.log('doInfinite');
+		this.pageIndex++;
+		this.greybackProvider.getCalendar(this.pageIndex).subscribe(events => {
+			this.addEvents(events);
+			infiniteScroll.complete();
+		});
 	}
 
 	viewEvent(event) {
 		this.navCtrl.push('EventDetailPage', {
 			event: event,
 			eventId: event.EventId
+		});
+	}
+
+	addEvents(events) {
+		events.Page.forEach((event, index) => {
+			let tmpMonth = moment.utc(event.StartDate).format('MMMM');
+			let tmpDay = moment.utc(event.StartDate).format('dddd, MMM Do');
+			if (this.curMonth != tmpMonth) {
+				this.monthIndex = this.events.length;
+				this.events.push({
+					name: tmpMonth,
+					days: []
+				});
+				this.curMonth = tmpMonth;
+			}
+			if (this.curDay != tmpDay) {
+				this.dayIndex = this.events[this.monthIndex].days.length;
+				this.events[this.monthIndex].days.push({
+					name: tmpDay,
+					events: []
+				});
+				this.curDay = tmpDay;
+			}
+			this.events[this.monthIndex].days[this.dayIndex].events.push(event);
 		});
 	}
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
+import * as moment from 'moment';
 
 @Injectable()
 export class GreybackProvider {
@@ -50,9 +51,13 @@ export class GreybackProvider {
 		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(result => result.json());
 	}
 
-	getCalendar() {
+	getCalendar(pageIndex) {
+		let today = moment().format('YYYY/MM/DD');
+		//let end = moment().add(30,'days').format('YYYY/MM/DD');
+
 		//58c08c0d-776d-4762-8180-0df5fcf1ae74
-		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=10/01/2017&pageIndex=0&pageSize=30&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(result => result.json());
+		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate='+today+'&'+pageIndex+'=0&pageSize=50&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(result => result.json());
+		//return this.http.get('http://localhost:8100/assets/data.json', this.opts).map(result => result.json());
 	}
 
 	getEvent(eventId: string) {
