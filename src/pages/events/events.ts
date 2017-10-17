@@ -42,6 +42,9 @@ export class EventsPage {
 					this.curDay = tmpDay;
 				}
 				this.events[this.monthIndex].days[this.dayIndex].events.push(event);
+				console.log(this.events);
+			},error => {
+				console.log('errors');
 			});
 		});
 	}

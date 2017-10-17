@@ -97,6 +97,9 @@ var EventsPage = (function () {
                     _this.curDay = tmpDay;
                 }
                 _this.events[_this.monthIndex].days[_this.dayIndex].events.push(event);
+                console.log(_this.events);
+            }, function (error) {
+                console.log('errors');
             });
         });
     }

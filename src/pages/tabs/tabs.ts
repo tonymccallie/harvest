@@ -26,7 +26,7 @@ export class TabsPage {
 	}
 
 	giving() {
-		const browser = this.iab.create('https://easytithe.com/fbcburleson','_system');
+		this.iab.create('https://easytithe.com/fbcburleson','_system');
 	}
 
 }
