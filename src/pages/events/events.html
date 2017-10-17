@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+	{{events | json}}
 	<ion-list>
 		<div *ngFor="let month of events">
 			<ion-item-divider>{{month.name}}</ion-item-divider>
