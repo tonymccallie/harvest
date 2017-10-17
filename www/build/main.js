@@ -174,11 +174,11 @@ var GreybackProvider = (function () {
     GreybackProvider.prototype.getCalendars = function () {
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(function (result) { return result.json(); });
     };
-    GreybackProvider.prototype.getCalendar = function (pageIndex) {
+    GreybackProvider.prototype.getCalendar = function (index) {
         var today = __WEBPACK_IMPORTED_MODULE_3_moment__().format('YYYY/MM/DD');
         //let end = moment().add(30,'days').format('YYYY/MM/DD');
         //58c08c0d-776d-4762-8180-0df5fcf1ae74
-        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=' + today + '&pageIndex=' + pageIndex + '&pageSize=50&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(function (result) { return result.json(); });
+        return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=' + today + '&pageIndex=' + index + '&pageSize=50&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(function (result) { return result.json(); });
         //return this.http.get('http://localhost:8100/assets/data.json', this.opts).map(result => result.json());
     };
     GreybackProvider.prototype.getEvent = function (eventId) {
