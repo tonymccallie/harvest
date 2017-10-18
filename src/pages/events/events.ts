@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GreybackProvider } from '../../providers/greyback/greyback';
+import { LoadingController } from 'ionic-angular';
 import * as moment from 'moment';
 
 @IonicPage()
@@ -17,13 +18,18 @@ export class EventsPage {
 	dayIndex: number = 0;
 	pageIndex: number = 0;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider, public loadingCtrl: LoadingController) {
 		console.log('constructor EventsPage');
 		this.rootUrl = greybackProvider.rootUrl;
+		let loader = this.loadingCtrl.create({
+			content: "Please wait..."
+		});
+		loader.present();
 		this.greybackProvider.getCalendar(this.pageIndex).subscribe(events => {
 			//this.events = events.Page;
 			this.events = [];
 			this.addEvents(events);
+			loader.dismiss();
 		});
 	}
 

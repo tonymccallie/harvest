@@ -64,21 +64,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var EventsPage = (function () {
-    function EventsPage(navCtrl, navParams, greybackProvider) {
+    function EventsPage(navCtrl, navParams, greybackProvider, loadingCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.greybackProvider = greybackProvider;
+        this.loadingCtrl = loadingCtrl;
         this.monthIndex = 0;
         this.dayIndex = 0;
         this.pageIndex = 0;
         console.log('constructor EventsPage');
         this.rootUrl = greybackProvider.rootUrl;
+        var loader = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loader.present();
         this.greybackProvider.getCalendar(this.pageIndex).subscribe(function (events) {
             //this.events = events.Page;
             _this.events = [];
             _this.addEvents(events);
+            loader.dismiss();
         });
     }
     EventsPage.prototype.ionViewDidLoad = function () {
@@ -132,12 +139,12 @@ var EventsPage = (function () {
 EventsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<div *ngFor="let month of events">\n			<!-- <ion-item-divider>{{month.name}}</ion-item-divider> -->\n			<div *ngFor="let day of month.days">\n				<ion-item-divider>{{day.name}}</ion-item-divider>\n				<div *ngFor="let event of day.events">\n					<ion-item>\n						<div item-start>{{event.StartDate | amLocal | amDateFormat:\'h:mma\'}}</div>\n						{{event.EventName}}\n					</ion-item>\n				</div>\n			</div>\n		</div>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n		<ion-infinite-scroll-content></ion-infinite-scroll-content>\n	</ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
+        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<div *ngFor="let month of events">\n			<!-- <ion-item-divider>{{month.name}}</ion-item-divider> -->\n			<div *ngFor="let day of month.days">\n				<ion-item-divider color="primary">{{day.name}}</ion-item-divider>\n				<div *ngFor="let event of day.events">\n					<ion-item>\n						<div item-start>{{event.StartDate | amLocal | amDateFormat:\'h:mma\'}}</div>\n						{{event.EventName}}\n					</ion-item>\n				</div>\n			</div>\n		</div>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n		<ion-infinite-scroll-content></ion-infinite-scroll-content>\n	</ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/events/events.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _d || Object])
 ], EventsPage);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=events.js.map
 
 /***/ })
