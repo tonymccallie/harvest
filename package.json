@@ -71,7 +71,6 @@
             "cordova-plugin-media": {
                 "MICROPHONE_USAGE_DESCRIPTION": " "
             },
-            "cordova-plugin-audioplayer": {},
             "nl.kingsquare.cordova.background-audio": {}
         },
         "platforms": [
