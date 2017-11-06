@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 412:
+/***/ 422:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuPageModule", function() { return MenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu__ = __webpack_require__(441);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +29,7 @@ MenuPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__menu__["a" /* MenuPage */]),
         ],
         schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
@@ -39,14 +39,14 @@ MenuPageModule = __decorate([
 
 /***/ }),
 
-/***/ 431:
+/***/ 441:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__ = __webpack_require__(331);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -128,15 +128,14 @@ var MenuPage = (function () {
     return MenuPage;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
 ], MenuPage.prototype, "nav", void 0);
 MenuPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-menu',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/'<!-- <ion-split-pane> -->\n<ion-menu [content]="content" side="right" type="reveal" persistent="true">\n	<ion-header no-border>\n		<ion-toolbar color="primary">\n			<ion-title *ngIf="!player.title">Menu</ion-title>\n			<ion-title *ngIf="player.title">\n				<ion-icon name="volume-up"></ion-icon> Now Playing</ion-title>\n		</ion-toolbar>\n	</ion-header>\n\n	<ion-content>\n		<ion-list>\n			<div *ngIf="player.title">\n				<ion-item (click)="pause()">\n					<ion-icon item-start *ngIf="player.playing && !player.loading" name="threeleaf-pause"></ion-icon>\n					<ion-icon item-start *ngIf="!player.playing && !player.loading" name="threeleaf-play"></ion-icon>\n					<ion-icon item-start *ngIf="player.loading" name="refresh" ></ion-icon>\n					{{player.title}}<br />{{player.speaker}}\n				</ion-item>\n				<ion-item>\n					<ion-range [(ngModel)]="player.percentage" (ionChange)="scrub($event)">\n						<ion-label range-left>{{player.current | date:\'mm:ss\' }}</ion-label>\n						<ion-label range-right>{{player.duration | date:\'mm:ss\' }}</ion-label>\n					</ion-range>\n				</ion-item>\n\n				<ion-list-header color="primary">Menu</ion-list-header>\n			</div>\n			<button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n				<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n				{{ p.title }}\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n<!-- main navigation -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n<!-- </ion-split-pane> -->'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/menu/menu.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_audio_audio__["a" /* AudioProvider */]])
 ], MenuPage);
 
 //# sourceMappingURL=menu.js.map

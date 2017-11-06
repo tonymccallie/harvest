@@ -1,14 +1,14 @@
 {
   "name": "fullNavigation",
-  "app_id": "",
+  "app_id": "ba9e941e",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
   },
-  "proxies":[
-	  {
-		  "path":"/calendars",
-		  "proxyUrl":"/api_accessacs_mobile/v2/10413/calendars"
-	  }
+  "proxies": [
+    {
+      "path": "/calendars",
+      "proxyUrl": "/api_accessacs_mobile/v2/10413/calendars"
+    }
   ]
 }

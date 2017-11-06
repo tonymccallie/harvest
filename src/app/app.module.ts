@@ -14,6 +14,16 @@ import { GreybackProvider } from '../providers/greyback/greyback';
 import { AudioProvider } from '../providers/audio/audio';
 import { TabHiddenDirective } from '../directives/tab-hidden/tab-hidden';
 
+import { Pro } from '@ionic/pro';
+const IonicPro = Pro.init('ba9e941e', {
+	appVersion: "1.1.1"
+});
+import { ErrorHandler } from '@angular/core';
+export class MyErrorHandler implements ErrorHandler {
+	handleError(err: any): void {
+		IonicPro.monitoring.handleNewError(err);
+	}
+}
 @NgModule({
 	declarations: [
 		MyApp,
