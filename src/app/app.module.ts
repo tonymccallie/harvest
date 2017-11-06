@@ -18,7 +18,6 @@ import { Pro } from '@ionic/pro';
 const IonicPro = Pro.init('ba9e941e', {
 	appVersion: "1.1.1"
 });
-import { ErrorHandler } from '@angular/core';
 export class MyErrorHandler implements ErrorHandler {
 	handleError(err: any): void {
 		IonicPro.monitoring.handleNewError(err);
