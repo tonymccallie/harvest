@@ -5,7 +5,7 @@ import * as moment from 'moment';
 
 @Injectable()
 export class GreybackProvider {
-	rootUrl: string = 'http://firstburleson.server3.greyback.net/';
+	rootUrl: string = 'http://firstburleson.server3.greyback.net';
 	headers: any = new Headers;
 	opts: any;
 

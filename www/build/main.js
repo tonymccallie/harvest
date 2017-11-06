@@ -141,7 +141,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GreybackProvider = (function () {
     function GreybackProvider(http) {
         this.http = http;
-        this.rootUrl = 'http://firstburleson.server3.greyback.net/';
+        this.rootUrl = 'http://firstburleson.server3.greyback.net';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */];
         console.log('Hello GreybackProvider Provider');
         this.headers.append('Accept', 'application/json');
@@ -189,9 +189,10 @@ var GreybackProvider = (function () {
 }());
 GreybackProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], GreybackProvider);
 
+var _a;
 //# sourceMappingURL=greyback.js.map
 
 /***/ }),
