@@ -8,11 +8,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { MomentModule } from 'angular2-moment';
 
 import { MyApp } from './app.component';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { SharedModule } from './shared.module';
 import { GreybackProvider } from '../providers/greyback/greyback';
 import { AudioProvider } from '../providers/audio/audio';
-import { TabHiddenDirective } from '../directives/tab-hidden/tab-hidden';
 import { HttpClientModule } from '@angular/common/http';
 
 import { Pro } from '@ionic/pro';
@@ -26,8 +24,7 @@ export class MyErrorHandler implements ErrorHandler {
 }
 @NgModule({
 	declarations: [
-		MyApp,
-		TabHiddenDirective
+		MyApp
 	],
 	imports: [
 		BrowserModule,
@@ -39,9 +36,7 @@ export class MyErrorHandler implements ErrorHandler {
 		SharedModule,
 		HttpClientModule
 	],
-	exports: [
-		TabHiddenDirective
-	],
+	exports: [],
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp
@@ -50,7 +45,6 @@ export class MyErrorHandler implements ErrorHandler {
 		StatusBar,
 		SplashScreen,
 		{ provide: ErrorHandler, useClass: IonicErrorHandler },
-		AuthServiceProvider,
 		GreybackProvider,
 		AudioProvider,
 		InAppBrowser,

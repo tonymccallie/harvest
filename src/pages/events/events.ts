@@ -45,7 +45,7 @@ export class EventsPage {
 	doInfinite(infiniteScroll) {
 		console.log('doInfinite');
 		this.pageIndex++;
-		this.greybackProvider.getCalendar(this.pageIndex).subscribe(events => {
+		this.greybackProvider.getCalendar(this.pageIndex).then(events => {
 			this.addEvents(events);
 			infiniteScroll.complete();
 		});
