@@ -89,6 +89,6 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
-    <plugin name="nl.x-services.plugins.backgroundaudio" spec="git+https://github.com/EddyVerbruggen/cordova-plugin-backgroundaudio.git" />
     <engine name="ios" spec="~4.4.0" />
+    <plugin name="nl.x-services.plugins.backgroundaudio" spec="^1.0.1" />
 </widget>
