@@ -409,8 +409,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var IonicPro = __WEBPACK_IMPORTED_MODULE_14__ionic_pro__["Pro"].init('ba9e941e', {
-    appVersion: "1.1.1"
+var IonicPro = __WEBPACK_IMPORTED_MODULE_14__ionic_pro__["Pro"].init('2191a4b0', {
+    appVersion: "1.0.0"
 });
 var MyErrorHandler = (function () {
     function MyErrorHandler() {
@@ -782,7 +782,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

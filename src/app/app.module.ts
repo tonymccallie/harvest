@@ -15,8 +15,8 @@ import { AudioProvider } from '../providers/audio/audio';
 import { TabHiddenDirective } from '../directives/tab-hidden/tab-hidden';
 
 import { Pro } from '@ionic/pro';
-const IonicPro = Pro.init('ba9e941e', {
-	appVersion: "1.1.1"
+const IonicPro = Pro.init('2191a4b0', {
+	appVersion: "1.0.0"
 });
 export class MyErrorHandler implements ErrorHandler {
 	handleError(err: any): void {

@@ -74,7 +74,7 @@ var PrayerPage = (function () {
 }());
 PrayerPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-prayer',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/prayer/prayer.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Prayer</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/prayer/prayer.html"*/,
+        selector: 'page-prayer',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/prayer/prayer.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Prayer</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/prayer/prayer.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
 ], PrayerPage);

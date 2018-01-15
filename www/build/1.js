@@ -74,13 +74,13 @@ var TabsPage = (function () {
         console.log('ionViewDidLoad TabsPage');
     };
     TabsPage.prototype.giving = function () {
-        this.iab.create('https://easytithe.com/fbcburleson', '_system');
+        this.iab.create('http://www.fbcwf.org/pages/page.asp?page_id=239772', '_system');
     };
     return TabsPage;
 }());
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-tabs',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcburleson/src/pages/tabs/tabs.html"*/'<!-- <ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header> -->\n\n<ion-tabs [selectedIndex]="myIndex" no-border color="primary">\n	<ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home-outline"></ion-tab>\n	<ion-tab [root]="tab2Root" tabTitle="Sermons" tabIcon="ios-headset-outline"></ion-tab>\n	<ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="ios-calendar-outline"></ion-tab>\n	<ion-tab (ionSelect)="giving()" tabTitle="Giving" tabIcon="ios-cash-outline"></ion-tab>\n	<ion-tab [root]="tab4Root" tabTitle="Services" tabIcon="ios-time-outline"></ion-tab>\n	<ion-tab #hiddenTab [root]="tab5Root" tabTitle="About" tabIcon="ios-time-outline"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcburleson/src/pages/tabs/tabs.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/tabs/tabs.html"*/'<!-- <ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header> -->\n\n<ion-tabs [selectedIndex]="myIndex" no-border color="primary">\n	<ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home-outline"></ion-tab>\n	<ion-tab [root]="tab2Root" tabTitle="Sermons" tabIcon="ios-headset-outline"></ion-tab>\n	<ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="ios-calendar-outline"></ion-tab>\n	<ion-tab (ionSelect)="giving()" tabTitle="Giving" tabIcon="ios-cash-outline"></ion-tab>\n	<ion-tab [root]="tab4Root" tabTitle="Services" tabIcon="ios-time-outline"></ion-tab>\n	<ion-tab #hiddenTab [root]="tab5Root" tabTitle="About" tabIcon="ios-time-outline"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/tabs/tabs.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
 ], TabsPage);
