@@ -81,7 +81,7 @@ var EventsPage = (function () {
             content: "Please wait..."
         });
         loader.present();
-        this.greybackProvider.getCalendar(this.pageIndex).subscribe(function (events) {
+        this.greybackProvider.getCalendar(this.pageIndex).then(function (events) {
             //this.events = events.Page;
             _this.events = [];
             _this.addEvents(events);
@@ -138,11 +138,12 @@ var EventsPage = (function () {
 }());
 EventsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<div *ngFor="let month of events">\n			<!-- <ion-item-divider>{{month.name}}</ion-item-divider> -->\n			<div *ngFor="let day of month.days">\n				<ion-item-divider color="primary">{{day.name}}</ion-item-divider>\n				<div *ngFor="let event of day.events">\n					<ion-item>\n						<div item-start>{{event.StartDate | amLocal | amDateFormat:\'h:mma\'}}</div>\n						{{event.EventName}}\n					</ion-item>\n				</div>\n			</div>\n		</div>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n		<ion-infinite-scroll-content></ion-infinite-scroll-content>\n	</ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/events/events.html"*/,
+        selector: 'page-events',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/events/events.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Events</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<ion-item *ngFor="let event of events">\n			<div item-start>{{event.OccurrenceStartTime | amLocal | amDateFormat:\'M/DD h:mma\'}}</div>\n			{{ event.Name }}\n		</ion-item>\n		<!-- <button ion-item *ngFor="let event of events">\n			<div item-start>{{event.StartDate | amLocal | amDateFormat:\'dd Mo h:mma\'}}</div>\n			{{event.EventName}}\n		</button> -->\n	</ion-list>\n	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n		<ion-infinite-scroll-content></ion-infinite-scroll-content>\n	</ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/events/events.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object])
 ], EventsPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=events.js.map
 
 /***/ })

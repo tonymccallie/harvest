@@ -13,6 +13,7 @@ import { SharedModule } from './shared.module';
 import { GreybackProvider } from '../providers/greyback/greyback';
 import { AudioProvider } from '../providers/audio/audio';
 import { TabHiddenDirective } from '../directives/tab-hidden/tab-hidden';
+import { HttpClientModule } from '@angular/common/http';
 
 import { Pro } from '@ionic/pro';
 const IonicPro = Pro.init('2191a4b0', {
@@ -35,7 +36,8 @@ export class MyErrorHandler implements ErrorHandler {
 			mode: 'ios'
 		}),
 		MomentModule,
-		SharedModule
+		SharedModule,
+		HttpClientModule
 	],
 	exports: [
 		TabHiddenDirective

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import * as moment from 'moment';
 
@@ -10,7 +11,7 @@ export class GreybackProvider {
 	opts: any;
 
 
-	constructor(public http: Http) {
+	constructor(public http: Http, public httpClient: HttpClient) {
 		console.log('Hello GreybackProvider Provider');
 		this.headers.append('Accept', 'application/json');
 		this.headers.append('Content-Type', 'application/json');
@@ -52,6 +53,55 @@ export class GreybackProvider {
 	}
 
 	getCalendar(index) {
+		//&departmentIds=
+		return new Promise(resolve => {
+			this.http.get('http://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
+				data => {
+					resolve(data);
+				},
+				err => {
+					console.warn(['getCalendar',err]);
+				}
+			)
+		});
+	}
+/*
+{
+CategoryList: "Department Event",
+ContactEmail: "abills@fbcwf.org",
+ContactName: "Angela Bills",
+ContactPhone: "",
+DateModified: "01/15/2018 03:36:31 PM",
+DepartmentList: "Adult Ministry",
+DepartmentName: "Adult Ministry",
+Description: "Off Campus",
+DisplayTimes: false,
+EventId: 9872952,
+ExternalEventUrl: "",
+ExternalImageUrl: "",
+LocationAddress: "2907 Garnett Ave WF 76308",
+LocationAddress2: "",
+LocationCity: "",
+LocationName: "Jason' Deli",
+LocationState: "",
+LocationZip: "",
+MaxDate: "01/01/1900 12:00:00 AM",
+MinDate: "01/01/1900 12:00:00 AM",
+Name: "Perkins LIFE Group Fellowship - January",
+OccurrenceEndTime: "01/15/2018 08:00:00 PM",
+OccurrenceId: 401278366,
+OccurrenceStartTime: "01/15/2018 06:00:00 PM",
+PublicEventUrl: "http://public.serviceu.com/calendar/EventDetails.asp?OrgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&EventID=9872952&OccID=401278366",
+RegistrationEnabled: 0,
+RegistrationUrl: "",
+ResourceEndTime: "01/15/2018 08:00:00 PM",
+ResourceList: "",
+ResourceStartTime: "01/15/2018 06:00:00 PM",
+StatusDescription: "Approved",
+SubmittedBy: "Angela Bills"
+}
+*/
+	getCalendarX(index) {
 		let today = moment().format('YYYY/MM/DD');
 		let end = moment().add(90,'days').format('YYYY/MM/DD');
 

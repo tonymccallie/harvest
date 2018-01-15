@@ -25,7 +25,7 @@ export class EventsPage {
 			content: "Please wait..."
 		});
 		loader.present();
-		this.greybackProvider.getCalendar(this.pageIndex).subscribe(events => {
+		this.greybackProvider.getCalendar(this.pageIndex).then(events => {
 			//this.events = events.Page;
 			this.events = [];
 			this.addEvents(events);

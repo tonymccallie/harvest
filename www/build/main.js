@@ -121,10 +121,11 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GreybackProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -138,9 +139,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var GreybackProvider = (function () {
-    function GreybackProvider(http) {
+    function GreybackProvider(http, httpClient) {
         this.http = http;
+        this.httpClient = httpClient;
         this.rootUrl = 'http://firstburleson.server3.greyback.net';
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */];
         console.log('Hello GreybackProvider Provider');
@@ -175,8 +178,55 @@ var GreybackProvider = (function () {
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getCalendar = function (index) {
-        var today = __WEBPACK_IMPORTED_MODULE_3_moment__().format('YYYY/MM/DD');
-        var end = __WEBPACK_IMPORTED_MODULE_3_moment__().add(90, 'days').format('YYYY/MM/DD');
+        var _this = this;
+        //&departmentIds=
+        return new Promise(function (resolve) {
+            _this.http.get('http://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(function (data) {
+                resolve(data);
+            }, function (err) {
+                console.warn(['getCalendar', err]);
+            });
+        });
+    };
+    /*
+    {
+    CategoryList: "Department Event",
+    ContactEmail: "abills@fbcwf.org",
+    ContactName: "Angela Bills",
+    ContactPhone: "",
+    DateModified: "01/15/2018 03:36:31 PM",
+    DepartmentList: "Adult Ministry",
+    DepartmentName: "Adult Ministry",
+    Description: "Off Campus",
+    DisplayTimes: false,
+    EventId: 9872952,
+    ExternalEventUrl: "",
+    ExternalImageUrl: "",
+    LocationAddress: "2907 Garnett Ave WF 76308",
+    LocationAddress2: "",
+    LocationCity: "",
+    LocationName: "Jason' Deli",
+    LocationState: "",
+    LocationZip: "",
+    MaxDate: "01/01/1900 12:00:00 AM",
+    MinDate: "01/01/1900 12:00:00 AM",
+    Name: "Perkins LIFE Group Fellowship - January",
+    OccurrenceEndTime: "01/15/2018 08:00:00 PM",
+    OccurrenceId: 401278366,
+    OccurrenceStartTime: "01/15/2018 06:00:00 PM",
+    PublicEventUrl: "http://public.serviceu.com/calendar/EventDetails.asp?OrgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&EventID=9872952&OccID=401278366",
+    RegistrationEnabled: 0,
+    RegistrationUrl: "",
+    ResourceEndTime: "01/15/2018 08:00:00 PM",
+    ResourceList: "",
+    ResourceStartTime: "01/15/2018 06:00:00 PM",
+    StatusDescription: "Approved",
+    SubmittedBy: "Angela Bills"
+    }
+    */
+    GreybackProvider.prototype.getCalendarX = function (index) {
+        var today = __WEBPACK_IMPORTED_MODULE_4_moment__().format('YYYY/MM/DD');
+        var end = __WEBPACK_IMPORTED_MODULE_4_moment__().add(90, 'days').format('YYYY/MM/DD');
         //58c08c0d-776d-4762-8180-0df5fcf1ae74
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/events?&startdate=' + today + '&stopdate=' + end + '&pageIndex=' + index + '&pageSize=50&calendarids=58c08c0d-776d-4762-8180-0df5fcf1ae74', this.opts).map(function (result) { return result.json(); });
         //return this.http.get('http://localhost:8100/assets/data.json', this.opts).map(result => result.json());
@@ -189,9 +239,10 @@ var GreybackProvider = (function () {
 }());
 GreybackProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
 ], GreybackProvider);
 
+var _a, _b;
 //# sourceMappingURL=greyback.js.map
 
 /***/ }),
@@ -386,8 +437,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_greyback_greyback__ = __webpack_require__(329);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_audio_audio__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__directives_tab_hidden_tab_hidden__ = __webpack_require__(413);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_pro__ = __webpack_require__(414);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_pro___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__ionic_pro__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_pro__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_pro___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__ionic_pro__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -409,7 +461,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var IonicPro = __WEBPACK_IMPORTED_MODULE_14__ionic_pro__["Pro"].init('2191a4b0', {
+
+var IonicPro = __WEBPACK_IMPORTED_MODULE_15__ionic_pro__["Pro"].init('2191a4b0', {
     appVersion: "1.0.0"
 });
 var MyErrorHandler = (function () {
@@ -461,7 +514,8 @@ AppModule = __decorate([
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_7_angular2_moment__["MomentModule"],
-            __WEBPACK_IMPORTED_MODULE_10__shared_module__["a" /* SharedModule */]
+            __WEBPACK_IMPORTED_MODULE_10__shared_module__["a" /* SharedModule */],
+            __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */]
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_13__directives_tab_hidden_tab_hidden__["a" /* TabHiddenDirective */]
