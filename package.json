@@ -38,7 +38,6 @@
         "cordova-plugin-add-swift-support": "^1.7.1",
         "cordova-plugin-audioplayer": "https://github.com/AubreyHewes/cordova-background-audio.git#1.1.0",
         "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-file": "^4.3.3",
         "cordova-plugin-ionic": "^2.0.4",
@@ -64,7 +63,6 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-console": {},
             "cordova-plugin-device": {},
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
