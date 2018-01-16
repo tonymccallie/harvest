@@ -60,7 +60,14 @@ export class GreybackProvider {
 					resolve(data);
 				},
 				err => {
-					console.warn(['getCalendar',err]);
+					this.http.get('assets/search.json').subscribe(
+						data => {
+							resolve(data);
+						},
+						err => {
+							console.warn(['getCalendar',err]);
+						}
+					)
 				}
 			)
 		});

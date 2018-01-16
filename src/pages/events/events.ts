@@ -27,6 +27,7 @@ export class EventsPage {
 		loader.present();
 		this.greybackProvider.getCalendar(this.pageIndex).then(events => {
 			//this.events = events.Page;
+			console.log(events);
 			this.events = [];
 			this.addEvents(events);
 			loader.dismiss();
