@@ -6,7 +6,7 @@ import * as moment from 'moment';
 
 @Injectable()
 export class GreybackProvider {
-	rootUrl: string = 'http://firstburleson.server3.greyback.net';
+	rootUrl: string = 'http://fbcwf.server3.greyback.net/';
 	headers: any = new Headers;
 	opts: any;
 
@@ -20,12 +20,12 @@ export class GreybackProvider {
 	}
 
 	getNews() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:3').map(result => result.json());
+		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:4/category:1').map(result => result.json());
 	}
 
 	getCommunity() {
 		//return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:2').map(result => result.json());
-		return this.http.get(this.rootUrl + '/ajax/plugin/community/community_posts/latest/department:2').map(result => result.json());
+		return this.http.get(this.rootUrl + '/ajax/plugin/community/community_posts/latest/department:1').map(result => result.json());
 	}
 
 	getSeries() {
@@ -45,7 +45,7 @@ export class GreybackProvider {
 	}
 
 	getStaff() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:2').map(result => result.json())
+		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:1').map(result => result.json())
 	}
 
 	getCalendars() {
@@ -53,14 +53,15 @@ export class GreybackProvider {
 	}
 
 	getCalendar(index) {
+		//return this.http.get('assets/search.json').map(result => result.json());
 		//&departmentIds=
 		return new Promise(resolve => {
-			this.http.get('http://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
+			this.httpClient.get('http://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
 				data => {
 					resolve(data);
 				},
 				err => {
-					this.http.get('assets/search.json').subscribe(
+					this.httpClient.get('assets/search.json').subscribe(
 						data => {
 							resolve(data);
 						},

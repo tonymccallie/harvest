@@ -14,6 +14,11 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+$dark: #23232B;
+$medium: #2C2C34;
+$medium-light: #42424A;
+$light: #ffffff;
+$accent: #00447c;
 
 ion-toolbar {
 	color: color($colors, light);
@@ -28,7 +33,9 @@ ion-title {
 
 .toolbar-ios-primary .toolbar-background-ios,
 .tabs-ios-primary .tabbar {
-	background-image: url(../assets/img/blue.jpg);
+	//background-image: url(../assets/img/blue.jpg);
+	background-color: $dark;
+	border-color: $dark;
 }
 
 // ion-navbar.toolbar {
@@ -53,3 +60,28 @@ ion-toolbar {
 	line-height: 20px;
 }
 
+ion-card, .card-ios {
+	background-color: $medium-light;
+	color: $light;
+	.card-title-ios {
+		color: $light;
+	}
+	p {
+		color: $light;
+	}
+	a {
+		color: $dark;
+	}
+	ion-button, .button-outline-ios {
+		border-color: $light;
+		color: $light;
+	}
+}
+
+ion-item, .item-ios {
+	background-color: $medium-light;
+}
+
+ion-item-divider, .item-ios-primary, .item-divider-ios-primary {
+	background-color: $medium;
+}

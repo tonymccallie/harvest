@@ -9,16 +9,20 @@
 
 <ion-content>
 	<ion-list>
-		<ion-item *ngFor="let event of events">
-			<div item-start>{{event.OccurrenceStartTime | amLocal | amDateFormat:'M/DD h:mma'}}</div>
-			{{ event.Name }}
-		</ion-item>
-		<!-- <button ion-item *ngFor="let event of events">
-			<div item-start>{{event.StartDate | amLocal | amDateFormat:'dd Mo h:mma'}}</div>
-			{{event.EventName}}
-		</button> -->
+		<div *ngFor="let month of events">
+			<!-- <ion-item-divider>{{month.name}}</ion-item-divider> -->
+			<div *ngFor="let day of month.days">
+				<ion-item-divider color="primary">{{day.name}}</ion-item-divider>
+				<div *ngFor="let event of day.events">
+					<ion-item>
+						<div item-start>{{event.OccurrenceStartTime | amLocal | amDateFormat:'h:mma'}}</div>
+						{{event.Name}}
+					</ion-item>
+				</div>
+			</div>
+		</div>
 	</ion-list>
-	<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+	<!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
 		<ion-infinite-scroll-content></ion-infinite-scroll-content>
-	</ion-infinite-scroll>
+	</ion-infinite-scroll> -->
 </ion-content>

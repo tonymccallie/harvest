@@ -60,9 +60,9 @@ export class EventsPage {
 	}
 
 	addEvents(events) {
-		events.Page.forEach((event, index) => {
-			let tmpMonth = moment.utc(event.StartDate).format('MMMM');
-			let tmpDay = moment.utc(event.StartDate).format('dddd, MMM Do');
+		events.forEach((event, index) => {
+			let tmpMonth = moment.utc(event.OccurrenceStartTime).format('MMMM');
+			let tmpDay = moment.utc(event.OccurrenceStartTime).format('dddd, MMM Do');
 			if (this.curMonth != tmpMonth) {
 				this.monthIndex = this.events.length;
 				this.events.push({
