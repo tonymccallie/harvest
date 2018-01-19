@@ -82,9 +82,7 @@
         "UPDATE_API": "https://api.ionicjs.com",
         "MAX_STORE": "2"
       },
-      "uk.co.workingedge.phonegap.plugin.launchnavigator": {
-        "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes"
-      }
+      "uk.co.workingedge.phonegap.plugin.launchnavigator": {}
     },
     "platforms": [
       "ios",
