@@ -1,1 +1,94 @@
-webpackJsonp([2],{394:function(l,n,e){"use strict";function u(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null))],null,function(l,n){var e=n.component;l(n,0,0,r["ɵinlineInterpolate"](2,"",e.rootUrl,"/img/thumb/",e.series.MediaImage.filename,"/width:1000/height:600/crop:true/zoom:auto"))})}function t(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,null,null,3,"div",[],null,null,null,null,null)),(l()(),r["ɵted"](null,["\n\t\t"])),(l()(),r["ɵeld"](0,null,null,0,"video",[["controls",""],["style","width: 100%;"]],[[8,"src",4],[8,"poster",4]],null,null,null,null)),(l()(),r["ɵted"](null,["\n\t"]))],null,function(l,n){var e=n.component;l(n,2,0,e.source,e.poster)})}function a(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,null,null,1,"div",[],null,null,null,null,null)),(l()(),r["ɵted"](null,["Description: ",""]))],null,function(l,n){l(n,1,0,n.component.sermon.MessageMessage.descr)})}function o(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,null,null,4,"button",[["block",""],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==t.playAudio(t.sermon)&&u}return u},M.b,M.a)),r["ɵdid"](1097728,null,0,_.a,[[8,""],D.a,r.ElementRef,r.Renderer],{block:[0,"block"]},null),(l()(),r["ɵeld"](0,null,0,1,"ion-icon",[["name","threeleaf-listen"],["role","img"]],[[2,"hide",null]],null,null,null,null)),r["ɵdid"](147456,null,0,E.a,[D.a,r.ElementRef,r.Renderer],{name:[0,"name"]},null),(l()(),r["ɵted"](0,["  Listen"]))],function(l,n){l(n,1,0,"");l(n,3,0,"threeleaf-listen")},function(l,n){l(n,2,0,r["ɵnov"](n,3)._hidden)})}function d(l){return r["ɵvid"](0,[r["ɵpid"](0,I.DateFormatPipe,[]),(l()(),r["ɵeld"](0,null,null,18,"ion-header",[["no-border",""]],null,null,null,null,null)),r["ɵdid"](16384,null,0,V.a,[D.a,r.ElementRef,r.Renderer,[2,P.a]],null,null),(l()(),r["ɵted"](null,["\n\t"])),(l()(),r["ɵeld"](0,null,null,14,"ion-navbar",[["class","toolbar"],["color","primary"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,w.b,w.a)),r["ɵdid"](49152,null,0,j.a,[K.a,[2,P.a],[2,T.a],D.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](3,["\n\t\t"])),(l()(),r["ɵeld"](0,null,3,2,"ion-title",[["center",""]],null,null,null,x.b,x.a)),r["ɵdid"](49152,null,0,A.a,[D.a,r.ElementRef,r.Renderer,[2,U.a],[2,j.a]],null,null),(l()(),r["ɵted"](0,["Sermon"])),(l()(),r["ɵted"](3,["\n\t\t"])),(l()(),r["ɵeld"](0,null,0,6,"button",[["icon-only",""],["ion-button",""],["menuToggle",""],["right",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==r["ɵnov"](l,13).toggle()&&u}return u},M.b,M.a)),r["ɵdid"](1097728,[[1,4]],0,_.a,[[8,""],D.a,r.ElementRef,r.Renderer],null,null),r["ɵdid"](1064960,null,0,F.a,[L.a,[2,P.a],[2,_.a],[2,j.a]],{menuToggle:[0,"menuToggle"]},null),r["ɵdid"](16384,null,1,S.a,[D.a,r.ElementRef,r.Renderer,[2,U.a],[2,j.a]],null,null),r["ɵqud"](603979776,1,{_buttons:1}),(l()(),r["ɵeld"](0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),r["ɵdid"](147456,null,0,E.a,[D.a,r.ElementRef,r.Renderer],{name:[0,"name"]},null),(l()(),r["ɵted"](3,["\n\t"])),(l()(),r["ɵted"](null,["\n"])),(l()(),r["ɵted"](null,["\n\n"])),(l()(),r["ɵeld"](0,null,null,30,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Y.b,Y.a)),r["ɵdid"](4374528,null,0,q.a,[D.a,N.a,z.a,r.ElementRef,r.Renderer,K.a,B.a,r.NgZone,[2,P.a],[2,T.a]],null,null),(l()(),r["ɵted"](1,["\n\t"])),(l()(),r["ɵand"](16777216,null,1,1,null,u)),r["ɵdid"](16384,null,0,O.j,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](1,["\n\t"])),(l()(),r["ɵand"](16777216,null,1,1,null,t)),r["ɵdid"](16384,null,0,O.j,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](1,["\n\t"])),(l()(),r["ɵeld"](0,null,1,2,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,H.b,H.a)),r["ɵdid"](49152,null,0,U.a,[D.a,r.ElementRef,r.Renderer],{color:[0,"color"]},null),(l()(),r["ɵted"](3,["\n\t\t","\n\t"])),(l()(),r["ɵted"](1,["\n\t"])),(l()(),r["ɵeld"](0,null,1,16,"div",[["padding",""]],null,null,null,null,null)),(l()(),r["ɵted"](null,["\n\t\tSpeaker: ",""])),(l()(),r["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),r["ɵted"](null,["\n\t\tDate: ",""])),r["ɵppd"](2),(l()(),r["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),r["ɵted"](null,["\n\t\t"])),(l()(),r["ɵand"](16777216,null,null,1,null,a)),r["ɵdid"](16384,null,0,O.j,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](null,["\n\t\t"])),(l()(),r["ɵeld"](0,null,null,1,"p",[],null,null,null,null,null)),(l()(),r["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),r["ɵted"](null,["\n\t\t"])),(l()(),r["ɵand"](16777216,null,null,1,null,o)),r["ɵdid"](16384,null,0,O.j,[r.ViewContainerRef,r.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),r["ɵted"](null,["\n\t\t"])),(l()(),r["ɵted"](null,["\n\t"])),(l()(),r["ɵted"](1,["\n"]))],function(l,n){var e=n.component;l(n,5,0,"primary");l(n,13,0,"");l(n,17,0,"menu");l(n,25,0,!e.source);l(n,28,0,e.source);l(n,31,0,"primary");l(n,42,0,e.sermon.MessageMessage.descr);l(n,48,0,e.sermon.MediaAudio.filename)},function(l,n){var e=n.component;l(n,4,0,r["ɵnov"](n,5)._hidden,r["ɵnov"](n,5)._sbPadding);l(n,11,0,r["ɵnov"](n,13).isHidden);l(n,16,0,r["ɵnov"](n,17)._hidden);l(n,21,0,r["ɵnov"](n,22).statusbarPadding,r["ɵnov"](n,22)._hasRefresher);l(n,30,0,r["ɵnov"](n,31)._sbPadding);l(n,32,0,e.sermon.MessageMessage.title);l(n,35,0,e.sermon.MessageAuthor.name);l(n,37,0,r["ɵunv"](n,37,0,l(n,38,0,r["ɵnov"](n,0),e.sermon.MessageMessage.start,"MMM Do, YYYY")))})}Object.defineProperty(n,"__esModule",{value:!0});var r=e(0),i=(e(4),e(53),e(118)),s=e(123),c=function(){function l(l,n,e,u,t){this.navCtrl=l,this.navParams=n,this.greybackProvider=e,this.audioProvider=u,this.menuCtrl=t,this.sermon=this.navParams.get("sermon"),this.series=this.navParams.get("series"),this.rootUrl=e.rootUrl,this.player=u,this.source=this.rootUrl+"/play/vid/"+this.sermon.MediaVideo.id+"/vid.mp4",this.poster=this.rootUrl+"/img/thumb/"+this.sermon.MediaVideo.preview+"/width:854/height:480/crop:true/zoom:auto/image.jpg"}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad SermonPage")},l.prototype.playAudio=function(l){this.audioProvider.play({url:this.rootUrl+"/play/mp3/"+l.MediaAudio.id,title:l.MessageMessage.title,speaker:l.MessageAuthor.name}),this.menuCtrl.open()},l}(),f=e(122),m=function(){return function(){}}(),b=e(329),g=e(330),p=e(331),v=e(332),h=e(333),R=e(334),k=e(335),y=e(336),C=e(337),M=e(41),_=e(20),D=e(2),E=e(40),I=e(124),V=e(119),P=e(6),w=e(402),j=e(39),K=e(9),T=e(21),x=e(400),A=e(116),U=e(52),F=e(120),L=e(25),S=e(121),Y=e(401),q=e(22),N=e(5),z=e(10),B=e(35),O=e(15),H=e(403),J=e(12),Z=r["ɵcrt"]({encapsulation:2,styles:[],data:{}}),G=r["ɵccf"]("page-sermon",c,function(l){return r["ɵvid"](0,[(l()(),r["ɵeld"](0,null,null,1,"page-sermon",[],null,null,null,d,Z)),r["ɵdid"](49152,null,0,c,[T.a,J.a,i.a,s.a,L.a],null,null)],null,null)},{},{},[]),Q=e(18),W=e(117),X=e(125),$=e(36);e.d(n,"SermonPageModuleNgFactory",function(){return ll});var ll=r["ɵcmf"](m,[],function(l){return r["ɵmod"]([r["ɵmpd"](512,r.ComponentFactoryResolver,r["ɵCodegenComponentFactoryResolver"],[[8,[b.a,g.a,p.a,v.a,h.a,R.a,k.a,y.a,C.a,G]],[3,r.ComponentFactoryResolver],r.NgModuleRef]),r["ɵmpd"](4608,O.l,O.k,[r.LOCALE_ID]),r["ɵmpd"](4608,Q.k,Q.k,[]),r["ɵmpd"](4608,Q.c,Q.c,[]),r["ɵmpd"](512,O.b,O.b,[]),r["ɵmpd"](512,Q.j,Q.j,[]),r["ɵmpd"](512,Q.d,Q.d,[]),r["ɵmpd"](512,Q.i,Q.i,[]),r["ɵmpd"](512,W.a,W.a,[]),r["ɵmpd"](512,W.b,W.b,[]),r["ɵmpd"](512,X.MomentModule,X.MomentModule,[]),r["ɵmpd"](512,f.a,f.a,[]),r["ɵmpd"](512,m,m,[]),r["ɵmpd"](256,$.a,c,[])])})},400:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[(l()(),t["ɵeld"](0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}e.d(n,"a",function(){return o}),n.b=u;var t=e(0),a=e(15),o=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})},401:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[t["ɵqud"](402653184,1,{_fixedContent:0}),t["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),t["ɵeld"](0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),t["ɵncd"](null,0),(l()(),t["ɵeld"](0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),t["ɵncd"](null,1),t["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return a}),n.b=u;var t=e(0),a=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})},402:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t["ɵeld"](0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.backButtonClick(e)&&u}return u},o.b,o.a)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵdid"](1097728,null,0,d.a,[[8,"bar-button"],r.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵeld"](0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵdid"](147456,null,0,i.a,[r.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵeld"](0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t["ɵted"](null,["",""])),t["ɵncd"](null,0),t["ɵncd"](null,1),t["ɵncd"](null,2),(l()(),t["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,3,0,"back-button","back-button-"+e._mode);l(n,6,0,"back-button-icon","back-button-icon-"+e._mode);l(n,7,0,e._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+e._mode);l(n,15,0,"toolbar-content","toolbar-content-"+e._mode)},function(l,n){var e=n.component;l(n,2,0,e._hideBb);l(n,5,0,t["ɵnov"](n,7)._hidden);l(n,10,0,e._backText)})}e.d(n,"a",function(){return s}),n.b=u;var t=e(0),a=e(15),o=e(41),d=e(20),r=e(2),i=e(40),s=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})},403:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[(l()(),t["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,0),t["ɵncd"](null,1),t["ɵncd"](null,2),(l()(),t["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,6,0,"toolbar-content","toolbar-content-"+e._mode)},null)}e.d(n,"a",function(){return o}),n.b=u;var t=e(0),a=e(15),o=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([2],{
+
+/***/ 438:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(459);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TabsPageModule = (function () {
+    function TabsPageModule() {
+    }
+    return TabsPageModule;
+}());
+TabsPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
+        ],
+    })
+], TabsPageModule);
+
+//# sourceMappingURL=tabs.module.js.map
+
+/***/ }),
+
+/***/ 459:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__ = __webpack_require__(337);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TabsPage = (function () {
+    function TabsPage(navCtrl, navParams, iab) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.iab = iab;
+        this.tab1Root = 'HomePage';
+        this.tab2Root = 'SeriesPage';
+        this.tab3Root = 'EventsPage';
+        this.tab4Root = 'TimesPage';
+        this.tab5Root = 'AboutPage';
+        this.tab6Root = 'GivingPage';
+        this.myIndex = navParams.data.tabIndex || 0;
+    }
+    TabsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TabsPage');
+    };
+    TabsPage.prototype.giving = function () {
+        this.iab.create('http://www.fbcwf.org/pages/page.asp?page_id=239772', '_system');
+    };
+    return TabsPage;
+}());
+TabsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-tabs',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/tabs/tabs.html"*/'<!-- <ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header> -->\n\n<ion-tabs [selectedIndex]="myIndex" no-border color="primary">\n	<ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="ios-home-outline"></ion-tab>\n	<ion-tab [root]="tab2Root" tabTitle="Sermons" tabIcon="ios-headset-outline"></ion-tab>\n	<ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="ios-calendar-outline"></ion-tab>\n	<ion-tab [root]="tab6Root" tabTitle="Giving" tabIcon="ios-cash-outline"></ion-tab>\n	<ion-tab [root]="tab4Root" tabTitle="Services" tabIcon="ios-time-outline"></ion-tab>\n	<ion-tab #hiddenTab [root]="tab5Root" tabTitle="About" tabIcon="ios-time-outline"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/tabs/tabs.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_in_app_browser__["a" /* InAppBrowser */]])
+], TabsPage);
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=2.js.map
