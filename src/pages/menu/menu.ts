@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { AudioProvider } from '../../providers/audio/audio';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 export interface PageInterface {
 	title: string;
@@ -31,13 +32,14 @@ export class MenuPage {
 		{ title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 2, icon: 'ios-calendar-outline' },
 		{ title: 'Giving', pageName: 'GivingPage', tabComponent: 'GivingPage', index: 3, icon: 'ios-cash-outline' },
 		{ title: 'Service Times', pageName: 'TabsPage', tabComponent: 'TimesPage', index: 4, icon: 'ios-time-outline' },
+		{ title: 'Watch Live', pageName: 'LivePage', icon: 'ios-videocam-outline' },
 		{ title: 'Staff', pageName: 'StaffPage', icon: 'ios-contact-outline' },
 		{ title: 'Location', pageName: 'LocationPage', icon: 'ios-pin-outline' },
 		// { title: 'Prayer', pageName: 'PrayerPage', icon: 'ios-chatboxes-outline' },
 		{ title: 'Credits', pageName: 'CreditsPage', icon: 'ios-ribbon-outline' },
 	];
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public audioProvider: AudioProvider) {
+	constructor(public navCtrl: NavController, public navParams: NavParams, public audioProvider: AudioProvider, private iab: InAppBrowser) {
 		this.player = audioProvider;
 	}
 
@@ -48,18 +50,17 @@ export class MenuPage {
 		if (page.index) {
 			params = { tabIndex: page.index };
 		}
-		
-		// The active child nav is our Tabs Navigation
-		if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
-			this.nav.getActiveChildNavs()[0].select(page.index);
+
+		if (page.pageName == "LivePage") {
+			this.iab.create('http://fbcwf.churchonline.org/', '_system');
 		} else {
-			// Tabs are not active, so reset the root page 
-			// In this case: moving to or from SpecialPage
-			//this.nav.setRoot(page.pageName, params);
-			//this.nav.getActiveChildNavs()[0].select(5);
-			//this.nav.getActiveChildNavs()[0].getByIndex(5).push(page.pageName);
-			this.nav.getActiveChildNavs()[0].getSelected().push(page.pageName);
-			//this.nav.push(page.pageName);
+			if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
+				this.nav.getActiveChildNavs()[0].select(page.index);
+			} else {
+				// Tabs are not active, so reset the root page 
+				// In this case: moving to or from SpecialPage
+				this.nav.getActiveChildNavs()[0].getSelected().push(page.pageName);
+			}
 		}
 	}
 
