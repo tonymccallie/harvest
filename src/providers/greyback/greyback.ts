@@ -45,7 +45,7 @@ export class GreybackProvider {
 	}
 
 	getStaff() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:1').map(result => result.json())
+		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:5').map(result => result.json())
 	}
 
 	getCalendars() {

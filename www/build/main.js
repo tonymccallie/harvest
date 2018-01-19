@@ -176,7 +176,7 @@ var GreybackProvider = (function () {
         return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:3').map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getStaff = function () {
-        return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:1').map(function (result) { return result.json(); });
+        return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:5').map(function (result) { return result.json(); });
     };
     GreybackProvider.prototype.getCalendars = function () {
         return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(function (result) { return result.json(); });
