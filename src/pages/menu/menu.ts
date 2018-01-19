@@ -29,7 +29,7 @@ export class MenuPage {
 		{ title: 'About', pageName: 'AboutPage', icon: 'ios-information-circle-outline' },
 		{ title: 'Sermons', pageName: 'TabsPage', tabComponent: 'SeriesPage', index: 1, icon: 'ios-headset-outline' },
 		{ title: 'Events', pageName: 'TabsPage', tabComponent: 'EventsPage', index: 2, icon: 'ios-calendar-outline' },
-		{ title: 'Giving', pageName: 'TabsPage', tabComponent: 'StoriesPage', index: 3, icon: 'ios-cash-outline' },
+		{ title: 'Giving', pageName: 'GivingPage', tabComponent: 'GivingPage', index: 3, icon: 'ios-cash-outline' },
 		{ title: 'Service Times', pageName: 'TabsPage', tabComponent: 'TimesPage', index: 4, icon: 'ios-time-outline' },
 		{ title: 'Staff', pageName: 'StaffPage', icon: 'ios-contact-outline' },
 		{ title: 'Location', pageName: 'LocationPage', icon: 'ios-pin-outline' },

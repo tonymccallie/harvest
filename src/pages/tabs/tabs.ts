@@ -14,6 +14,7 @@ export class TabsPage {
 	tab3Root: any = 'EventsPage';
 	tab4Root: any = 'TimesPage';
 	tab5Root: any = 'AboutPage';
+	tab6Root: any = 'GivingPage';
 
 	myIndex: number;
 
