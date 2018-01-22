@@ -1,1 +1,106 @@
-webpackJsonp([6],{381:function(l,n,e){"use strict";function t(l){return u["ɵvid"](0,[(l()(),u["ɵeld"](0,null,null,18,"ion-header",[["no-border",""]],null,null,null,null,null)),u["ɵdid"](16384,null,0,v.a,[k.a,u.ElementRef,u.Renderer,[2,R.a]],null,null),(l()(),u["ɵted"](null,["\n\t"])),(l()(),u["ɵeld"](0,null,null,14,"ion-navbar",[["class","toolbar"],["color","primary"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,h.b,h.a)),u["ɵdid"](49152,null,0,C.a,[y.a,[2,R.a],[2,_.a],k.a,u.ElementRef,u.Renderer],{color:[0,"color"]},null),(l()(),u["ɵted"](3,["\n\t\t"])),(l()(),u["ɵeld"](0,null,3,2,"ion-title",[["center",""]],null,null,null,D.b,D.a)),u["ɵdid"](49152,null,0,E.a,[k.a,u.ElementRef,u.Renderer,[2,I.a],[2,C.a]],null,null),(l()(),u["ɵted"](0,["Latest News"])),(l()(),u["ɵted"](3,["\n\t\t"])),(l()(),u["ɵeld"](0,null,0,6,"button",[["icon-only",""],["ion-button",""],["menuToggle",""],["right",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==u["ɵnov"](l,12).toggle()&&t}return t},P.b,P.a)),u["ɵdid"](1097728,[[1,4]],0,V.a,[[8,""],k.a,u.ElementRef,u.Renderer],null,null),u["ɵdid"](1064960,null,0,K.a,[w.a,[2,R.a],[2,V.a],[2,C.a]],{menuToggle:[0,"menuToggle"]},null),u["ɵdid"](16384,null,1,x.a,[k.a,u.ElementRef,u.Renderer,[2,I.a],[2,C.a]],null,null),u["ɵqud"](603979776,1,{_buttons:1}),(l()(),u["ɵeld"](0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),u["ɵdid"](147456,null,0,A.a,[k.a,u.ElementRef,u.Renderer],{name:[0,"name"]},null),(l()(),u["ɵted"](3,["\n\t"])),(l()(),u["ɵted"](null,["\n"])),(l()(),u["ɵted"](null,["\n\n\n"])),(l()(),u["ɵeld"](0,null,null,10,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),u["ɵdid"](4374528,null,0,N.a,[k.a,M.a,T.a,u.ElementRef,u.Renderer,y.a,F.a,u.NgZone,[2,R.a],[2,_.a]],null,null),(l()(),u["ɵted"](1,["\n\t"])),(l()(),u["ɵeld"](0,null,1,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),u["ɵted"](1,["\n\t"])),(l()(),u["ɵeld"](0,null,1,2,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,j.b,j.a)),u["ɵdid"](49152,null,0,I.a,[k.a,u.ElementRef,u.Renderer],{color:[0,"color"]},null),(l()(),u["ɵted"](3,["\n\t\t","\n\t"])),(l()(),u["ɵted"](1,["\n\t"])),(l()(),u["ɵeld"](0,null,1,0,"div",[["padding",""]],[[8,"innerHTML",1]],null,null,null,null)),(l()(),u["ɵted"](1,["\n"]))],function(l,n){l(n,4,0,"primary");l(n,12,0,"");l(n,16,0,"menu");l(n,26,0,"primary")},function(l,n){var e=n.component;l(n,3,0,u["ɵnov"](n,4)._hidden,u["ɵnov"](n,4)._sbPadding);l(n,10,0,u["ɵnov"](n,12).isHidden);l(n,15,0,u["ɵnov"](n,16)._hidden);l(n,20,0,u["ɵnov"](n,21).statusbarPadding,u["ɵnov"](n,21)._hasRefresher);l(n,23,0,u["ɵinlineInterpolate"](2,"",e.rootUrl,"/img/thumb/",e.article.MediaImage.filename,"/width:1000/height:600/crop:true/zoom:auto"));l(n,25,0,u["ɵnov"](n,26)._sbPadding);l(n,27,0,e.article.NewsArticle.title);l(n,29,0,e.article.NewsArticle.body)})}Object.defineProperty(n,"__esModule",{value:!0});var u=e(0),a=(e(4),e(53),e(118)),o=function(){function l(l,n,e){this.navCtrl=l,this.navParams=n,this.greybackProvider=e,console.log("constructor ArticleDetailPage"),this.article=this.navParams.get("article"),this.rootUrl=e.rootUrl}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ArticleDetailPage")},l}(),r=function(){return function(){}}(),d=e(329),i=e(330),s=e(331),c=e(332),f=e(333),b=e(334),m=e(335),g=e(336),p=e(337),v=e(119),k=e(2),R=e(6),h=e(402),C=e(39),y=e(9),_=e(21),D=e(400),E=e(116),I=e(52),P=e(41),V=e(20),K=e(120),w=e(25),x=e(121),A=e(40),L=e(401),N=e(22),M=e(5),T=e(10),F=e(35),j=e(403),q=e(12),U=u["ɵcrt"]({encapsulation:2,styles:[],data:{}}),B=u["ɵccf"]("page-article-detail",o,function(l){return u["ɵvid"](0,[(l()(),u["ɵeld"](0,null,null,1,"page-article-detail",[],null,null,null,t,U)),u["ɵdid"](49152,null,0,o,[_.a,q.a,a.a],null,null)],null,null)},{},{},[]),H=e(15),O=e(18),z=e(117),J=e(36);e.d(n,"ArticleDetailPageModuleNgFactory",function(){return Z});var Z=u["ɵcmf"](r,[],function(l){return u["ɵmod"]([u["ɵmpd"](512,u.ComponentFactoryResolver,u["ɵCodegenComponentFactoryResolver"],[[8,[d.a,i.a,s.a,c.a,f.a,b.a,m.a,g.a,p.a,B]],[3,u.ComponentFactoryResolver],u.NgModuleRef]),u["ɵmpd"](4608,H.l,H.k,[u.LOCALE_ID]),u["ɵmpd"](4608,O.k,O.k,[]),u["ɵmpd"](4608,O.c,O.c,[]),u["ɵmpd"](512,H.b,H.b,[]),u["ɵmpd"](512,O.j,O.j,[]),u["ɵmpd"](512,O.d,O.d,[]),u["ɵmpd"](512,O.i,O.i,[]),u["ɵmpd"](512,z.a,z.a,[]),u["ɵmpd"](512,z.b,z.b,[]),u["ɵmpd"](512,r,r,[]),u["ɵmpd"](256,J.a,o,[])])})},400:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}e.d(n,"a",function(){return o}),n.b=t;var u=e(0),a=e(15),o=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},401:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[u["ɵqud"](402653184,1,{_fixedContent:0}),u["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),u["ɵeld"](0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),u["ɵncd"](null,0),(l()(),u["ɵeld"](0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),u["ɵncd"](null,1),u["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return a}),n.b=t;var u=e(0),a=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},402:function(l,n,e){"use strict";function t(l){return u["ɵvid"](0,[(l()(),u["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),u["ɵeld"](0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.backButtonClick(e)&&t}return t},o.b,o.a)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵdid"](1097728,null,0,r.a,[[8,"bar-button"],d.a,u.ElementRef,u.Renderer],null,null),(l()(),u["ɵeld"](0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵdid"](147456,null,0,i.a,[d.a,u.ElementRef,u.Renderer],{name:[0,"name"]},null),(l()(),u["ɵeld"](0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),u["ɵted"](null,["",""])),u["ɵncd"](null,0),u["ɵncd"](null,1),u["ɵncd"](null,2),(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,3,0,"back-button","back-button-"+e._mode);l(n,6,0,"back-button-icon","back-button-icon-"+e._mode);l(n,7,0,e._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+e._mode);l(n,15,0,"toolbar-content","toolbar-content-"+e._mode)},function(l,n){var e=n.component;l(n,2,0,e._hideBb);l(n,5,0,u["ɵnov"](n,7)._hidden);l(n,10,0,e._backText)})}e.d(n,"a",function(){return s}),n.b=t;var u=e(0),a=e(15),o=e(41),r=e(20),d=e(2),i=e(40),s=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},403:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[(l()(),u["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,0),u["ɵncd"](null,1),u["ɵncd"](null,2),(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,6,0,"toolbar-content","toolbar-content-"+e._mode)},null)}e.d(n,"a",function(){return o}),n.b=t;var u=e(0),a=e(15),o=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([6],{
+
+/***/ 435:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SermonPageModule", function() { return SermonPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sermon__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_shared_module__ = __webpack_require__(335);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var SermonPageModule = (function () {
+    function SermonPageModule() {
+    }
+    return SermonPageModule;
+}());
+SermonPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sermon__["a" /* SermonPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__app_shared_module__["a" /* SharedModule */]
+        ],
+    })
+], SermonPageModule);
+
+//# sourceMappingURL=sermon.module.js.map
+
+/***/ }),
+
+/***/ 456:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SermonPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_audio_audio__ = __webpack_require__(336);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SermonPage = (function () {
+    function SermonPage(navCtrl, navParams, greybackProvider, audioProvider, menuCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.greybackProvider = greybackProvider;
+        this.audioProvider = audioProvider;
+        this.menuCtrl = menuCtrl;
+        this.sermon = this.navParams.get('sermon');
+        this.series = this.navParams.get('series');
+        this.rootUrl = greybackProvider.rootUrl;
+        this.player = audioProvider;
+        this.source = this.rootUrl + '/play/vid/' + this.sermon.MediaVideo.id + '/vid.mp4';
+        this.poster = this.rootUrl + '/img/thumb/' + this.sermon.MediaVideo.preview + '/width:854/height:480/crop:true/zoom:auto/image.jpg';
+    }
+    SermonPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SermonPage');
+    };
+    SermonPage.prototype.playAudio = function (sermon) {
+        this.audioProvider.play({
+            url: this.rootUrl + '/play/mp3/' + sermon.MediaAudio.id,
+            title: sermon.MessageMessage.title,
+            speaker: sermon.MessageAuthor.name
+        });
+        this.menuCtrl.open();
+    };
+    return SermonPage;
+}());
+SermonPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-sermon',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/sermon/sermon.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Sermon</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<div *ngIf="source">\n		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>\n	</div>\n	<ion-toolbar color="primary">\n		{{sermon.MessageMessage.title}}\n	</ion-toolbar>\n	<div padding>\n		Speaker: {{sermon.MessageAuthor.name}}<br />\n		Date: {{sermon.MessageMessage.start | amDateFormat:\'MMM Do, YYYY\'}}<br />\n		<div *ngIf="sermon.MessageMessage.descr">Description: {{sermon.MessageMessage.descr}}</div>\n		<p><br /></p>\n		<button *ngIf="sermon.MediaAudio.filename" ion-button block (click)="playAudio(sermon)"><ion-icon name="threeleaf-listen"></ion-icon>&nbsp;&nbsp;Listen</button>\n		<!-- <button *ngIf="sermon.MediaVideo.filename" ion-button block (click)="playVideo(sermon)"><ion-icon name="threeleaf-watch"></ion-icon>&nbsp;&nbsp;Watch</button> -->\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/sermon/sermon.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_audio_audio__["a" /* AudioProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]])
+], SermonPage);
+
+//# sourceMappingURL=sermon.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=6.js.map

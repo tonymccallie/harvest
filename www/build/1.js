@@ -1,1 +1,356 @@
-webpackJsonp([1],{395:function(l,n,e){"use strict";function t(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,null,null,10,"button",[["class","item item-block"],["ion-item",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.viewSermon(l.context.$implicit)&&t}return t},R.b,R.a)),a["ɵdid"](1097728,null,3,h.a,[y.a,C.a,a.ElementRef,a.Renderer,[2,_.a]],null,null),a["ɵqud"](335544320,2,{contentLabel:0}),a["ɵqud"](603979776,3,{_buttons:1}),a["ɵqud"](603979776,4,{_icons:1}),a["ɵdid"](16384,null,0,D.a,[],null,null),(l()(),a["ɵted"](2,["\n\t\t\t"])),(l()(),a["ɵeld"](0,null,0,2,"div",[["item-start",""]],null,null,null,null,null)),(l()(),a["ɵted"](null,["",""])),a["ɵppd"](2),(l()(),a["ɵted"](2,["\n\t\t\t","\n\t\t"]))],null,function(l,n){l(n,8,0,a["ɵunv"](n,8,0,l(n,9,0,a["ɵnov"](n.parent,0),n.context.$implicit.MessageMessage.start,"M/DD")));l(n,10,0,n.context.$implicit.MessageMessage.title)})}function u(l){return a["ɵvid"](0,[a["ɵpid"](0,E.DateFormatPipe,[]),(l()(),a["ɵeld"](0,null,null,20,"ion-header",[["no-border",""]],null,null,null,null,null)),a["ɵdid"](16384,null,0,I.a,[C.a,a.ElementRef,a.Renderer,[2,P.a]],null,null),(l()(),a["ɵted"](null,["\n\t"])),(l()(),a["ɵeld"](0,null,null,16,"ion-navbar",[["class","toolbar"],["color","primary"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,M.b,M.a)),a["ɵdid"](49152,null,0,V.a,[x.a,[2,P.a],[2,w.a],C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](3,["\n\t\t"])),(l()(),a["ɵeld"](0,null,3,2,"ion-title",[["center",""]],null,null,null,K.b,K.a)),a["ɵdid"](49152,null,0,S.a,[C.a,a.ElementRef,a.Renderer,[2,F.a],[2,V.a]],null,null),(l()(),a["ɵted"](0,["Sermons"])),(l()(),a["ɵted"](3,["\n\t\t"])),(l()(),a["ɵeld"](0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""],["right",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==a["ɵnov"](l,13).toggle()&&t}return t},q.b,q.a)),a["ɵdid"](1097728,[[1,4]],0,L.a,[[8,""],C.a,a.ElementRef,a.Renderer],null,null),a["ɵdid"](1064960,null,0,T.a,[O.a,[2,P.a],[2,L.a],[2,V.a]],{menuToggle:[0,"menuToggle"]},null),a["ɵdid"](16384,null,1,j.a,[C.a,a.ElementRef,a.Renderer,[2,F.a],[2,V.a]],null,null),a["ɵqud"](603979776,1,{_buttons:1}),(l()(),a["ɵted"](0,["\n\t\t\t"])),(l()(),a["ɵeld"](0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](147456,null,0,B.a,[C.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵted"](0,["\n\t\t"])),(l()(),a["ɵted"](3,["\n\t"])),(l()(),a["ɵted"](null,["\n"])),(l()(),a["ɵted"](null,["\n\n"])),(l()(),a["ɵeld"](0,null,null,15,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,N.b,N.a)),a["ɵdid"](4374528,null,0,U.a,[C.a,$.a,W.a,a.ElementRef,a.Renderer,x.a,z.a,a.NgZone,[2,P.a],[2,w.a]],null,null),(l()(),a["ɵted"](1,["\n\t"])),(l()(),a["ɵeld"](0,null,1,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),a["ɵted"](1,["\n\t"])),(l()(),a["ɵeld"](0,null,1,2,"ion-toolbar",[["class","toolbar"],["color","primary"]],[[2,"statusbar-padding",null]],null,null,A.b,A.a)),a["ɵdid"](49152,null,0,F.a,[C.a,a.ElementRef,a.Renderer],{color:[0,"color"]},null),(l()(),a["ɵted"](3,["\n\t\t","\n\t"])),(l()(),a["ɵted"](1,["\n\t"])),(l()(),a["ɵeld"](0,null,1,5,"ion-list",[],null,null,null,null,null)),a["ɵdid"](16384,null,0,H.a,[C.a,a.ElementRef,a.Renderer,$.a,J.l,W.a],null,null),(l()(),a["ɵted"](null,["\n\t\t"])),(l()(),a["ɵand"](16777216,null,null,1,null,t)),a["ɵdid"](802816,null,0,Z.i,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](null,["\n\t"])),(l()(),a["ɵted"](1,["\n"]))],function(l,n){var e=n.component;l(n,5,0,"primary");l(n,13,0,"");l(n,18,0,"menu");l(n,29,0,"primary");l(n,36,0,e.sermons)},function(l,n){var e=n.component;l(n,4,0,a["ɵnov"](n,5)._hidden,a["ɵnov"](n,5)._sbPadding);l(n,11,0,a["ɵnov"](n,13).isHidden);l(n,17,0,a["ɵnov"](n,18)._hidden);l(n,23,0,a["ɵnov"](n,24).statusbarPadding,a["ɵnov"](n,24)._hasRefresher);l(n,26,0,a["ɵinlineInterpolate"](2,"",e.rootUrl,"/img/thumb/",e.series.MediaImage.filename,"/width:1000/height:600/crop:true/zoom:auto"));l(n,28,0,a["ɵnov"](n,29)._sbPadding);l(n,30,0,e.series.title)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),o=(e(4),e(53),e(118)),r=function(){function l(l,n,e){var t=this;this.navCtrl=l,this.navParams=n,this.greybackProvider=e,this.greybackProvider.getSeriesById(this.navParams.get("seriesId")).subscribe(function(l){t.sermons=l.data}),this.series=this.navParams.get("series"),this.rootUrl=e.rootUrl}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad SermonsPage")},l.prototype.ionViewWillEnter=function(){console.log("ionViewWillEnter SermonsPage")},l.prototype.viewSermon=function(l){this.navCtrl.push("SermonPage",{series:this.series,sermon:l,sermonId:l.id})},l}(),d=e(122),i=function(){return function(){}}(),s=e(329),c=e(330),f=e(331),m=e(332),b=e(333),g=e(334),p=e(335),v=e(336),k=e(337),R=e(338),h=e(19),y=e(16),C=e(2),_=e(42),D=e(73),E=e(125),I=e(119),P=e(6),M=e(402),V=e(39),x=e(9),w=e(21),K=e(400),S=e(116),F=e(52),q=e(41),L=e(20),T=e(120),O=e(25),j=e(121),B=e(40),N=e(401),U=e(22),$=e(5),W=e(10),z=e(35),A=e(403),H=e(54),J=e(8),Z=e(15),G=e(12),Q=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),X=a["ɵccf"]("page-sermons",r,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,null,null,1,"page-sermons",[],null,null,null,u,Q)),a["ɵdid"](49152,null,0,r,[w.a,G.a,o.a],null,null)],null,null)},{},{},[]),Y=e(18),ll=e(117),nl=e(126),el=e(36);e.d(n,"SermonsPageModuleNgFactory",function(){return tl});var tl=a["ɵcmf"](i,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[s.a,c.a,f.a,m.a,b.a,g.a,p.a,v.a,k.a,X]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,Z.l,Z.k,[a.LOCALE_ID]),a["ɵmpd"](4608,Y.k,Y.k,[]),a["ɵmpd"](4608,Y.c,Y.c,[]),a["ɵmpd"](512,Z.b,Z.b,[]),a["ɵmpd"](512,Y.j,Y.j,[]),a["ɵmpd"](512,Y.d,Y.d,[]),a["ɵmpd"](512,Y.i,Y.i,[]),a["ɵmpd"](512,ll.a,ll.a,[]),a["ɵmpd"](512,ll.b,ll.b,[]),a["ɵmpd"](512,nl.MomentModule,nl.MomentModule,[]),a["ɵmpd"](512,d.a,d.a,[]),a["ɵmpd"](512,i,i,[]),a["ɵmpd"](256,el.a,r,[])])})},400:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}e.d(n,"a",function(){return o}),n.b=t;var u=e(0),a=e(15),o=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},401:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[u["ɵqud"](402653184,1,{_fixedContent:0}),u["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),u["ɵeld"](0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),u["ɵncd"](null,0),(l()(),u["ɵeld"](0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),u["ɵncd"](null,1),u["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return a}),n.b=t;var u=e(0),a=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},402:function(l,n,e){"use strict";function t(l){return u["ɵvid"](0,[(l()(),u["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),u["ɵeld"](0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.backButtonClick(e)&&t}return t},o.b,o.a)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵdid"](1097728,null,0,r.a,[[8,"bar-button"],d.a,u.ElementRef,u.Renderer],null,null),(l()(),u["ɵeld"](0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵdid"](147456,null,0,i.a,[d.a,u.ElementRef,u.Renderer],{name:[0,"name"]},null),(l()(),u["ɵeld"](0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),u["ɵted"](null,["",""])),u["ɵncd"](null,0),u["ɵncd"](null,1),u["ɵncd"](null,2),(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,3,0,"back-button","back-button-"+e._mode);l(n,6,0,"back-button-icon","back-button-icon-"+e._mode);l(n,7,0,e._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+e._mode);l(n,15,0,"toolbar-content","toolbar-content-"+e._mode)},function(l,n){var e=n.component;l(n,2,0,e._hideBb);l(n,5,0,u["ɵnov"](n,7)._hidden);l(n,10,0,e._backText)})}e.d(n,"a",function(){return s}),n.b=t;var u=e(0),a=e(15),o=e(41),r=e(20),d=e(2),i=e(40),s=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})},403:function(l,n,e){"use strict";function t(l){return u["ɵvid"](2,[(l()(),u["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,0),u["ɵncd"](null,1),u["ɵncd"](null,2),(l()(),u["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),u["ɵdid"](278528,null,0,a.h,[u.IterableDiffers,u.KeyValueDiffers,u.ElementRef,u.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),u["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,6,0,"toolbar-content","toolbar-content-"+e._mode)},null)}e.d(n,"a",function(){return o}),n.b=t;var u=e(0),a=e(15),o=u["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([1],{
+
+/***/ 428:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationPageModule", function() { return LocationPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__location__ = __webpack_require__(449);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_launch_navigator__ = __webpack_require__(440);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var LocationPageModule = (function () {
+    function LocationPageModule() {
+    }
+    return LocationPageModule;
+}());
+LocationPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__location__["a" /* LocationPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__location__["a" /* LocationPage */]),
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_launch_navigator__["a" /* LaunchNavigator */]
+        ]
+    })
+], LocationPageModule);
+
+//# sourceMappingURL=location.module.js.map
+
+/***/ }),
+
+/***/ 440:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LaunchNavigator; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(51);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name Launch Navigator
+ * @description
+ * Requires Cordova plugin: uk.co.workingedge.phonegap.plugin.launchnavigator. For more info, please see the [LaunchNavigator plugin docs](https://github.com/dpa99c/phonegap-launch-navigator).
+ *
+ * @usage
+ * Please refer to the plugin's repo for detailed usage. This docs page only explains the Native wrapper.
+ *
+ * ```typescript
+ * import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+ *
+ * constructor(private launchNavigator: LaunchNavigator) { }
+ *
+ * ...
+ *
+ * let options: LaunchNavigatorOptions = {
+ *   start: 'London, ON',
+ *   app: LaunchNavigator.APPS.UBER
+ * };
+ *
+ * this.launchNavigator.navigate('Toronto, ON', options)
+ *   .then(
+ *     success => console.log('Launched navigator'),
+ *     error => console.log('Error launching navigator', error)
+ *   );
+ * ```
+ * @interfaces
+ * LaunchNavigatorOptions
+ * PromptsOptions
+ * RememberChoiceOptions
+ * AppSelectionOptions
+ * UserChoice
+ * UserPrompted
+ * AppSelection
+ */
+var LaunchNavigator = (function (_super) {
+    __extends(LaunchNavigator, _super);
+    function LaunchNavigator() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.APP = {
+            USER_SELECT: 'user_select',
+            APPLE_MAPS: 'apple_maps',
+            GOOGLE_MAPS: 'google_maps',
+            WAZE: 'waze',
+            CITYMAPPER: 'citymapper',
+            NAVIGON: 'navigon',
+            TRANSIT_APP: 'transit_app',
+            YANDEX: 'yandex',
+            UBER: 'uber',
+            TOMTOM: 'tomtom',
+            BING_MAPS: 'bing_maps',
+            SYGIC: 'sygic',
+            HERE_MAPS: 'here_maps',
+            MOOVIT: 'moovit'
+        };
+        _this.TRANSPORT_MODE = {
+            DRIVING: 'driving',
+            WALKING: 'walking',
+            BICYCLING: 'bicycling',
+            TRANSIT: 'transit'
+        };
+        return _this;
+    }
+    /**
+     * Launches navigator app
+     * @param destination {string|number[]} Location name or coordinates (as string or array)
+     * @param options {LaunchNavigatorOptions}
+     * @returns {Promise<any>}
+     */
+    LaunchNavigator.prototype.navigate = function (destination, options) { return; };
+    /**
+     * Determines if the given app is installed and available on the current device.
+     * @param app {string}
+     * @returns {Promise<any>}
+     */
+    LaunchNavigator.prototype.isAppAvailable = function (app) { return; };
+    /**
+     * Returns a list indicating which apps are installed and available on the current device.
+     * @returns {Promise<string[]>}
+     */
+    LaunchNavigator.prototype.availableApps = function () { return; };
+    /**
+     * Returns the display name of the specified app.
+     * @param app {string}
+     * @returns {string}
+     */
+    LaunchNavigator.prototype.getAppDisplayName = function (app) { return; };
+    /**
+     * Returns list of supported apps on a given platform.
+     * @param platform {string}
+     * @returns {string[]}
+     */
+    LaunchNavigator.prototype.getAppsForPlatform = function (platform) { return; };
+    /**
+     * Indicates if an app on a given platform supports specification of transport mode.
+     * @param app {string} specified as a string, you can use one of the constants, e.g `LaunchNavigator.APP.GOOGLE_MAPS`
+     * @param platform {string}
+     * @returns {boolean}
+     */
+    LaunchNavigator.prototype.supportsTransportMode = function (app, platform) { return; };
+    /**
+     * Returns the list of transport modes supported by an app on a given platform.
+     * @param app {string}
+     * @param platform {string}
+     * @returns {string[]}
+     */
+    LaunchNavigator.prototype.getTransportModes = function (app, platform) { return; };
+    /**
+     * @param app {string}
+     * @param platform {string}
+     * @returns {boolean}
+     */
+    LaunchNavigator.prototype.supportsDestName = function (app, platform) { return; };
+    /**
+     * Indicates if an app on a given platform supports specification of start location.
+     * @param app {string}
+     * @param platform {string}
+     * @returns {boolean}
+     */
+    LaunchNavigator.prototype.supportsStart = function (app, platform) { return; };
+    /**
+     * @param app {string}
+     * @param platform {string}
+     * @returns {boolean}
+     */
+    LaunchNavigator.prototype.supportsStartName = function (app, platform) { return; };
+    /**
+     * Indicates if an app on a given platform supports specification of launch mode.
+     * Note that currently only Google Maps on Android does.
+     * @param app {string}
+     * @param platform {string}
+     * @returns {boolean}
+     */
+    LaunchNavigator.prototype.supportsLaunchMode = function (app, platform) { return; };
+    /**
+     * @param destination {string | number[]}
+     * @param options {LaunchNavigatorOptions}
+     */
+    LaunchNavigator.prototype.userSelect = function (destination, options) { };
+    LaunchNavigator.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+    ];
+    /** @nocollapse */
+    LaunchNavigator.ctorParameters = function () { return []; };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({
+            successIndex: 2,
+            errorIndex: 3
+        }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object, Object]),
+        __metadata("design:returntype", Promise)
+    ], LaunchNavigator.prototype, "navigate", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String]),
+        __metadata("design:returntype", Promise)
+    ], LaunchNavigator.prototype, "isAppAvailable", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", Promise)
+    ], LaunchNavigator.prototype, "availableApps", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String]),
+        __metadata("design:returntype", String)
+    ], LaunchNavigator.prototype, "getAppDisplayName", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String]),
+        __metadata("design:returntype", Array)
+    ], LaunchNavigator.prototype, "getAppsForPlatform", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Boolean)
+    ], LaunchNavigator.prototype, "supportsTransportMode", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Array)
+    ], LaunchNavigator.prototype, "getTransportModes", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Boolean)
+    ], LaunchNavigator.prototype, "supportsDestName", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Boolean)
+    ], LaunchNavigator.prototype, "supportsStart", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Boolean)
+    ], LaunchNavigator.prototype, "supportsStartName", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:returntype", Boolean)
+    ], LaunchNavigator.prototype, "supportsLaunchMode", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({ sync: true }),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object, Object]),
+        __metadata("design:returntype", void 0)
+    ], LaunchNavigator.prototype, "userSelect", null);
+    LaunchNavigator = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["f" /* Plugin */])({
+            pluginName: 'LaunchNavigator',
+            plugin: 'uk.co.workingedge.phonegap.plugin.launchnavigator',
+            pluginRef: 'launchnavigator',
+            repo: 'https://github.com/dpa99c/phonegap-launch-navigator',
+            platforms: ['Android', 'iOS', 'Windows', 'Windows Phone 8']
+        })
+    ], LaunchNavigator);
+    return LaunchNavigator;
+}(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["e" /* IonicNativePlugin */]));
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 449:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__ = __webpack_require__(440);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//LaunchNavigatorOptions
+var LocationPage = (function () {
+    function LocationPage(navCtrl, navParams, launchNavigator) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.launchNavigator = launchNavigator;
+    }
+    LocationPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LocationPage');
+    };
+    LocationPage.prototype.map = function (location) {
+        this.launchNavigator.navigate(location);
+    };
+    return LocationPage;
+}());
+LocationPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-location',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/location/location.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Location</ion-title>\n		<button ion-button icon-only menuToggle right>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<img src="assets/img/locations.jpg">\n	<div padding>\n		<h1>Locations</h1>\n		<p>We have 3 campuses accross Wichita Falls. Check out the differnt service times we have and make plans to join us this weekend.\n			See you Sunday.</p>\n\n		<h3>Downtown Campus:</h3>\n		<br>\n		<p>1200 9th St.\n			<br> Wichita Falls, TX 76301</p>\n		<p>\n			<strong>Phone:</strong>&nbsp;940.723.2764\n			<br>\n			<strong>Fax:&nbsp;</strong>940.766.1373</p>\n		<b>Modern Worship</b>\n		<p>8:15am - East Sanctuary\n			<br> 11:00am – Worship Center</p>\n		<b>Blended Worship</b>\n		<p>9:30am - Worship Center</p>\n\n		<button ion-button outline round small color="light" (click)="map(\'1200 9th St., Wichita Falls, TX 76301\')">Get Directions</button>\n		<br>\n		<br>\n\n\n		<h3>West Campus:</h3>\n		<br>\n		<p>4317 Barnett Road\n			<br> Wichita Falls, TX 76310</p>\n		<p>\n			<strong>Phone:</strong>&nbsp;940.723.2764\n			<br>\n			<strong>Fax:&nbsp;</strong>940.766.1373</p>\n		<b>Modern Worship</b>\n		<p>9:30am - West Auditorium\n			<br> 11:00am – West Auditorium</p>\n\n		<button ion-button outline round small color="light" (click)="map(\'4317 Barnett Road, Wichita Falls, TX 76310\')">Get Directions</button>\n		<br>\n		<br>\n\n\n		<h3>Sheppard Campus:</h3>\n		<br>\n		<p>2101 Puckett Rd\n			<br> Wichita Falls, TX 76306</p>\n		<p>\n			<strong>Phone:</strong>940.723.2764\n			<br>\n			<strong>Fax:&nbsp;</strong>940.766.1373</p>\n		<b>Modern Worship</b>\n		<p>9:30am - Sheppard Auditorium\n			<br> 11:00am – Sheppard Auditorium</p>\n		<button ion-button outline round small color="light" (click)="map(\'2101 Puckett Rd, Wichita Falls, TX 76306\')">Get Directions</button>\n		<br>\n		<br>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/location/location.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["a" /* LaunchNavigator */]])
+], LocationPage);
+
+//# sourceMappingURL=location.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=1.js.map
