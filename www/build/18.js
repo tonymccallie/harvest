@@ -1,1 +1,87 @@
-webpackJsonp([18],{380:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,null,null,20,"ion-header",[["no-border",""]],null,null,null,null,null)),t["ɵdid"](16384,null,0,p.a,[g.a,t.ElementRef,t.Renderer,[2,v.a]],null,null),(l()(),t["ɵted"](null,["\n\t"])),(l()(),t["ɵeld"](0,null,null,16,"ion-navbar",[["class","toolbar"],["color","primary"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,k.b,k.a)),t["ɵdid"](49152,null,0,y.a,[R.a,[2,v.a],[2,C.a],g.a,t.ElementRef,t.Renderer],{color:[0,"color"]},null),(l()(),t["ɵted"](3,["\n\t\t"])),(l()(),t["ɵeld"](0,null,3,2,"ion-title",[["center",""]],null,null,null,w.b,w.a)),t["ɵdid"](49152,null,0,_.a,[g.a,t.ElementRef,t.Renderer,[2,D.a],[2,y.a]],null,null),(l()(),t["ɵted"](0,["About"])),(l()(),t["ɵted"](3,["\n\t\t"])),(l()(),t["ɵeld"](0,null,0,8,"button",[["icon-only",""],["ion-button",""],["menuToggle",""],["right",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==t["ɵnov"](l,12).toggle()&&u}return u},E.b,E.a)),t["ɵdid"](1097728,[[1,4]],0,x.a,[[8,""],g.a,t.ElementRef,t.Renderer],null,null),t["ɵdid"](1064960,null,0,I.a,[F.a,[2,v.a],[2,x.a],[2,y.a]],{menuToggle:[0,"menuToggle"]},null),t["ɵdid"](16384,null,1,V.a,[g.a,t.ElementRef,t.Renderer,[2,D.a],[2,y.a]],null,null),t["ɵqud"](603979776,1,{_buttons:1}),(l()(),t["ɵted"](0,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,0,1,"ion-icon",[["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](147456,null,0,P.a,[g.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](0,["\n\t\t"])),(l()(),t["ɵted"](3,["\n\t"])),(l()(),t["ɵted"](null,["\n"])),(l()(),t["ɵted"](null,["\n\n"])),(l()(),t["ɵeld"](0,null,null,45,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,W.b,W.a)),t["ɵdid"](4374528,null,0,K.a,[g.a,q.a,B.a,t.ElementRef,t.Renderer,R.a,L.a,t.NgZone,[2,v.a],[2,C.a]],null,null),(l()(),t["ɵted"](1,["\n\t"])),(l()(),t["ɵeld"](0,null,1,0,"img",[["src","assets/img/about.jpg"]],null,null,null,null,null)),(l()(),t["ɵted"](1,["\n\t"])),(l()(),t["ɵeld"](0,null,1,39,"div",[["padding",""]],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t"])),(l()(),t["ɵeld"](0,null,null,36,"p",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["People who attend our church come from different experiences and backgrounds.  One thing you will quickly notice about\n\t\t\tthe First family is that we're not your stereotypical Baptist church. We are unique. We believe church should be fun and\n\t\t\texciting, yet without compromising the truth of God’s Word, the Bible. \n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,[" We are a Christian evangelical church—a church whose primary purpose is to share the good news of Jesus Christ. \n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,[" We call our church a Church in 3D because we concentrate on three areas of church life.\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,1,"b",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["Decisions"])),(l()(),t["ɵted"](null,[" - We want to see people make life and eternity changing decisions for Christ by accepting Him as their Savior. \n\t\t\tTo that end you will find both our staff and members ready to share how to become a Christian.\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,1,"b",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["Development"])),(l()(),t["ɵted"](null,[" - Once a person has accepted Christ we want to help them grow as a Christian through a variety of opportunities\n\t\t\tincluding LIFE Groups, Family Night at First, Special Bible Studies for various interests, and more.\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,1,"b",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["Deployment"])),(l()(),t["ɵted"](null,[" - We believe that a Christian, and the church, should help others so we want to help everyone find a place\n\t\t\tof service where they may use their skills, talents, and abilities to help others come to know Christ and grow in their\n\t\t\tfaith.\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,[" Ultimately the purpose of the church is to lead people to become obedient and reproducing disciples of Jesus Christ,\n\t\t\tas He commanded in Matthew 28:18-20. \n\t\t\t"])),(l()(),t["ɵeld"](0,null,null,0,"br",[],null,null,null,null,null)),(l()(),t["ɵted"](null,["\n\t\t"])),(l()(),t["ɵted"](null,["\n\t"])),(l()(),t["ɵted"](1,["\n"]))],function(l,n){l(n,4,0,"primary");l(n,12,0,"");l(n,17,0,"menu")},function(l,n){l(n,3,0,t["ɵnov"](n,4)._hidden,t["ɵnov"](n,4)._sbPadding);l(n,10,0,t["ɵnov"](n,12).isHidden);l(n,16,0,t["ɵnov"](n,17)._hidden);l(n,22,0,t["ɵnov"](n,23).statusbarPadding,t["ɵnov"](n,23)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var t=e(0),a=(e(4),e(53),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AboutPage")},l}()),o=function(){return function(){}}(),d=e(329),r=e(330),i=e(331),s=e(332),c=e(333),b=e(334),f=e(335),h=e(336),m=e(337),p=e(119),g=e(2),v=e(6),k=e(402),y=e(39),R=e(9),C=e(21),w=e(400),_=e(116),D=e(52),E=e(41),x=e(20),I=e(120),F=e(25),V=e(121),P=e(40),W=e(401),K=e(22),q=e(5),B=e(10),L=e(35),T=e(12),j=t["ɵcrt"]({encapsulation:2,styles:[],data:{}}),A=t["ɵccf"]("page-about",a,function(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,null,null,1,"page-about",[],null,null,null,u,j)),t["ɵdid"](49152,null,0,a,[C.a,T.a],null,null)],null,null)},{},{},[]),M=e(15),N=e(18),O=e(117),H=e(36);e.d(n,"AboutPageModuleNgFactory",function(){return J});var J=t["ɵcmf"](o,[],function(l){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[d.a,r.a,i.a,s.a,c.a,b.a,f.a,h.a,m.a,A]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,M.l,M.k,[t.LOCALE_ID]),t["ɵmpd"](4608,N.k,N.k,[]),t["ɵmpd"](4608,N.c,N.c,[]),t["ɵmpd"](512,M.b,M.b,[]),t["ɵmpd"](512,N.j,N.j,[]),t["ɵmpd"](512,N.d,N.d,[]),t["ɵmpd"](512,N.i,N.i,[]),t["ɵmpd"](512,O.a,O.a,[]),t["ɵmpd"](512,O.b,O.b,[]),t["ɵmpd"](512,o,o,[]),t["ɵmpd"](256,H.a,a,[])])})},400:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[(l()(),t["ɵeld"](0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}e.d(n,"a",function(){return o}),n.b=u;var t=e(0),a=e(15),o=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})},401:function(l,n,e){"use strict";function u(l){return t["ɵvid"](2,[t["ɵqud"](402653184,1,{_fixedContent:0}),t["ɵqud"](402653184,2,{_scrollContent:0}),(l()(),t["ɵeld"](0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),t["ɵncd"](null,0),(l()(),t["ɵeld"](0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),t["ɵncd"](null,1),t["ɵncd"](null,2)],null,null)}e.d(n,"a",function(){return a}),n.b=u;var t=e(0),a=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})},402:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t["ɵeld"](0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.backButtonClick(e)&&u}return u},o.b,o.a)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵdid"](1097728,null,0,d.a,[[8,"bar-button"],r.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵeld"](0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵdid"](147456,null,0,i.a,[r.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵeld"](0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t["ɵted"](null,["",""])),t["ɵncd"](null,0),t["ɵncd"](null,1),t["ɵncd"](null,2),(l()(),t["ɵeld"](0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t["ɵdid"](278528,null,0,a.h,[t.IterableDiffers,t.KeyValueDiffers,t.ElementRef,t.Renderer],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t["ɵncd"](null,3)],function(l,n){var e=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+e._mode);l(n,3,0,"back-button","back-button-"+e._mode);l(n,6,0,"back-button-icon","back-button-icon-"+e._mode);l(n,7,0,e._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+e._mode);l(n,15,0,"toolbar-content","toolbar-content-"+e._mode)},function(l,n){var e=n.component;l(n,2,0,e._hideBb);l(n,5,0,t["ɵnov"](n,7)._hidden);l(n,10,0,e._backText)})}e.d(n,"a",function(){return s}),n.b=u;var t=e(0),a=e(15),o=e(41),d=e(20),r=e(2),i=e(40),s=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([18],{
+
+/***/ 420:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleDetailPageModule", function() { return ArticleDetailPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__article_detail__ = __webpack_require__(441);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ArticleDetailPageModule = (function () {
+    function ArticleDetailPageModule() {
+    }
+    return ArticleDetailPageModule;
+}());
+ArticleDetailPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__article_detail__["a" /* ArticleDetailPage */]),
+        ],
+    })
+], ArticleDetailPageModule);
+
+//# sourceMappingURL=article-detail.module.js.map
+
+/***/ }),
+
+/***/ 441:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArticleDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__ = __webpack_require__(334);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ArticleDetailPage = (function () {
+    function ArticleDetailPage(navCtrl, navParams, greybackProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.greybackProvider = greybackProvider;
+        console.log('constructor ArticleDetailPage');
+        this.article = this.navParams.get('article');
+        this.rootUrl = greybackProvider.rootUrl;
+    }
+    ArticleDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ArticleDetailPage');
+    };
+    return ArticleDetailPage;
+}());
+ArticleDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-article-detail',template:/*ion-inline-start:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/article-detail/article-detail.html"*/'<ion-header no-border>\n	<ion-navbar color="primary">\n		<ion-title center>Latest News</ion-title>\n		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>\n	</ion-navbar>\n</ion-header>\n\n\n<ion-content>\n	<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">\n	<ion-toolbar color="primary">\n		{{article.NewsArticle.title}}\n	</ion-toolbar>\n	<div padding [innerHTML]="article.NewsArticle.body"></div>\n</ion-content>'/*ion-inline-end:"/Users/tonymccallie/Sites/fbcwichitafalls/src/pages/article-detail/article-detail.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_greyback_greyback__["a" /* GreybackProvider */]])
+], ArticleDetailPage);
+
+//# sourceMappingURL=article-detail.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=18.js.map
