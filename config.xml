@@ -97,8 +97,8 @@
     </plugin>
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <plugin name="nl.x-services.plugins.backgroundaudio" spec="^1.0.1" />
-	<feature name="BackgroundAudio">
-		<param name="ios-package" value="BackgroundAudio" />
-		<param name="onload" value="true" />
-	</feature>
+    <feature name="BackgroundAudio">
+        <param name="ios-package" value="BackgroundAudio" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>
