@@ -51,9 +51,6 @@ export class MediaProvider {
 			this.title = '';
 			console.log(['onerror', error]);
 		});
-		this.player.getCurrentPosition().then((position) => {
-			console.error(position);
-		});
 		this.player.play();
 		this.timeUpdate();
 	}
@@ -66,6 +63,7 @@ export class MediaProvider {
 				}
 				console.log('getCurrentPosition', position);
 				this.current = new Date(1970, 0, 1).setSeconds(position);
+				console.error(this.player.getDuration());
 				this.duration = new Date(1970, 0, 1).setSeconds(this.player.getDuration());
 				console.log('duration',this.duration);
 				this.percentage = Math.round(position / this.player.getDuration() * 100);
