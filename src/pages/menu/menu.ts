@@ -100,6 +100,7 @@ export class MenuPage {
 	}
 
 	scrub(percent) {
+		console.log('scrubbed');
 		//this.audioProvider.scrub(percent);
 		this.mediaProvider.scrub(percent);
 	}
