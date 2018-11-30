@@ -1,3 +1,4 @@
+import { MediaProvider } from './../../providers/media/media';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { AudioProvider } from '../../providers/audio/audio';
@@ -43,6 +44,7 @@ export class MenuPage {
 		public navCtrl: NavController, 
 		public navParams: NavParams, 
 		public audioProvider: AudioProvider, 
+		public mediaProvider: MediaProvider,
 		private iab: InAppBrowser
 	) {
 		this.player = audioProvider;

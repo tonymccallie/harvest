@@ -11,7 +11,9 @@ import { MyApp } from './app.component';
 import { SharedModule } from './shared.module';
 import { GreybackProvider } from '../providers/greyback/greyback';
 import { AudioProvider } from '../providers/audio/audio';
-import { HttpClientModule } from '@angular/common/http';
+import { MediaProvider } from '../providers/media/media';
+import { HttpClientModule } from '@angular/common/http'; 
+import { Media } from '@ionic-native/media';
 
 import { Pro } from '@ionic/pro';
 const IonicPro = Pro.init('2191a4b0', {
@@ -48,7 +50,9 @@ export class MyErrorHandler implements ErrorHandler {
 		GreybackProvider,
 		AudioProvider,
 		InAppBrowser,
-		SharedModule
+		SharedModule,
+		Media,
+    MediaProvider
 	]
 })
 export class AppModule { }

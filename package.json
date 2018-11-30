@@ -25,6 +25,7 @@
     "@ionic-native/core": "4.5.2",
     "@ionic-native/in-app-browser": "^4.17.0",
     "@ionic-native/launch-navigator": "^4.17.0",
+    "@ionic-native/media": "^4.17.0",
     "@ionic-native/native-audio": "^4.17.0",
     "@ionic-native/splash-screen": "4.5.2",
     "@ionic-native/status-bar": "4.5.2",
