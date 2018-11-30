@@ -1,3 +1,4 @@
+import { AlertController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
 import { Media, MediaObject } from '@ionic-native/media';
 
@@ -12,8 +13,12 @@ export class MediaProvider {
 	percentage: number = 0;
 	title: string = '';
 	speaker: string = '';
+	timer: any;
 
-	constructor(private media: Media) {
+	constructor(
+		private media: Media,
+		public alertCtrl: AlertController
+	) {
 		console.log('Hello MediaProvider Provider');
 		//var self = this;
 		//this.player = this.media.create('../assets/test.mp3');
@@ -22,6 +27,7 @@ export class MediaProvider {
 		// 	self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
 		// 	self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
 		// }
+
 		// this.player.onprogress = function (data) {
 		// 	console.log(['onprogress',data]);
 		// }
@@ -74,10 +80,38 @@ export class MediaProvider {
 		console.error(config.url + '/file.mp3');
 		this.player = this.media.create(config.url + '/file.mp3');
 		this.player.onStatusUpdate.subscribe(status => console.log(status));
+		this.player.onError.subscribe((error) => {
+			let alert = this.alertCtrl.create({
+				title: 'Oh no!',
+				subTitle: 'There was an error trying to load the audio file. You might try again later or listen to a different one.',
+				buttons: ['Ok']
+			});
+			alert.present();
+			this.playing = false;
+			this.loading = true;
+			this.title = '';
+			console.log(['onerror', error]);
+		});
+		this.player.getCurrentPosition().then((position) => {
+			console.error(position);
+		});
 		this.player.play();
+		this.player.
 		// this.player.src = config.url + '/file.mp3';
 		// this.player.load();
 		// this.player.play();
+	}
+
+	timeUpdate() {
+		setInterval(() => {
+
+		})
+		this.current = 0;
+		this.duration = 0;
+		this.percentage = 0;
+		self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
+		self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
+		self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
 	}
 
 	pause() {

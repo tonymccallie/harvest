@@ -95,10 +95,12 @@ export class MenuPage {
 	}
 
 	pause() {
-		this.audioProvider.pause();
+		//this.audioProvider.pause();
+		this.mediaProvider.pause();
 	}
 
 	scrub(percent) {
-		this.audioProvider.scrub(percent);
+		//this.audioProvider.scrub(percent);
+		this.mediaProvider.scrub(percent);
 	}
 }
