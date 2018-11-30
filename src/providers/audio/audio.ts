@@ -24,21 +24,21 @@ export class AudioProvider {
 			self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
 		}
 		this.player.onprogress = function (data) {
-			console.log(['onprogress', data]);
+			//console.log(['onprogress', data]);
 		}
 		this.player.oncanplay = function (data) {
-			console.log(['oncanplay', data]);
+			//console.log(['oncanplay', data]);
 			//self.player.play();
 		}
 		this.player.oncanplaythrough = function (data) {
 			self.loading = false;
-			console.log(['oncanplaythrough', data]);
+			//console.log(['oncanplaythrough', data]);
 		}
 		this.player.onstalled = function (data) {
 			console.log(['onstalled', data]);
 		}
 		this.player.onabort = function (data) {
-			console.log(['onabort', data]);
+			//console.log(['onabort', data]);
 		}
 		this.player.onerror = function (data) {
 			let alert = self.alertCtrl.create({
@@ -53,16 +53,16 @@ export class AudioProvider {
 			console.log(['onerror', data]);
 		}
 		this.player.onloadstart = function (data) {
-			console.log(['onloadstart', data]);
+			//console.log(['onloadstart', data]);
 		}
 		this.player.onplaying = function (data) {
-			console.log(['onplaying', data]);
+			//console.log(['onplaying', data]);
 		}
 		this.player.onplay = function (data) {
-			console.log(['onplay', data]);
+			//console.log(['onplay', data]);
 		}
 		this.player.onpause = function (data) {
-			console.log(['onpause', data]);
+			//console.log(['onpause', data]);
 		}
 	}
 
@@ -88,8 +88,8 @@ export class AudioProvider {
 
 	scrub(percent) {
 		let newTime = (percent.value / 100) * this.player.duration;
-		console.error(newTime, this.player.currentTime, Math.abs(newTime - this.player.currentTime));
-		if (Math.abs(newTime - this.player.currentTime) > 10) {
+		//console.error(newTime, this.player.currentTime, Math.abs(newTime - this.player.currentTime));
+		if (Math.abs(newTime - this.player.currentTime) > 20) {
 			this.player.currentTime = newTime;
 		}
 	}
