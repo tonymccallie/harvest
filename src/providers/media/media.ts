@@ -22,53 +22,6 @@ export class MediaProvider {
 		console.log('Hello MediaProvider Provider');
 		//var self = this;
 		this.player = this.media.create('../assets/test.mp3');
-		// this.player.ontimeupdate = function (player) {
-		// 	self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
-		// 	self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
-		// 	self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
-		// }
-
-		// this.player.onprogress = function (data) {
-		// 	console.log(['onprogress',data]);
-		// }
-		// this.player.oncanplay = function (data) {
-		// 	console.log(['oncanplay',data]);
-		// 	//self.player.play();
-		// }
-		// this.player.oncanplaythrough = function (data) {
-		// 	self.loading = false;
-		// 	console.log(['oncanplaythrough',data]);
-		// }
-		// this.player.onstalled = function (data) {
-		// 	console.log(['onstalled',data]);
-		// }
-		// this.player.onabort = function (data) {
-		// 	console.log(['onabort',data]);
-		// }
-		// this.player.onerror = function (data) {
-		// 	let alert = self.alertCtrl.create({
-		// 		title: 'Oh no!',
-		// 		subTitle: 'There was an error trying to load the audio file. You might try again later or listen to a different one.',
-		// 		buttons: ['Ok']
-		// 	});
-		// 	alert.present();
-		// 	self.playing = false;
-		// 	self.loading = true;
-		// 	self.title = '';
-		// 	console.log(['onerror',data]);
-		// }
-		// this.player.onloadstart = function (data) {
-		// 	console.log(['onloadstart',data]);
-		// }
-		// this.player.onplaying = function (data) {
-		// 	console.log(['onplaying',data]);
-		// }
-		// this.player.onplay = function (data) {
-		// 	console.log(['onplay',data]);
-		// }
-		// this.player.onpause = function (data) {
-		// 	console.log(['onpause',data]);
-		// }
 	}
 
 	play(config: any) {
@@ -77,7 +30,6 @@ export class MediaProvider {
 		this.title = config.title;
 		this.speaker = config.speaker;
 
-		console.error(config.url + '/file.mp3');
 		this.player.release();
 		this.player = this.media.create(config.url + '/file.mp3');
 		this.player.onStatusUpdate.subscribe(status => {
@@ -103,29 +55,34 @@ export class MediaProvider {
 			console.error(position);
 		});
 		this.player.play();
-		this.timer = setInterval(() => {
-			this.timeUpdate()
-		}, 1000);
+		this.timeUpdate();
 	}
 
 	timeUpdate() {
-		this.player.getCurrentPosition().then((position) => {
-			console.log('getCurrentPosition', position);
-			this.current = position;
-			this.duration = new Date(1970, 0, 1).setSeconds(this.player.getDuration());
-			console.log('duration',this.duration);
-			this.percentage = Math.round(this.current / this.duration * 100);
-			console.log('percentage',this.percentage);
-		});
+		this.timer = setInterval(() => {
+			this.player.getCurrentPosition().then((position) => {
+				if(position > 0) {
+					this.loading = false;
+				}
+				console.log('getCurrentPosition', position);
+				this.current = new Date(1970, 0, 1).setSeconds(position);
+				this.duration = new Date(1970, 0, 1).setSeconds(this.player.getDuration());
+				console.log('duration',this.duration);
+				this.percentage = Math.round(position / this.player.getDuration() * 100);
+				console.log('percentage',this.percentage);
+			});
+		}, 1000);
 	}
 
 	pause() {
 		if (this.playing) {
 			this.player.pause();
 			this.playing = false;
+			clearInterval(this.timer);
 		} else {
 			this.player.play();
 			this.playing = true;
+			this.timeUpdate();
 		}
 	}
 
