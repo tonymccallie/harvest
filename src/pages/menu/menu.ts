@@ -47,7 +47,8 @@ export class MenuPage {
 		public mediaProvider: MediaProvider,
 		private iab: InAppBrowser
 	) {
-		this.player = audioProvider;
+		//this.player = audioProvider;
+		this.player = mediaProvider;
 	}
 
 	openPage(page: PageInterface) {
