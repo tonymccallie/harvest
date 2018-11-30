@@ -47,8 +47,8 @@ export class MenuPage {
 		public mediaProvider: MediaProvider,
 		private iab: InAppBrowser
 	) {
-		//this.player = audioProvider;
-		this.player = mediaProvider;
+		this.player = audioProvider;
+		//this.player = mediaProvider;
 	}
 
 	openPage(page: PageInterface) {
@@ -95,13 +95,13 @@ export class MenuPage {
 	}
 
 	pause() {
-		//this.audioProvider.pause();
-		this.mediaProvider.pause();
+		this.audioProvider.pause();
+		//this.mediaProvider.pause();
 	}
 
 	scrub(percent) {
 		console.log('scrubbed');
-		//this.audioProvider.scrub(percent);
-		this.mediaProvider.scrub(percent);
+		this.audioProvider.scrub(percent);
+		//this.mediaProvider.scrub(percent);
 	}
 }

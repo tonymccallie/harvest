@@ -37,7 +37,7 @@ export class SermonPage {
 	}
 
 	playAudio(sermon) {
-		this.mediaProvider.play({
+		this.audioProvider.play({
 			url: this.rootUrl + 'play/mp3/' + sermon.MediaAudio.id,
 			title: sermon.MessageMessage.title,
 			speaker: sermon.MessageAuthor.name
