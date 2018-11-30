@@ -96,7 +96,6 @@ export class MediaProvider {
 			console.error(position);
 		});
 		this.player.play();
-		this.player.
 		// this.player.src = config.url + '/file.mp3';
 		// this.player.load();
 		// this.player.play();
@@ -109,9 +108,6 @@ export class MediaProvider {
 		this.current = 0;
 		this.duration = 0;
 		this.percentage = 0;
-		self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
-		self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
-		self.percentage = Math.round(player.srcElement.currentTime / player.srcElement.duration * 100);
 	}
 
 	pause() {
