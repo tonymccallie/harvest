@@ -88,6 +88,7 @@ export class AudioProvider {
 
 	scrub(percent) {
 		let newTime = (percent.value / 100) * this.player.duration;
+		console.error(newTime, this.player.currentTime, Math.abs(newTime - this.player.currentTime));
 		if (Math.abs(newTime - this.player.currentTime) > 10) {
 			this.player.currentTime = newTime;
 		}
