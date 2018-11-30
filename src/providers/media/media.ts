@@ -21,7 +21,7 @@ export class MediaProvider {
 	) {
 		console.log('Hello MediaProvider Provider');
 		//var self = this;
-		//this.player = this.media.create('../assets/test.mp3');
+		this.player = this.media.create('../assets/test.mp3');
 		// this.player.ontimeupdate = function (player) {
 		// 	self.current = new Date(1970, 0, 1).setSeconds(player.srcElement.currentTime);
 		// 	self.duration = new Date(1970, 0, 1).setSeconds(player.srcElement.duration);
