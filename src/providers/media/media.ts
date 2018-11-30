@@ -78,9 +78,16 @@ export class MediaProvider {
 		this.speaker = config.speaker;
 
 		console.error(config.url + '/file.mp3');
+		this.player.release();
 		this.player = this.media.create(config.url + '/file.mp3');
-		this.player.onStatusUpdate.subscribe(status => console.log(status));
+		this.player.onStatusUpdate.subscribe(status => {
+			console.log('onStatusUpdate', status);
+		});
+		this.player.onSuccess.subscribe(() => {
+			console.log('onSuccess');
+		});
 		this.player.onError.subscribe((error) => {
+			console.log('onStatusUpdate', error);
 			let alert = this.alertCtrl.create({
 				title: 'Oh no!',
 				subTitle: 'There was an error trying to load the audio file. You might try again later or listen to a different one.',
@@ -96,18 +103,20 @@ export class MediaProvider {
 			console.error(position);
 		});
 		this.player.play();
-		// this.player.src = config.url + '/file.mp3';
-		// this.player.load();
-		// this.player.play();
+		this.timer = setInterval(() => {
+			this.timeUpdate()
+		}, 1000);
 	}
 
 	timeUpdate() {
-		setInterval(() => {
-
-		})
-		this.current = 0;
-		this.duration = 0;
-		this.percentage = 0;
+		this.player.getCurrentPosition().then((position) => {
+			console.log('getCurrentPosition', position);
+			this.current = position;
+			this.duration = new Date(1970, 0, 1).setSeconds(this.player.getDuration());
+			console.log('duration',this.duration);
+			this.percentage = Math.round(this.current / this.duration * 100);
+			console.log('percentage',this.percentage);
+		});
 	}
 
 	pause() {
