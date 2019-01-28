@@ -56,7 +56,7 @@ export class GreybackProvider {
 		//return this.http.get('assets/search.json').map(result => result.json());
 		//&departmentIds=
 		return new Promise(resolve => {
-			this.httpClient.get('http://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
+			this.httpClient.get('https://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
 				data => {
 					resolve(data);
 				},
