@@ -18,4 +18,7 @@ page-menu {
 	.bar-button-default-ios:hover:not(.disable-hover), .bar-button-default.bar-button-ios-default:hover:not(.disable-hover), .bar-button-clear-ios-default:hover:not(.disable-hover) {
 		color: color($colors,light);
 	}
+	ion-footer {
+		color: color($colors,light);
+	}
 }
