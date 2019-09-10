@@ -15,7 +15,8 @@ export class GreybackProvider {
 		console.log('Hello GreybackProvider Provider');
 		this.headers.append('Accept', 'application/json');
 		this.headers.append('Content-Type', 'application/json');
-		this.headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
+		// this.headers.append('Authorization', "Basic " + btoa('patrickkemp:Three3leaf'));
+		// this.headers.append('Authorization', "Basic " + btoa('it@fbcwf.org:starsareeyes'));
 		this.opts = new RequestOptions({ headers: this.headers });
 	}
 
@@ -57,10 +58,13 @@ export class GreybackProvider {
 		//&departmentIds=
 		return new Promise(resolve => {
 			this.httpClient.get('https://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
-				data => {
+					data => {
 					resolve(data);
 				},
-				err => {
+				// error => this.logError(filename, error)
+				error => {
+					console.log('getCalendar error');
+
 					this.httpClient.get('assets/search.json').subscribe(
 						data => {
 							resolve(data);
@@ -73,6 +77,22 @@ export class GreybackProvider {
 			)
 		});
 	}
+
+	getCalendar2(index) {
+		return new Promise(resolve => {
+			// for local dev must run Chrome with: open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+			this.httpClient.get('https://fbcwf.org/ajax/plugin/organization/organization_departments/suproxy2/occurrences').subscribe(
+					data => {
+					resolve(data);
+				},
+				// error => this.logError(filename, error)
+				error => {
+					console.log('getCalendar error');
+				}
+			)
+		});
+	}
+
 /*
 {
 CategoryList: "Department Event",

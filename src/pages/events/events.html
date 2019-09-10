@@ -20,8 +20,8 @@
 				<ion-item-divider color="primary">{{day.name}}</ion-item-divider>
 				<div *ngFor="let event of day.events">
 					<ion-item>
-						<div item-start>{{event.OccurrenceStartTime | amLocal | amDateFormat:'h:mma'}}</div>
-						{{event.Name}}
+						<div item-start>{{event.EventStart | amLocal | amDateFormat:'h:mma'}}</div>
+						{{event.EventName}}
 					</ion-item>
 				</div>
 			</div>

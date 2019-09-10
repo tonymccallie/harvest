@@ -25,11 +25,11 @@ export class EventsPage {
 			content: "Please wait..."
 		});
 		loader.present();
-		this.greybackProvider.getCalendar(this.pageIndex).then(events => {
+		this.greybackProvider.getCalendar2(this.pageIndex).then(events => {
 			//this.events = events.Page;
-			console.log(events);
+			// console.log(events["Data"]);
 			this.events = [];
-			this.addEvents(events);
+			this.addEvents(events["Data"]);
 			loader.dismiss();
 		});
 	}
@@ -61,8 +61,9 @@ export class EventsPage {
 
 	addEvents(events) {
 		events.forEach((event, index) => {
-			let tmpMonth = moment.utc(event.OccurrenceStartTime).format('MMMM');
-			let tmpDay = moment.utc(event.OccurrenceStartTime).format('dddd, MMM Do');
+			let tmpMonth = moment(event.EventStart, 'YYYY-MM-DDThh:mm:ss').format('MMMM');
+			// moment(event.EventStart, 'YYYY-MM-DDThh:mm:ss').format('MMM Do');
+			let tmpDay = moment(event.EventStart, 'YYYY-MM-DDThh:mm:ss').format('dddd, MMM Do');
 			if (this.curMonth != tmpMonth) {
 				this.monthIndex = this.events.length;
 				this.events.push({
