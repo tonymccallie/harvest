@@ -1,8 +1,8 @@
 {
   "name": "fbcwichitafalls",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "author": "GreyBack Labs, LLP",
-  "homepage": "http://greyback.net/",
+  "homepage": "https://fbcwf.org/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
