@@ -1,2 +1,2 @@
-FBC Wichita Falls
+New Hope Church
 =================

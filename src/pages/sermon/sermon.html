@@ -6,9 +6,10 @@
 </ion-header>
 
 <ion-content>
-	<img *ngIf="!source" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
-	<div *ngIf="source">
-		<video [src]="source" [poster]="poster" controls style="width: 100%;"></video>
+	<img *ngIf="!youTubeUrl" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto">
+	<div *ngIf="youTubeUrl">
+		<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
+		<iframe width="100%" height="315" [src]="youTubeUrl" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<ion-toolbar color="primary">
 		{{sermon.MessageMessage.title}}
