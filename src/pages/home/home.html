@@ -12,8 +12,24 @@
 		</ion-slide>
 	</ion-slides>
 	<ion-toolbar color="primary">
-		Community Feed
+		Latest Sermon
 	</ion-toolbar>
+	<ion-card>
+		<!-- <img *ngIf="!youTubeUrl" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto"> -->
+		<div *ngIf="youTubeUrl">
+			<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
+			<iframe width="100%" height="315" [src]="youTubeUrl" frameborder="0" allowfullscreen></iframe>
+		</div>	
+	</ion-card>
+	<!-- <ion-card>
+		<ion-toolbar color="primary">
+			{{sermon.MessageMessage.title}}
+		</ion-toolbar>
+		<div padding>
+			Speaker: {{sermon.MessageAuthor.name}}<br />
+			Date: {{sermon.MessageMessage.start | amDateFormat:'MMM Do, YYYY'}}<br />
+		</div>	
+	</ion-card> -->
 	<!-- <ion-card *ngFor="let post of posts; let i = index">
 		<img *ngIf="post.CommunityPost.type!='gallery' && post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
 		<div *ngIf="post.CommunityPost.type=='gallery'">

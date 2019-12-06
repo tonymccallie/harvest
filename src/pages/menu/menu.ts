@@ -2,7 +2,7 @@ import { MediaProvider } from './../../providers/media/media';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { AudioProvider } from '../../providers/audio/audio';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+// import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 export interface PageInterface {
 	title: string;
@@ -45,7 +45,7 @@ export class MenuPage {
 		public navParams: NavParams, 
 		public audioProvider: AudioProvider, 
 		public mediaProvider: MediaProvider,
-		private iab: InAppBrowser
+		// private iab: InAppBrowser
 	) {
 		this.player = audioProvider;
 		//this.player = mediaProvider;

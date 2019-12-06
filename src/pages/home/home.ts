@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SafeResourceUrl, DomSanitizer } from '../../../node_modules/@angular/platform-browser';
 import { GreybackProvider } from '../../providers/greyback/greyback';
 import { SharedModule } from '../../app/shared.module';
 import { ViewChild } from '@angular/core';
@@ -19,12 +20,26 @@ export class HomePage {
 	news: any[];
 	posts: any[];
 	rootUrl: string;
+	sermon: any;
+	youTubeUrl: SafeResourceUrl;
 
 	@ViewChild(Slides) slides: Slides;
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, private greybackProvider: GreybackProvider, public shared: SharedModule) {
-		this.rootUrl = greybackProvider.rootUrl;
-		console.log('contructor HomePage');
+	constructor(
+		public navCtrl: NavController, 
+		public navParams: NavParams, 
+		private greybackProvider: GreybackProvider, 
+		public shared: SharedModule, 
+		private sanitizer: DomSanitizer) 
+	{
+			this.rootUrl = greybackProvider.rootUrl;
+			console.log('contructor HomePage');
+			this.greybackProvider.getLatestSermon().subscribe(sermon => {
+				this.sermon = sermon.data[0];
+				console.log('latest sermon homepage', this.sermon);
+				this.youTubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/embed/" + this.sermon.MessageMessage.video_url);
+	
+			});			
 	}
 
 	ionViewDidLoad() {
@@ -38,6 +53,8 @@ export class HomePage {
 		this.greybackProvider.getNews().subscribe(news => {
 			this.news = news.data;
 		});
+
+
 		// this.greybackProvider.getCommunity().subscribe(posts => {
 		// 	this.posts = posts.data;
 		// });
