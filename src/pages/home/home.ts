@@ -36,7 +36,7 @@ export class HomePage {
 			console.log('contructor HomePage');
 			this.greybackProvider.getLatestSermon().subscribe(sermon => {
 				this.sermon = sermon.data[0];
-				console.log('latest sermon homepage', this.sermon);
+				// console.log('latest sermon homepage', this.sermon);
 				this.youTubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/embed/" + this.sermon.MessageMessage.video_url);
 	
 			});			

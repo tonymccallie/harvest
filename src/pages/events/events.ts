@@ -21,17 +21,15 @@ export class EventsPage {
 	constructor(public navCtrl: NavController, public navParams: NavParams, public greybackProvider: GreybackProvider, public loadingCtrl: LoadingController) {
 		console.log('constructor EventsPage');
 		this.rootUrl = greybackProvider.rootUrl;
-		let loader = this.loadingCtrl.create({
-			content: "Please wait..."
-		});
-		loader.present();
-		this.greybackProvider.getCalendar2(this.pageIndex).then(events => {
-			//this.events = events.Page;
-			// console.log(events["Data"]);
-			this.events = [];
-			this.addEvents(events["Data"]);
-			loader.dismiss();
-		});
+		// let loader = this.loadingCtrl.create({
+		// 	content: "Please wait..."
+		// });
+		// loader.present();
+		// this.greybackProvider.getCalendar2(this.pageIndex).then(events => {
+		// 	this.events = [];
+		// 	this.addEvents(events["Data"]);
+		// 	loader.dismiss();
+		// });
 	}
 
 	ionViewDidLoad() {
@@ -43,14 +41,14 @@ export class EventsPage {
 		return newDate;
 	}
 
-	doInfinite(infiniteScroll) {
-		console.log('doInfinite');
-		this.pageIndex++;
-		this.greybackProvider.getCalendar(this.pageIndex).then(events => {
-			this.addEvents(events);
-			infiniteScroll.complete();
-		});
-	}
+	// doInfinite(infiniteScroll) {
+	// 	console.log('doInfinite');
+	// 	this.pageIndex++;
+	// 	this.greybackProvider.getCalendar(this.pageIndex).then(events => {
+	// 		this.addEvents(events);
+	// 		infiniteScroll.complete();
+	// 	});
+	// }
 
 	viewEvent(event) {
 		this.navCtrl.push('EventDetailPage', {

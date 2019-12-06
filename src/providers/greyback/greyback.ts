@@ -53,30 +53,30 @@ export class GreybackProvider {
 		return this.http.get('https://secure.accessacs.com/api_accessacs_mobile/v2/10413/calendars', this.opts).map(result => result.json());
 	}
 
-	// getCalendar(index) {
-	// 	//return this.http.get('assets/search.json').map(result => result.json());
-	// 	//&departmentIds=
-	// 	return new Promise(resolve => {
-	// 		this.httpClient.get('https://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
-	// 				data => {
-	// 				resolve(data);
-	// 			},
-	// 			// error => this.logError(filename, error)
-	// 			error => {
-	// 				console.log('getCalendar error');
+	getCalendar(index) {
+		//return this.http.get('assets/search.json').map(result => result.json());
+		//&departmentIds=
+		return new Promise(resolve => {
+			this.httpClient.get('https://api.serviceu.com/rest/events/occurrences/search?orgKey=9ccb6bd6-c8f2-4e89-8b1e-b8cfbc85c19d&format=json').subscribe(
+					data => {
+					resolve(data);
+				},
+				// error => this.logError(filename, error)
+				error => {
+					console.log('getCalendar error');
 
-	// 				this.httpClient.get('assets/search.json').subscribe(
-	// 					data => {
-	// 						resolve(data);
-	// 					},
-	// 					err => {
-	// 						console.warn(['getCalendar',err]);
-	// 					}
-	// 				)
-	// 			}
-	// 		)
-	// 	});
-	// }
+					this.httpClient.get('assets/search.json').subscribe(
+						data => {
+							resolve(data);
+						},
+						err => {
+							console.warn(['getCalendar',err]);
+						}
+					)
+				}
+			)
+		});
+	}
 
 	getCalendar2(index) {
 		return new Promise(resolve => {
