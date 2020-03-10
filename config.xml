@@ -120,5 +120,4 @@
         <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
     </plugin>
     <engine name="android" spec="^7.1.4" />
-    <engine name="ios" spec="~4.5.5" />
 </widget>

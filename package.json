@@ -34,7 +34,7 @@
     "angular2-moment": "^1.7.0",
     "audio-context-polyfill": "^1.0.0",
     "cordova-android": "^7.1.4",
-    "cordova-ios": "4.5.5",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-actionsheet": "^2.3.3",
     "cordova-plugin-add-swift-support": "^1.7.1",
     "cordova-plugin-device": "^1.1.7",
@@ -89,8 +89,8 @@
       }
     },
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
