@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Media } from '@ionic-native/media';
 
 import { Pro } from '@ionic/pro';
-const IonicPro = Pro.init('2191a4b0', {
+const IonicPro = Pro.init('c683e85d', {
 	appVersion: "1.0.0"
 });
 export class MyErrorHandler implements ErrorHandler {
