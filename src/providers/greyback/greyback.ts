@@ -7,7 +7,7 @@ import * as moment from 'moment';
 @Injectable()
 export class GreybackProvider {
 	// rootUrl: string = 'http://newhopeqc.server3.greyback.net';
-	rootUrl: string = 'https://newhopeqc.org';
+	rootUrl: string = 'https://harvestconnexion.com';
 	headers: any = new Headers;
 	opts: any;
 
@@ -41,12 +41,16 @@ export class GreybackProvider {
 		return this.http.get(this.rootUrl + '/ajax/plugin/message/message_messages/json/limit:1/category:1').map(result => result.json());
 	}
 
+	getSermons() {
+		return this.http.get(this.rootUrl + '/ajax/plugin/message/message_messages/json/category:1').map(result => result.json());
+	}
+
 	getEvents() {
 		return this.http.get(this.rootUrl + '/ajax/plugin/news/news_articles/json/limit:10/category:3').map(result => result.json());
 	}
 
 	getStaff() {
-		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:5').map(result => result.json())
+		return this.http.get(this.rootUrl + '/ajax/plugin/staff/staff_departments/json/department:6').map(result => result.json())
 	}
 
 	getCalendars() {

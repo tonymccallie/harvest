@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.greyback.newhope" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="net.greyback.harvest" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>New Hope Church</name>
     <description>Sermons and News for New Hope Church</description>
     <author email="info@greyback.net" href="http://greyback.net/">GreyBack Labs, LLP</author>

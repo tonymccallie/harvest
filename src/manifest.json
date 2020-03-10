@@ -1,10 +1,10 @@
 {
-  "name": "New Hope Church",
-  "short_name": "newhopechurch",
+  "name": "Harvest Connexion",
+  "short_name": "harvest",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "assets/img/newhope-sermon-load.png",
+    "src": "assets/img/harvest_sermon_banner.jpg",
     "sizes": "512x512",
     "type": "image/png"
   }],

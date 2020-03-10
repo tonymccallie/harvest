@@ -1,8 +1,8 @@
 {
-  "name": "newhope",
+  "name": "harvest",
   "version": "1.4.0",
   "author": "GreyBack Labs, LLP",
-  "homepage": "https://newhopeqc.org/",
+  "homepage": "https://harvestconnexion.com//",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",

@@ -35,7 +35,6 @@ export class MenuPage {
 		{ title: 'Service Times', pageName: 'TabsPage', tabComponent: 'TimesPage', index: 4, icon: 'ios-time-outline' },
 		{ title: 'Watch Live', pageName: 'LivePage', icon: 'ios-videocam-outline' },
 		{ title: 'Staff', pageName: 'StaffPage', icon: 'ios-contact-outline' },
-		{ title: 'Location', pageName: 'LocationPage', icon: 'ios-pin-outline' },
 		// { title: 'Prayer', pageName: 'PrayerPage', icon: 'ios-chatboxes-outline' },
 		{ title: 'Credits', pageName: 'CreditsPage', icon: 'ios-ribbon-outline' },
 	];

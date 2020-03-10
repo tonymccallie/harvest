@@ -1,47 +1,24 @@
 <ion-header no-border>
 	<ion-navbar color="primary">
-		<ion-title start><img src="assets/logo.svg" class="logo"></ion-title>
+		<ion-title start><img src="assets/img/logo.svg" class="logo"></ion-title>
 		<button ion-button icon-only menuToggle right><ion-icon name="menu"></ion-icon></button>
 	</ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
-	<ion-slides autoplay="5000" loop="true" *ngIf="news && news.length">
-		<ion-slide *ngFor="let article of news" (click)="viewArticle(article)">
-			<img src="{{rootUrl}}/img/thumb/{{article.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
-		</ion-slide>
-	</ion-slides>
+	<div *ngIf="youTubeUrl">
+		<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
+		<iframe width="100%" height="315" [src]="youTubeUrl" frameborder="0" allowfullscreen></iframe>
+	</div>	
 	<ion-toolbar color="primary">
 		Latest Sermon
 	</ion-toolbar>
-	<ion-card>
-		<!-- <img *ngIf="!youTubeUrl" src="{{rootUrl}}/img/thumb/{{series.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto"> -->
-		<div *ngIf="youTubeUrl">
-			<!-- <video [src]="source" [poster]="poster" controls style="width: 100%;"></video> -->
-			<iframe width="100%" height="315" [src]="youTubeUrl" frameborder="0" allowfullscreen></iframe>
-		</div>	
-	</ion-card>
-	<!-- <ion-card>
-		<ion-toolbar color="primary">
-			{{sermon.MessageMessage.title}}
-		</ion-toolbar>
-		<div padding>
-			Speaker: {{sermon.MessageAuthor.name}}<br />
-			Date: {{sermon.MessageMessage.start | amDateFormat:'MMM Do, YYYY'}}<br />
-		</div>	
-	</ion-card> -->
-	<!-- <ion-card *ngFor="let post of posts; let i = index">
-		<img *ngIf="post.CommunityPost.type!='gallery' && post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
-		<div *ngIf="post.CommunityPost.type=='gallery'">
-			<ion-slides autoplay="5000" loop="true" *ngIf="post.CommunityPicture && post.CommunityPicture.length">
-				<ion-slide *ngFor="let picture of post.CommunityPicture">
-					<img src="{{rootUrl}}/img/thumb/{{picture.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
-				</ion-slide>
-			</ion-slides>
-		</div>
+	<!-- <pre>{{news|json}}</pre> -->
+	<ion-card *ngFor="let post of news; let i = index">
+		<img *ngIf="post.MediaImage.filename" src="{{rootUrl}}/img/thumb/{{post.MediaImage.filename}}/width:1000/height:600/crop:true/zoom:auto" />
 		<ion-card-content>
-			<ion-card-title>{{post.CommunityPost.title}}</ion-card-title>
-			<div [innerHTML]="post.CommunityPost.body"></div>
+			<ion-card-title>{{post.NewsArticle.title}}</ion-card-title>
+			<div [innerHTML]="post.NewsArticle.body"></div>
 		</ion-card-content>
-	</ion-card> -->
+	</ion-card>
 </ion-content>
